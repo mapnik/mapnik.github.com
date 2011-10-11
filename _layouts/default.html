@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ page.title }}</title>
+</head>
+
+<body>
+<h1>{{ page.title }}</h1>
+
+{{ content | markdownify }}
+
+<div><i>{{ site.time | date_to_long_string }}</i></div>
+</body>
+</html>
