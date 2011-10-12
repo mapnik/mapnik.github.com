@@ -2,9 +2,8 @@
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
-    <title>{{ page.title }}</title>
-    <link href="/css/base.css"
-          rel="stylesheet" type="text/css" media="screen" />
+    {% include mapnik.meta %}
+    <title>{{ page.title }}</title>    
   </head>
   
   <body>
@@ -12,7 +11,7 @@
     <div id="wrap">
       <div id="header">
         <a href="/">
-          <img src="http://media.mapnik.org/images/mapnik-logo.png" />
+          <img src="/images/mapnik-logo.png" />
         </a>
       </div>
       <div id="navbar">
@@ -38,14 +37,13 @@
         </div>
         <div id="portlet">
           <h2>Latest News</h2>
-          <a href="/feeds/rss/"><img alt="latest news (rss2)" src="http://media.mapnik.org/images/rss.png" /></a>
-             
+          <a href="/feeds/rss/"><img alt="latest news (rss2)" src="/images/rss.png" /></a>             
         </div>
       </div>
       <div id="main">
         <div id="content">
           {{ page.content | markdownify }}
-        </div>	
+        </div>
       </div>
       <div id="footer">
         Copyright &copy; 2011 Artem Pavlenko
