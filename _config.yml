@@ -1,18 +1,18 @@
-safe:        false
+safe:        true
 auto:        true
 server:      false
 server_port: 4000
 baseurl:    /
 
 source:      .
-destination: ./_site
+destination: ./_site/mapnik.github.com
 plugins:     ./_plugins
 
 future:      true
 lsi:         false
 pygments:    true
 markdown:    maruku
-permalink:   pretty
+permalink:   /news/:year/:month/:day/:title
 
 maruku:
   use_tex:    false
@@ -31,10 +31,10 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
   
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
+coderay:
+  coderay_wrap: div
+  coderay_line_numbers: inline
+  coderay_line_numbers_start: 1
+  coderay_tab_width: 4
+  coderay_bold_every: 10
+  coderay_css: style
