@@ -1,0 +1,189 @@
+body,html
+{ 
+  margin-top:0;
+  margin-left: 0em;
+  margin-right:0em;
+  padding: 0;
+  color:#000;
+  font:10pt "Bitstream Vera Sans",Verdana,sans-serif;
+  background-color:white;
+}
+
+.errorlist {
+	color: #f00;
+}
+
+.errors {
+	color: #f00;
+}
+
+h1,h2,h3,h4,h5 {color:#073f93;font-weight:normal;}
+h1 {font-size: 16pt;}
+h2 {font-size: 14pt;}
+:link, :visited {
+ text-decoration: none;
+ color: #a00;
+ border-bottom: 1px dotted #bbb;
+}
+:link:hover, :visited:hover {
+ background-color: #eee;
+ color: #448;
+}
+
+img { border: none; vertical-align: middle;}
+img 
+{
+  border: none;
+  vertical-align: middle;
+}
+
+ul {list-style-image: url(http://media.mapnik.org/images/arrow.gif);}
+
+#wrap-front
+{
+width:775px; 
+margin: 0 auto;
+border: 1px solid #ccc;
+background-color:#fbfbfb;
+}
+
+#wrap
+{ 
+width:775px;
+margin: 0 auto;
+padding:0;
+border: 1px solid #ccc;
+background-color:#fbfbfb;
+}
+
+
+#header
+{
+   background: url(http://media.mapnik.org/images/bg-head.png) repeat-x;
+   height:70px;
+   margin:0;
+}
+
+#header a {background:none;border:none;}
+
+#navbar
+{
+   padding:0.4em;
+   background-color:#647a8e;
+}
+
+#navbar a {color:#fff;border:none;}
+#navbar ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+#navbar li {display:inline;margin:0;padding:0.2em;}
+#navbar :link:hover,#navbar :visited:hover
+{
+   color:#647a8e;
+   background-color: #ccc;
+} 
+
+#main 
+{
+padding-top: 0.2em;
+padding-bottom: 4em;
+margin: 0.2em 260px 0 0;
+}
+
+#sidebar {
+float: right;
+width: 260px;
+margin-right:0;
+padding-top: 1em;
+}
+
+#footer
+{
+   clear:both;
+   text-align:center;
+   padding:1em;
+   background:#fbfbfb;
+}
+
+#content
+{
+   margin-top:0em;
+   margin-left:1em; 	
+   padding-left:0.4em;
+   padding-right:0.4em;	
+}
+
+#content-secondary
+{
+
+   padding:1em;
+   color:#073f93;
+   background-color:#ddd;
+}
+
+#portlet
+{
+   margin-left:0.4em;
+   margin-right:0.4em;
+   margin-top:0em; 
+   margin-bottom:1em;
+   padding-left:0.6em; 
+   padding-right:0.4em; 
+   border:1px solid #fbfbfb;
+   background: #fbfbfb url(http://media.mapnik.org/images/bg-portlet.png) repeat-x;
+}
+
+#portlet-clear
+{
+   margin-left:0.4em;
+   margin-right:0.4em;
+   margin-top:0em; 
+   margin-bottom:1em;
+   padding-left:0.6em; 
+   padding-right:0.4em; 
+   background: transparent;
+}
+
+#button a {text-decoration:none;background-color:transparent}
+
+pre.code {
+   background: #f0f0ff;
+   border: 1px solid #d7d7ff;
+   margin: 0;
+   padding: 0.6em; 
+   overflow: auto;
+}
+
+.banner-center
+{
+   padding:0;
+   margin-left:0;
+   margin-right:0;
+   margin-top:0;
+   margin-bottom:0;
+   text-align:center;
+   background-color:transparent;
+   border:none;
+}
+
+.frontcolumn 
+{
+    width: 30%;
+    float: left;
+    padding-right:3%;	
+}
+
+.frontcolumndouble {
+   width: 63%;
+   float: left; 
+   padding-right:3%;
+}
+
+.frontcolumnlast {
+   width: 33%;
+   float: left;
+}
+
