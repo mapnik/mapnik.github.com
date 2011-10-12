@@ -23,7 +23,7 @@ if __name__ == "__main__" :
     output_dir = sys.argv[2]
     for row in c:
         pub_date = dateutil.parser.parse(row[1])
-        news_file = "%s-%s-%s-%s.html" % (pub_date.year,pub_date.month,pub_date.day,row[2])
+        news_file = "%s-%02d-%02d-%s.html" % (pub_date.year,pub_date.month,pub_date.day,row[2])
         f = open(output_dir+"/" + news_file,"wb")
         f.write("---\n")
         f.write("layout: news\n")
@@ -37,7 +37,7 @@ if __name__ == "__main__" :
         body = body.replace(u'\\t',"")
         body = body.replace(u'\\n',"")
         body = body.encode("utf-8")
-        print type(body),body
         f.write(body)
         f.write("\n\n")
         f.close()
+        print "news file: %s" % (news_file)
