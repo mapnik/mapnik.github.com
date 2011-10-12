@@ -7,26 +7,12 @@
   </head>
   <body>
     <div id="wrap-front">
-      
       <div id="header">
         <a href="/">
           <img src="/images/mapnik-logo.png" />
         </a>
       </div>
-      <div id="navbar">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/news/">News</a></li>
-          <li><a href="/faq/">FAQ</a></li>
-          <li><a href="/demo/">Demos</a></li>
-          <li><a href="/download/">Download</a></li>
-          <li><a href="http://trac.mapnik.org/">Trac</a></li>
-          <li><a href="/documentation/">Documentation</a></li>
-          <li><a href="/maps/">Maps</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/licence/">Licence</a></li>
-        </ul>
-      </div>
+      {% include navbar.html %}
       <div class="banner-center">
         <img alt="front banner" src="/images/front_banner_top.png" />
       </div>
@@ -43,32 +29,29 @@
             <h1>Support Mapnik</h1>
             <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
               <input type="hidden" name="cmd" value="_xclick">
-              <input type="hidden" name="business" value="artem@mapnik.org">
-              <input type="hidden" name="item_name" value="Support Mapnik!">
-              <input type="hidden" name="currency_code" value="GBP">
-              <input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Support Mapnik!">
-            </form>
-            <h1>Getting Started</h1>
-            <ul>
-              <li><a href="/download/">Get source!</a></li>
-              <!--<li><a href="/documentation/install/">Installation Guide</a></li>-->
-              <li><a href="http://trac.mapnik.org/">Documentation (Trac Wiki)</a></li>
-            </ul>
-          </div>
-          <div id="portlet-clear" class="frontcolumn">      
-            <h1>Get Mapnik <img src="/images/release-2.0.0.png"/></h1>
-          </div>
-        </p>
-      </div>
-      <div class="banner-center">
-        <img alt="front banner" src="/images/front_banner_bottom.png" />
-      </div>
-      
-      <div id="footer">
-        <a href="http://www.10east.com/"><img src="http://media.mapnik.org/images/10east_sponsor.png" border="0" alt="Hosting is contributed by 10east" title="A Django site."></a>
-        <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangosite100x25_grey.gif" border="0" alt="A Django site." title="A Django site."></a><br />
-        Copyright &copy; 2010 Artem Pavlenko
-      </div>
-    </div>
-  </body>
-</html>
+                <input type="hidden" name="business" value="artem@mapnik.org">
+                  <input type="hidden" name="item_name" value="Support Mapnik!">
+                    <input type="hidden" name="currency_code" value="GBP">
+                      <input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Support Mapnik!">
+                      </form>
+                      <h1>Getting Started</h1>
+                      <ul>
+                        <li><a href="/download/">Get source!</a></li>
+                        <!--<li><a href="/documentation/install/">Installation Guide</a></li>-->
+                        <li><a href="http://trac.mapnik.org/">Documentation (Trac Wiki)</a></li>
+                      </ul>
+                    </div>
+                    <div id="portlet-clear" class="frontcolumn">      
+                      <h1>Get Mapnik <img src="/images/release-2.0.0.png"/></h1>
+                    </div>
+                  </p>
+                </div>
+                <div class="banner-center">
+                  <img alt="front banner" src="/images/front_banner_bottom.png" />
+                </div>
+		<div id="footer">
+                  Copyright &copy; 2011 Artem Pavlenko
+		</div>
+              </div>
+            </body>
+          </html>
