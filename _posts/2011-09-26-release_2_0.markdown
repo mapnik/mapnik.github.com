@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Mapnik-2.0
+title: Release 2.0
+author: Artem Pavlenko
 ---
-
-# Release 2.0
 
 The Mapnik team is pleased to announce that Mapnik 2.0 is finally here! We've jumped from 0.7 to 2.0, not because we got confused with our numbers, but to reflect that this release represents a big step forward for the project. We believe Mapnik 2.0 will provide a much more flexible and expressive platform for creating beautiful maps. For full details see:
 

@@ -1,6 +1,7 @@
 ---
 layout: news
 title: Raster Reprojection lands in trunk 
+author: Dane Springmeyer
 ---
 
 Alberto Valverde has recently been hard at work getting initial support in trunk (to be part of Mapnik 2.x) for on the fly reprojection of rasters.
