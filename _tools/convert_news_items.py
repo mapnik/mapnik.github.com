@@ -26,7 +26,7 @@ if __name__ == "__main__" :
         news_file = "%s-%02d-%02d-%s.html" % (pub_date.year,pub_date.month,pub_date.day,row[2])
         f = open(output_dir+"/" + news_file,"wb")
         f.write("---\n")
-        f.write("layout: news\n")
+        f.write("layout: post\n")
         f.write("title: \"%s\"\n" % row[3])
         f.write("author: %s\n" % row[4])
         f.write("---\n")

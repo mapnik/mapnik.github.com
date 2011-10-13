@@ -1,43 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-  <head>
-    {% include mapnik.meta %}
-    <title>{{ page.title }}</title>
-  </head>
-  
-  <body>
-  <body>
-    <div id="wrap">
-      <div id="header">
-        <a href="/">
-          <img src="/images/mapnik-logo.png" />
-        </a>
-      </div>
-      
-      {% include navbar.html %}
+---
+layout: default
+---
 
-      <div id="sidebar">
-        <div id="portlet">
-          <h1>Quick Download</h1>
-          <p>
-            <small>Mapnik is a work in progress. There are multiple updates almost every day. If you are a developer grab the latest source from <a href="/download/">subversion repository</a>. For the rest there is a packaged tarball with the latest release. Hit the button above!</small>
-          </p>
-        </div>
-        <div id="portlet">
-          <h2>Latest News</h2>
-          <a href="/feeds/rss/"><img alt="latest news (rss2)" src="/images/rss.png" /></a>
-          
-        </div>
-      </div>
-      <div id="main">
-        <div id="content">
-          {{ content }} 
-        </div>
-      </div>
-      <div id="footer">
-        Copyright &copy; 2011 Artem Pavlenko
-      </div>
-    </div>    
-  </body>
-</html>
+{{ content }} 
