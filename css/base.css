@@ -65,11 +65,7 @@ background-color:#fbfbfb;
 
 #header
 {
-<<<<<<< HEAD
-   background: url(http://media.mapnik.org/images/bg-head.png) repeat-x;
-=======
    background: url(/images/bg-head.png) repeat-x;
->>>>>>> updates
    height:70px;
    margin:0;
 }
@@ -115,19 +111,15 @@ padding-top: 1em;
    clear:both;
    text-align:center;
    padding:1em;
-<<<<<<< HEAD
-   background:#fbfbfb;
-=======
    background:transparent;
->>>>>>> updates
 }
 
 #content
 {
    margin-top:0em;
-   margin-left:1em; 	
+   margin-left:1em; 
    padding-left:0.4em;
-   padding-right:0.4em;	
+   padding-right:0.4em;
 }
 
 #content-secondary
@@ -147,11 +139,7 @@ padding-top: 1em;
    padding-left:0.6em; 
    padding-right:0.4em; 
    border:1px solid #fbfbfb;
-<<<<<<< HEAD
-   background: #fbfbfb url(http://media.mapnik.org/images/bg-portlet.png) repeat-x;
-=======
    background: #fbfbfb url(/images/bg-portlet.png) repeat-x;
->>>>>>> updates
 }
 
 #portlet-clear
