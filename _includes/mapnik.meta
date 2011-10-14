@@ -9,5 +9,4 @@
     <meta name="DC.description" content="Mapnik is a toolkit for developing GIS applications" />
     <meta name="DC.creator" content="Artem Pavlenko, artem at mapnik" />
     <link href="/css/base.css" rel="stylesheet" type="text/css" media="screen" />
-    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Mapnik project news">
-
+    <link rel="alternate" type="application/atom+html" href="atom.xml" title="Mapnik project news">
