@@ -1,0 +1,32 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>mapnik.org</title>
+ <link href="http://mapnik.org/"/>
+ <link href="http://mapnik.org/atom.xml" rel="self" type="application/atom+xml"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://mapnik.org/</id>
+ <author>
+   <name>Artem Pavlenko</name>
+   <email>mapnik@mapnik.org</email>
+ </author>
+
+ {% for post in site.posts limit:10 %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link type="text/html" rel="alternate" href="http://mapnik.org{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://mapnik/org{{ post.id }}</id>
+   <content type="html">
+     <div>
+       {{ post.content | xml_escape }}
+     </div>
+   </content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
