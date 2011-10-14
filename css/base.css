@@ -37,7 +37,7 @@ img
   vertical-align: middle;
 }
 
-ul {list-style-image: url(/images/arrow.gif);}
+ul {list-style-image: url('/images/arrow.gif');}
 
 #wrap-front
 {
@@ -45,6 +45,12 @@ width:775px;
 margin: 0 auto;
 border: 1px solid #ccc;
 background-color:#fbfbfb;
+}
+
+#map
+{
+    border:1px solid white;
+    opacity: 2.0;
 }
 
 #wrap
@@ -59,7 +65,7 @@ background-color:#fbfbfb;
 
 #header
 {
-   background: url(http://media.mapnik.org/images/bg-head.png) repeat-x;
+   background: url(/images/bg-head.png) repeat-x;
    height:70px;
    margin:0;
 }
@@ -105,7 +111,7 @@ padding-top: 1em;
    clear:both;
    text-align:center;
    padding:1em;
-   background:#fbfbfb;
+   background:transparent;
 }
 
 #content
@@ -133,7 +139,7 @@ padding-top: 1em;
    padding-left:0.6em; 
    padding-right:0.4em; 
    border:1px solid #fbfbfb;
-   background: #fbfbfb url(http://media.mapnik.org/images/bg-portlet.png) repeat-x;
+   background: #fbfbfb url(/images/bg-portlet.png) repeat-x;
 }
 
 #portlet-clear
