@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Realtime, dynamic rendering by Vizzuality"
+author: Dane Springmeyer
+---
+
+<p>Check out some amazing recent work by the team at <a href="http://www.vizzuality.com/projects/spanishelections">Vizzuality</a>, leveraging Mapnik and NodeJS to map the 2011 Spanish Elections in realtime.</p><a href="http://www.vizzuality.com/projects/spanishelections"><img src="/images/rtve_espana_vizzuality.png" width="470"/></a><p>What is cool here is how Mapnik is one of many small, modular components tied together with NodeJS. (Did you know that Mapnik now has <a href="https://github.com/mapnik/node-mapnik/">Javascript bindings?</a>). Mapnik is likely critical in this case because of the large size and detail of the data (polygons are being fetched from postgis by Mapnik), but for lighter visualizations you could switch out node-canvas (or in the future maybe even <a href="https://github.com/mbostock/node-mappy">node-mappy</a>). Overall the package <a href="http://cartodb.com/">"Cartodb"</a> is the magic glue here which combines cloud logic for distributed storage and the ability to accept dynamic postgis queries with a highly optimized dynamic render service via the <a href="https://github.com/Vizzuality/cartodbtileserver">cartodbtileserver</a>.</p>
+
