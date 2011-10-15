@@ -155,7 +155,8 @@ padding-top: 1em;
 
 #button a {text-decoration:none;background-color:transparent}
 
-pre.code {
+code 
+{
    background: #f0f0ff;
    border: 1px solid #d7d7ff;
    margin: 0;
