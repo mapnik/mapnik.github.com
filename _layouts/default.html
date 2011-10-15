@@ -16,12 +16,7 @@
       </div>
       {% include navbar.html %}
       <div id="sidebar">
-        <div id="portlet">
-          <h1>Quick Download</h1>
-          <p>
-            <small>Mapnik is a work in progress. There are multiple updates almost every day. If you are a developer grab the latest source from <a href="/download/">subversion repository</a>. For the rest there is a packaged tarball with the latest release. Hit the button above!</small>
-          </p>
-        </div>
+        {% include quick-download.html %}
         {% include latest-news.html %}
       </div>
       <div id="main">
