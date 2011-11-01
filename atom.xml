@@ -22,9 +22,7 @@ layout: nil
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://mapnik/org{{ post.id }}</id>
    <content type="html">
-     <div>
-       {{ post.content | xml_escape }}
-     </div>
+     {{ post.content | xml_escape }}
    </content>
  </entry>
  {% endfor %}
