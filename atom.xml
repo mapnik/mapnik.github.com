@@ -12,9 +12,9 @@ layout: nil
  <id>http://mapnik.org/</id>
  <author>
    <name>Artem Pavlenko</name>
-   <email>mapnik@mapnik.org</email>
+   <email>artem.mapnik@gmail.com</email>
  </author>
-
+ 
  {% for post in site.posts limit:10 %}
  <entry>
    <title>{{ post.title }}</title>
