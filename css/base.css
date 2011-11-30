@@ -155,13 +155,22 @@ padding-top: 1em;
 
 #button a {text-decoration:none;background-color:transparent}
 
-code 
+code
+{
+  font-family: monospace;
+  color: #8c8c8c;
+}
+
+pre
 {
    background: #f0f0ff;
    border: 1px solid #d7d7ff;
-   margin: 0;
    padding: 0.6em; 
-   overflow: auto;
+   margin:0 10px 0 0;
+   -moz-box-shadow:0 3px 0 #fff;-webkit-box-shadow:0 3px 0 #fff;box-shadow:0 3px 0 #fff;
+   overflow: scroll;
+   width:95%;
+   border-radius: 2px;
 }
 
 .banner-center
