@@ -19,5 +19,5 @@ title: Licence
   <input type=submit name="sub" value="Subscribe">
   </td></tr>
 </form>
-<tr><td align=right> <a href="http://groups.google.com/group/mapnik?hl=en-GB">Visit this group</a> </td></tr>
+<tr><td align=right> <a href="http://groups.google.com/group/mapnik">Visit this group</a> </td></tr>
 </table>
