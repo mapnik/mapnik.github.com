@@ -21,6 +21,6 @@ Access to the current Mapnik development code:
 
     git clone https://github.com/mapnik/mapnik.git
 
-You can also browse source files through [web-based Git repository access] (https://github.com/mapnik/mapnik)
+You can also browse source files through [web-based Git repository access](https://github.com/mapnik/mapnik)
 
 Once you have downloaded the Mapnik source code see the [Mapnik Install](https://github.com/mapnik/mapnik/wiki) guides or the [INSTALL](https://github.com/mapnik/mapnik/blob/master/INSTALL.md) document in the Git repository.
