@@ -4,23 +4,29 @@ title: Download
 ---
 
 
-### Anonymous SVN access
+### Latest release
 
-All mapnik's source files are maintained in a Git  repository.
-You will need a Git client installed on your machine.
-You can use the command-line client or GUI - it's up to you.
+The latest release is Mapnik 2.0.0. Download it [here](https://github.com/downloads/mapnik/mapnik/mapnik-2.0.0.tar.bz2).
 
-Please, consult [Git documentation](http://git-scm.com/documentation) on client availibility for your platform, usage etc.
+### Development code
 
-Using command-line client you can clone the latest source like this:
-
-
-Latest release (2.0.0) : <a href="http://prdownload.berlios.de/mapnik/mapnik-2.0.0.tar.bz2">Download (tar.bz2)</a>
-
-Access to the current Mapnik development code:
+Use git to get the latest code:
 
     git clone https://github.com/mapnik/mapnik.git
 
-You can also browse source files through [web-based Git repository access] (https://github.com/mapnik/mapnik)
+Browse the code at [github](https://github.com/mapnik/mapnik).
 
-Once you have downloaded the Mapnik source code see the [Mapnik Install](https://github.com/mapnik/mapnik/wiki) guides or the [INSTALL](https://github.com/mapnik/mapnik/blob/master/INSTALL.md) document in the Git repository.
+Download a snapshot as a [zip archive](https://github.com/mapnik/mapnik/zipball/master).
+
+
+### Other releases
+
+[Previous tags](https://github.com/mapnik/mapnik/tags).
+
+
+### Installing
+
+See platform specific notes at [Mapnik Wiki](https://github.com/mapnik/mapnik/wiki/Mapnik-Installation).
+
+Se also the detailed [Install guide](https://github.com/mapnik/mapnik/blob/master/INSTALL.md) for the development code.
+
