@@ -38,7 +38,7 @@ And lastly I add a bit of texture to the land fill to get that 'paper' feel to t
 
 ![Final](http://farm8.staticflickr.com/7199/7115592503_8318044641.jpg)
 
-I'm not sure the last step adds much to the cartography but it's good to try different things. So go ahead and grab the latest source from [compositing branch] and have fun!
+I'm not sure the last step adds much to the cartography but it's good to try different things. So go ahead and grab the latest source from [compositing branch](https://github.com/mapnik/mapnik/tree/compositing) and have fun!
 
 Ooh, one more.. I really like 'blur' filters, they seem to be so versatile. Here is a water-floating-shadow style using a combination of 'emboss' and 'agg-stack-blur' filters, and also applying transform on the shadow symbolizer 
 <pre>transform="translate(10,10)"</pre>
