@@ -20,7 +20,7 @@ layout: nil
    <title>{{ post.title }}</title>
    <link type="text/html" rel="alternate" href="http://mapnik.org{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://mapnik/org{{ post.id }}</id>
+   <id>http://mapnik.org{{ post.id }}</id>
    <content type="html">
      {{ post.content | xml_escape }}
    </content>
