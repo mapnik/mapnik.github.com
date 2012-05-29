@@ -7,7 +7,7 @@ Uses [jekyll](https://github.com/mojombo/jekyll).
 
 ## Setup
 
-### Install jekyll (depends on Ruby and rubygems)
+### Install jekyll (depends on Ruby, rubygems and Ruby development packages)
 
     sudo gem install jekyll
 
