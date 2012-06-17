@@ -40,7 +40,7 @@ Tom and Artem spent most of the day brainstorming and experimenting with [HSL (h
 
 To implement this Artem started researching the Boost.GIL IO extensions by [Christian Henning](http://lists.boost.org/boost-users/2008/09/40737.php), which have recently been [accepted into Boost](http://mateusz.loskot.net/2011/01/27/boost-gil-io-and-toolbox-extensions-accepted-into-boost/).
 
-AJ started messing with new bezier smoothing features that Artem added to Mapnik as part of his push on Compositing in core. AJ quickly found that the unintended uses of beziers (when they double back on themselves) can be gorgeous and give maps an hand drawn look:
+AJ started messing with new bezier smoothing features that Artem added to Mapnik as part of his push on Compositing in core. The goal was the [properly document](https://github.com/mapnik/reference.json/commit/66648bc7a403c6669f58dbb7e7cd404b55405232) the feature in [Mapnik's styling reference](https://github.com/mapnik/reference.json), but in testing AJ found the unintended uses of beziers (when they double back on themselves) can be gorgeous and give maps an hand drawn look:
 
 <a href="http://a.tiles.mapbox.com/v3/aj.sketchy.html#4.00/-14.60/-218.65">
 <img src="http://a.tiles.mapbox.com/v3/aj.sketchy/5/4/10.png" />
