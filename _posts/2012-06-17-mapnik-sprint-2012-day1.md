@@ -28,11 +28,11 @@ Native CSS support awaits free time from developers to pick up on the excellent 
 In the afternoon everyone split off to experiment with new ideas and play with new features.
 
 
-<img src="http://wiki.openstreetmap.org/w/images/7/74/Toposm-logo.jpg">
+<img src="http://wiki.openstreetmap.org/w/images/7/74/TopOSM-logo.jpg">
 
-Lars started upgrading [TopOsm](http://www.toposm.com/) to the latest Mapnik 2.1.0-pre code, which natively supports compositing operations between features and styles. Lars hopes by leveraging compositing natively in Mapnik he can radically speed up his existing rendering workflow. Along the way he found [a few bugs](https://github.com/mapnik/mapnik/issues/1256) in SVG parsing that I was able to fix promptly and he discovered some interesting design issues around ["Smart Halos"](https://github.com/mapnik/mapnik/issues/1259), that will help guide the refinement of this experimental feature.
+Lars started upgrading [TopOSM](http://www.TopOSM.com/) to the latest Mapnik 2.1.0-pre code, which natively supports compositing operations between features and styles. Lars hopes by leveraging compositing natively in Mapnik he can radically speed up his existing rendering workflow. Along the way he found [a few bugs](https://github.com/mapnik/mapnik/issues/1256) in SVG parsing that I was able to fix promptly and he discovered some interesting design issues around ["Smart Halos"](https://github.com/mapnik/mapnik/issues/1259), that will help guide the refinement of this experimental feature.
 
-It was a joy to see the real-time collaboration with remote participants, as Bill Morris commented on the subtleties of [TopOsm rendering vs. google's terrain](http://farm8.staticflickr.com/7073/7381097632_b8b78c237d_z.jpg), and better approaches were discussed on IRC.
+It was a joy to see the real-time collaboration with remote participants, as Bill Morris commented on the subtleties of [TopOSM rendering vs. google's terrain](http://farm8.staticflickr.com/7073/7381097632_b8b78c237d_z.jpg), and better approaches were discussed on IRC.
 
 Tom and Artem spent most of the day brainstorming and experimenting with [HSL (hue, saturation, and lightness)](http://en.wikipedia.org/wiki/HSL_and_HSV) color transformations in Mapnik. HSL rotation could perhaps be a new kind of blend mode or standalone symbolizer - imagine being able to rotate hue in your entire map (or by feature) like:
 
@@ -49,16 +49,16 @@ AJ started messing with new bezier smoothing features that Artem added to Mapnik
 Or a trippy look:
 
 <a href="http://dl.dropbox.com/u/2398828/scrot/smooth02.png">
-<img src="http://dl.dropbox.com/u/2398828/scrot/smooth02.png" width="400" />
+<img src="http://dl.dropbox.com/u/2398828/scrot/smooth02.png" width="256" />
 </a>
 
 <a href="http://dl.dropbox.com/u/2398828/scrot/smooth01.png">
-<img src="http://dl.dropbox.com/u/2398828/scrot/smooth01.png" width="400">
+<img src="http://dl.dropbox.com/u/2398828/scrot/smooth01.png" width="256">
 </a>
 
 
-I enjoyed acting on a few side project ideas. After getting Mapnik compiled and built against the iPhone Simulator SDK on OS X, I wrote a simple Objective C++ app to be able to stress-test Mapnik rendering. See a [video here](
-http://f.cl.ly/items/1d3q2b1l2y0f0t2l2t0q/vector_ios_rendering.mov). I also started experimenting with wrapping Mapnik in a pure and simple C API. The motivation here is that a C API could provide a more stable endpoint for apps using Mapnik, could make things like [PyPy](http://pypy.org/) python bindings support (through ctypes) easy, and would allow ObjC iOS applications to call into Mapnik directly from C without needing to compile as ObjC++. It was great that just uttering my interest in this topic prompted some sage advise from [Howard Butler](https://github.com/hobu) about important design considerations for [theadsafe concurrency in C API's](https://twitter.com/howardbutler/status/214114362498101248).
+I enjoyed acting upon a few side project ideas. After getting Mapnik compiled and built against the iPhone Simulator SDK on OS X, I wrote a simple Objective C++ app to be able to stress-test Mapnik rendering. See a [video here](
+http://f.cl.ly/items/1d3q2b1l2y0f0t2l2t0q/vector_ios_rendering.mov). I also started experimenting with wrapping Mapnik in a pure and simple C API. The motivation here is that a C API could provide a more stable endpoint for apps using Mapnik, could make things like [PyPy](http://pypy.org/) python bindings support (through ctypes, or [node-ffi](https://github.com/rbranson/node-ffi)) easy, and would allow ObjC iOS applications to call into Mapnik directly from C without needing to compile as ObjC++. It was great that just uttering my interest in this topic prompted some sage advise from [Howard Butler](https://github.com/hobu) about important design considerations for [theadsafe concurrency in C API's](https://twitter.com/howardbutler/status/214114362498101248).
 
 ## Thank you
 Thanks to all the participants and especially [MapBox](https://twitter.com/#!/MapBox), for hosting us and providing a delicious catered lunch from [Taylor Gourmet](http://www.taylorgourmet.com/)!
