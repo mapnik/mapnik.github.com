@@ -27,8 +27,7 @@ Native CSS support awaits free time from developers to pick up on the excellent 
 
 In the afternoon everyone split off to experiment with new ideas and play with new features.
 
-
-<img src="http://wiki.openstreetmap.org/w/images/7/74/TopOSM-logo.jpg">
+<img src="http://toposm.com/logo_small.png" />
 
 Lars started upgrading [TopOSM](http://www.TopOSM.com/) to the latest Mapnik 2.1.0-pre code, which natively supports compositing operations between features and styles. Lars hopes by leveraging compositing natively in Mapnik he can radically speed up his existing rendering workflow. Along the way he found [a few bugs](https://github.com/mapnik/mapnik/issues/1256) in SVG parsing that I was able to fix promptly and he discovered some interesting design issues around ["Smart Halos"](https://github.com/mapnik/mapnik/issues/1259), that will help guide the refinement of this experimental feature.
 
@@ -61,7 +60,7 @@ I enjoyed acting upon a few side project ideas. After getting Mapnik compiled an
 http://f.cl.ly/items/1d3q2b1l2y0f0t2l2t0q/vector_ios_rendering.mov). I also started experimenting with wrapping Mapnik in a pure and simple C API. The motivation here is that a C API could provide a more stable endpoint for apps using Mapnik, could make things like [PyPy](http://pypy.org/) python bindings support (through ctypes, or [node-ffi](https://github.com/rbranson/node-ffi)) easy, and would allow ObjC iOS applications to call into Mapnik directly from C without needing to compile as ObjC++. It was great that just uttering my interest in this topic prompted some sage advise from [Howard Butler](https://github.com/hobu) about important design considerations for [theadsafe concurrency in C API's](https://twitter.com/howardbutler/status/214114362498101248).
 
 ## Thank you
-Thanks to all the participants and especially [MapBox](https://twitter.com/#!/MapBox), for hosting us and providing a delicious catered lunch from [Taylor Gourmet](http://www.taylorgourmet.com/)!
+Thanks to all the participants and especially [MapBox](https://twitter.com/#!/MapBox), for hosting us and [Bonnie](https://twitter.com/bonnie/status/213355117641084929) for organizing a delicious catered lunch from [Taylor Gourmet](http://www.taylorgourmet.com/)!
 
 
 
