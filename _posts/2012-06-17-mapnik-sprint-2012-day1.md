@@ -17,7 +17,7 @@ It was an enjoyable and spirited time sharing ideas for new features and connect
 ## Big needs
 Topics that received strong attention in the discussion were supporting better text and marker placement, more data-driven/dynamic symbolizers, and CSS natively. Fortunately each of these tasks, while very large, are in process and solidly on the roadmap.
 
-Mapnik 2.1 will include a re-written placement system by Hermann Krause, supporting alternative placements and fallbacks - the task before release is to document how it works.
+Mapnik 2.1 will include a re-written placement system by Hermann Kraus, supporting alternative placements and fallbacks - the task before release is to document how it works.
 
 A big step forward to more dynamic symbolizers was achieved last week thanks to the team at [mirecta](https://github.com/mirecta)/[mapy.cz](http://www.mapy.cz/) who landed expressions support for [svg transforms](https://github.com/mapnik/mapnik/pull/1243), and markers sizes will also soon be able to be [data-driven](https://github.com/mapnik/mapnik/pull/1255). But, much work and energy remains to properly design and support more symbolizers - work that will likely take another 6 months or so and will not appear until after the Mapnik 2.1 release.
 
