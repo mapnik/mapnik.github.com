@@ -1,8 +1,0 @@
----
-layout: post
-title: "A simplest Mapnik plugin"
-author: Dane Springmeyer
----
-
-We have a new ultra simple "hello world" plugin in mapnik trunk. This should be useful to anyone interested in adding new datasource plugins for any fancy new formats that come online.To get it you need mapnik trunk and this build option:<pre>$ scons SAMPLE_INPUT_PLUGINS=True</pre>See the basic intro to the idea of "template" plugins <a href="http://trac.mapnik.org/browser/trunk/plugins/input/templates/README">here</a>.README for the first, "hello world" plugin is <a href="http://trac.mapnik.org/browser/trunk/plugins/input/templates/helloworld/README">here</a>.And here is what it produces:<pre>$ cd plugins/input/templates/helloworld/$ nik2img.py test.xml hello.png -d 256 256</pre><img src="/images/hello.png" style="border:1px solid;"/>
-
