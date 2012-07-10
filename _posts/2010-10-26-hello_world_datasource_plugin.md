@@ -27,3 +27,11 @@ Which should produce:
 
 <img src="/images/hello.png" style="border:1px solid;"/>
 
+If you want to build the plugin outside of the Mapnik build system, you can do that by using the sample `Makefile`:
+
+<pre>
+cd plugins/input/templates/helloworld
+make
+make deploy
+</pre>
+
