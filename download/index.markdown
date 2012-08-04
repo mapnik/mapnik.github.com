@@ -6,11 +6,11 @@ title: Download
 
 ### Latest release
 
-The latest release is Mapnik 2.0.1. Download it [as tar.bz2](https://github.com/downloads/mapnik/mapnik/mapnik-v2.0.1.tar.bz2).
+The latest release is Mapnik 2.0.2. Download it [as tar.bz2](https://github.com/downloads/mapnik/mapnik/mapnik-v2.0.2.tar.bz2).
 
 ### Development code
 
-Use git to get the latest code:
+Use git to get the latest code (currently the 2.1.x series):
 
     git clone https://github.com/mapnik/mapnik.git
 
