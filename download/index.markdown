@@ -10,8 +10,9 @@ The latest release is Mapnik 2.0.2.
 
 Downloads include:
 
- * [Source tarball](https://github.com/downloads/mapnik/mapnik/mapnik-v2.0.2.tar.bz2)
- * [OS X Installer](https://github.com/downloads/mapnik/mapnik/mapnik_2.0.2.dmg)
+ * [Source tarball](https://github.com/downloads/mapnik/mapnik/mapnik-v2.0.2.tar.bz2) ([more info](https://github.com/mapnik/mapnik/blob/master/INSTALL.md))
+ * [OS X Installer](https://github.com/downloads/mapnik/mapnik/mapnik_2.0.2.dmg) (for more info see installer readme)
+ * [Ubuntu PPA](https://launchpad.net/~mapnik/+archive/v2.0.2) ([more info])
 
 ### Development code
 
