@@ -25,11 +25,6 @@ Browse the code at [github](https://github.com/mapnik/mapnik).
 Download a snapshot as a [zip archive](https://github.com/mapnik/mapnik/zipball/master).
 
 
-### Other releases
-
-[Previous tags](https://github.com/mapnik/mapnik/tags).
-
-
 ### Installing
 
 See platform specific notes at [Mapnik Wiki](https://github.com/mapnik/mapnik/wiki/Mapnik-Installation).
