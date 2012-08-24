@@ -6,7 +6,7 @@ author: Artem Pavlenko
 
 Following up last week's post about  [smart halos](http://mapnik.org/news/2012/04/20/smart-halos/), I wanted to share some ways of using compositing and filters together to achieve interesting effects.
 
-As a starting point we use the [smart halos](http://mapnik.org/news/2012/04/20/smart-halos/) map from the previous posting. You can find the features used in this post at [compositing branch](https://github.com/mapnik/mapnik/tree/compositing). Just be aware that these new features are work-in-progress and some syntax might change.
+As a starting point we use the [smart halos](http://mapnik.org/news/2012/04/20/smart-halos/) map from the previous posting. You can find the features used in this post <strike>in the [compositing branch](https://github.com/mapnik/mapnik/tree/compositing)</strike> Mapnik 2.1 release. Just be aware that these new features are work-in-progress and some syntax might change in future releases.
 
 ### Deep water
 
@@ -38,7 +38,7 @@ And lastly I add a bit of texture to the land fill to get that 'paper' feel to t
 
 ![Final](http://farm8.staticflickr.com/7199/7115592503_8318044641.jpg)
 
-I'm not sure the last step adds much to the cartography but it's good to try different things. So go ahead and grab the latest source from [compositing branch](https://github.com/mapnik/mapnik/tree/compositing) and have fun!
+I'm not sure the last step adds much to the cartography but it's good to try different things. So go ahead and grab <strike>the latest source from [compositing branch](https://github.com/mapnik/mapnik/tree/compositing)</strike> Mapnik 2.1 and have fun!
 
 Ooh, one more.. I really like 'blur' filters, they seem to be so versatile. Here is a water-floating-shadow style using a combination of 'emboss' and 'agg-stack-blur' filters, and also applying transform on the shadow symbolizer 
 <pre>transform="translate(10,10)"</pre>
