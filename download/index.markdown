@@ -28,7 +28,7 @@ Downloads include:
 
 ### Development code
 
-Use git to fetch the latest code (currently the 2.1.x series):
+Use git to fetch the latest code:
 
     git clone https://github.com/mapnik/mapnik.git
 
