@@ -23,7 +23,7 @@ Let's grab one of the [lovely watercolour patterns](http://content.stamen.com/wa
 Very nice so far, perhaps a bit flat. Now time to add some depth. One of the very useful image processing tools is the ability to apply various blurs. In this case I use 'agg-stack-blur' with both x/y radius' set to 10 pixels:
 
 <pre>
-&lt;Style name="water-shadow" image-filters="agg-stack-blur:rx=10,ry=10" comp-op="dst-over"&gt;
+&lt;Style name="water-shadow" image-filters="agg-stack-blur(10,10)" comp-op="dst-over"&gt;
 	&lt;Rule&gt;
 		&lt;Filter&gt;([HYC]=8)&lt;/Filter&gt;
 		&lt;PolygonSymbolizer fill="lightblue" fill-opacity="0.4" smooth="0.7" transform="translate(0,0)" /&gt;
