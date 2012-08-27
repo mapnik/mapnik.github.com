@@ -4,11 +4,11 @@ title: "Stamen, Compositing, and Mapnik 2.1"
 author: Dane Springmeyer
 ---
 
-What if there was software that combined the power of Photoshop image effects with Illustrator like transformations that is fully open source, spatially capable, and scales to handle data as big as OpenStreetMap? Well, hopefully as you start using Mapnik 2.1 more, this will feel like less of a pipedream.
+What if there was software that combined the power of Photoshop image effects with Illustrator like transformations that is fully open source, spatially capable, and can handle big data like OpenStreetMap? Well, hopefully as you start using Mapnik 2.1 this future will feel near.
 
 ### Thanks Stamen
 
-Our friends at [Stamen Design](http://stamen.com) have been advocating for the value of Photoshop-like alpha compositing and blending modes in mapping for many years. As far back as 2008 Mike was already beautifully [working around](http://mike.teczno.com/notes/hillshading.html) limitations in Mapnik for terrain hillshading and proactively advocating for better support by writing new software like [TileStache](http://permalink.gmane.org/gmane.comp.gis.mapnik.devel/518). Shaun was instrumental in helping me see the viability of compositing in Mapnik by helping push sketching out ideas [on the Mapnik wiki](https://github.com/mapnik/mapnik/wiki/Ideas_Compositing).
+Our friends at [Stamen Design](http://stamen.com) have been advocating for the value of Photoshop-like alpha blending in mapping for many years. As far back as 2008 Mike was already beautifully [working around](http://mike.teczno.com/notes/hillshading.html) limitations in Mapnik for terrain hillshading and proactively advocating for better support by writing new software like [TileStache](http://permalink.gmane.org/gmane.comp.gis.mapnik.devel/518). Shaun was instrumental in helping me see the viability of compositing in Mapnik by helping sketching out ideas [on the Mapnik wiki](https://github.com/mapnik/mapnik/wiki/Ideas_Compositing).
 
 ### A compositing framework in Core
 
