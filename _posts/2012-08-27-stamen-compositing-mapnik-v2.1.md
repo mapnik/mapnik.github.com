@@ -4,7 +4,7 @@ title: "Stamen, Compositing, and Mapnik 2.1"
 author: Dane Springmeyer
 ---
 
-What if there was software that combined the power of Photoshop image effects with Illustrator like transformations that is fully open source, spatially capable, and can handle big data like OpenStreetMap? Well, hopefully as you start using Mapnik 2.1 this future will feel near.
+What if there were software that combined the power of Photoshop image effects with Illustrator like vector transformations that was fully open source, spatially capable, and could handle big data like OpenStreetMap? Well, hopefully as you start using Mapnik 2.1 this future will feel near.
 
 ### Thanks Stamen
 
