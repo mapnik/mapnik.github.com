@@ -6,7 +6,7 @@ author: Artem Pavlenko
 
 Following up last week's post about  [smart halos](http://mapnik.org/news/2012/04/20/smart-halos/), I wanted to share some ways of using compositing and filters together to achieve interesting effects.
 
-As a starting point we use the [smart halos](http://mapnik.org/news/2012/04/20/smart-halos/) map from the previous posting. You can find the features used in this post at [compositing branch](https://github.com/mapnik/mapnik/tree/compositing). Just be aware that these new features are work-in-progress and some syntax might change.
+As a starting point we use the [smart halos](http://mapnik.org/news/2012/04/20/smart-halos/) map from the previous posting. You can find the features used in this post <strike>in the [compositing branch](https://github.com/mapnik/mapnik/tree/compositing)</strike> Mapnik 2.1 release. Just be aware that these new features are work-in-progress and some syntax might change in future releases.
 
 ### Deep water
 
@@ -23,7 +23,7 @@ Let's grab one of the [lovely watercolour patterns](http://content.stamen.com/wa
 Very nice so far, perhaps a bit flat. Now time to add some depth. One of the very useful image processing tools is the ability to apply various blurs. In this case I use 'agg-stack-blur' with both x/y radius' set to 10 pixels:
 
 <pre>
-&lt;Style name="water-shadow" image-filters="agg-stack-blur:rx=10,ry=10" comp-op="dst-over"&gt;
+&lt;Style name="water-shadow" image-filters="agg-stack-blur(10,10)" comp-op="dst-over"&gt;
 	&lt;Rule&gt;
 		&lt;Filter&gt;([HYC]=8)&lt;/Filter&gt;
 		&lt;PolygonSymbolizer fill="lightblue" fill-opacity="0.4" smooth="0.7" transform="translate(0,0)" /&gt;
@@ -38,7 +38,7 @@ And lastly I add a bit of texture to the land fill to get that 'paper' feel to t
 
 ![Final](http://farm8.staticflickr.com/7199/7115592503_8318044641.jpg)
 
-I'm not sure the last step adds much to the cartography but it's good to try different things. So go ahead and grab the latest source from [compositing branch](https://github.com/mapnik/mapnik/tree/compositing) and have fun!
+I'm not sure the last step adds much to the cartography but it's good to try different things. So go ahead and grab <strike>the latest source from [compositing branch](https://github.com/mapnik/mapnik/tree/compositing)</strike> Mapnik 2.1 and have fun!
 
 Ooh, one more.. I really like 'blur' filters, they seem to be so versatile. Here is a water-floating-shadow style using a combination of 'emboss' and 'agg-stack-blur' filters, and also applying transform on the shadow symbolizer 
 <pre>transform="translate(10,10)"</pre>
