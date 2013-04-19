@@ -53,7 +53,7 @@ NOTE: smaller numbers are better and indicate that the tests finished faster.
 
 The results seem to indicate:
 
- - Concurrent does not hurt performance and rather helps. This is great, but not always the case in C++ when parsing strings. If your parsing code triggers mutex locks then concurrency like this can hurt.
+ - High concurrency, as you would hope and expect, does not hurt performance but rather helps. This is great, but not always the case in C++ when parsing strings. If your parsing code triggers mutex locks then concurrency like this can hurt.
  
  - Mapnik is more than 2x faster than GEOS for these simple [test cases](https://github.com/springmeyer/wkt-parsing-benchmark/blob/master/cases/wkt.csv). So, the next step here is to 1) figure out if Mapnik continues to perform well on larger WKT strings and 2) make sure we are using the GEOS API correctly.
  
