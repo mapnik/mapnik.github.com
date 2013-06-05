@@ -32,7 +32,7 @@ We also provide a pre-built [OS X 64 bit package](http://mapnik.s3.amazonaws.com
 
  * [Ubuntu PPA](https://launchpad.net/~mapnik/+archive/v2.2.0) ([more info](https://github.com/mapnik/mapnik/wiki/UbuntuInstallation))
 
-### Source
+## Source
 
 To build Mapnik v2.2.0 from source either download the [v2.2.0 tarball](http://mapnik.s3.amazonaws.com/dist/v2.2.0/mapnik-v2.2.0.tar.bz2) or pull directly from github:
 
@@ -41,9 +41,7 @@ To build Mapnik v2.2.0 from source either download the [v2.2.0 tarball](http://m
 
 For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v2.2.0/INSTALL.md)
 
-### Development code
-
-Use git to fetch the latest code (will default to `master` branch):
+You can also use git to fetch the latest code (will default to `master` branch):
 
     git clone https://github.com/mapnik/mapnik.git
 
@@ -51,13 +49,13 @@ Browse the code at [github](https://github.com/mapnik/mapnik).
 
 Download a snapshot as a [zip archive](https://github.com/mapnik/mapnik/archive/master.zip).
 
-### Extra Installation Details
+##  Extra Installation Details
 
 See platform specific notes at [Mapnik Wiki](https://github.com/mapnik/mapnik/wiki/Mapnik-Installation).
 
 See also the detailed [Install guide](https://github.com/mapnik/mapnik/blob/master/INSTALL.md) for the development code.
 
-### Older releases
+##  Older releases
 
 See the listing at [the download archive on s3](http://mapnik.s3.amazonaws.com/index.html?path=dist/).
 
