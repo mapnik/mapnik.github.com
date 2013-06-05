@@ -3,46 +3,59 @@ layout: default
 title: Download
 ---
 
+## Latest Major Release
 
-### Latest Major Release
+The latest release is Mapnik v2.2.0.
 
-The latest release is Mapnik 2.1.0.
+## Platforms
 
-Downloads include:
+### OS X
 
- * [Source tarball](https://github.com/downloads/mapnik/mapnik/mapnik-v2.1.0.tar.bz2) ([more info](https://github.com/mapnik/mapnik/blob/master/INSTALL.md))
- * [OS X Installer](https://github.com/downloads/mapnik/mapnik/mapnik-v2.1.0.dmg)
- * [Ubuntu PPA](https://launchpad.net/~mapnik/+archive/v2.1.0) ([more info](https://github.com/mapnik/mapnik/wiki/UbuntuInstallation))
+The recommend install method on OS X is `homebrew`. If you are running `homebrew` simply do:
 
+    brew update && brew install mapnik
 
-### Recent bugfix series on 2.0.x
+We also provide a pre-built [OS X 64 bit package](http://mapnik.s3.amazonaws.com/dist/v2.2.0/mapnik-osx-v2.2.0.dmg) that will install into the same place (`/usr/local`) as homebrew.
 
-The latest and final release in the 2.0.x series is 2.0.2
+### iOS
 
-Downloads include:
+ * [3-way arch (i386/armv7/armv7s) SDK](http://mapnik.s3.amazonaws.com/dist/v2.2.0/mapnik-ios-v2.2.0.tar.bz2)
+ * [Setup instructions](https://gist.github.com/springmeyer/5710531)
 
- * [Source tarball](https://github.com/downloads/mapnik/mapnik/mapnik-v2.0.2.tar.bz2) ([more info](https://github.com/mapnik/mapnik/blob/master/INSTALL.md))
- * [OS X Installer](https://github.com/downloads/mapnik/mapnik/mapnik_2.0.2.dmg)
- * [Ubuntu PPA](https://launchpad.net/~mapnik/+archive/v2.0.2) ([more info](https://github.com/mapnik/mapnik/wiki/UbuntuInstallation))
+### Windows
 
+ * [Windows 32 bit Package](http://mapnik.s3.amazonaws.com/dist/v2.2.0/mapnik-win-v2.2.0.zip)
+ * [Windows 32 bit SDK](http://mapnik.s3.amazonaws.com/dist/v2.2.0/mapnik-win-sdk-v2.2.0.zip)
+ * [Setup instructions](https://gist.github.com/springmeyer/5651701)
 
-### Development code
+### Ubuntu
 
-Use git to fetch the latest code:
+ * [Ubuntu PPA](https://launchpad.net/~mapnik/+archive/v2.2.0) ([more info](https://github.com/mapnik/mapnik/wiki/UbuntuInstallation))
+
+## Source
+
+To build Mapnik v2.2.0 from source either download the [v2.2.0 tarball](http://mapnik.s3.amazonaws.com/dist/v2.2.0/mapnik-v2.2.0.tar.bz2) or pull directly from github:
+
+    git clone https://github.com/mapnik/mapnik.git
+    git checkout v2.2.0
+
+For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v2.2.0/INSTALL.md)
+
+You can also use git to fetch the latest code (will default to `master` branch):
 
     git clone https://github.com/mapnik/mapnik.git
 
 Browse the code at [github](https://github.com/mapnik/mapnik).
 
-Download a snapshot as a [zip archive](https://github.com/mapnik/mapnik/zipball/master).
+Download a snapshot as a [zip archive](https://github.com/mapnik/mapnik/archive/master.zip).
 
-### Installing
+##  Extra Installation Details
 
 See platform specific notes at [Mapnik Wiki](https://github.com/mapnik/mapnik/wiki/Mapnik-Installation).
 
 See also the detailed [Install guide](https://github.com/mapnik/mapnik/blob/master/INSTALL.md) for the development code.
 
-### Older releases
+##  Older releases
 
-See the listing at [the github downloads](https://github.com/mapnik/mapnik/downloads).
+See the listing at [the download archive on s3](http://mapnik.s3.amazonaws.com/index.html?path=dist/).
 
