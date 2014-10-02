@@ -10,7 +10,7 @@ title: Contact
 
 This is a single list for user and development questions.
 
-For help you can alternatively post to an issue [mapnik-support](http://groups.google.com/intl/en/images/logos/groups_logo_sm.gif) (requires github username). But please only post to one place: do not ask for help on both the mailing list and a github issue.
+For help you can alternatively post to an issue [mapnik-support](https://github.com/mapnik/mapnik-support) (requires github username). But please only post to one place: do not ask for help on both the mailing list and a github issue.
 
 <form action="http://groups.google.com/group/mapnik/boxsubscribe">
   <input type=hidden name="hl" value="en-GB">
