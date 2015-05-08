@@ -4,34 +4,12 @@ title: "A simplest Mapnik plugin"
 author: Dane Springmeyer
 ---
 
-We have a new ultra simple "hello world" plugin in Mapnik.
+I've written a starter "hello world" datasource plugin (aka `input`) for Mapnik.
 
-This should be useful for anyone interested in adding new datasource plugins for any fancy new formats that come online.
+It should be useful as a starting point for anyone writing their own plugin. It also serves as an example of how to develop plugins that are standalone and do not live inside of Mapnik core. While we do maintain a handful of [plugins in core](https://github.com/mapnik/mapnik/blob/master/plugins/input/) the design is for plugins to be external to Mapnik.
 
-To build it you need Mapnik >= 2.0 and a custom build flag:
-
-<pre>
-./configure SAMPLE_INPUT_PLUGINS=True
-</pre>
-
-See the basic intro to the idea of ["template" plugins](https://github.com/mapnik/mapnik/blob/master/plugins/input/templates/README.md), see the "hello world" plugin [readme](https://github.com/mapnik/mapnik/blob/master/plugins/input/templates/helloworld/README.md) find the [code](https://github.com/mapnik/mapnik/tree/master/plugins/input/templates/helloworld).
-
-To test the plugin you can render a map like:
-
-<pre>
-cd plugins/input/templates/helloworld
-nik2img.py test.xml hello.png -d 256 256
-</pre>
-
-Which should produce:
+It renders nothing more than:
 
 <img src="/images/hello.png" style="border:1px solid;"/>
 
-If you want to build the plugin outside of the Mapnik build system, you can do that by using the sample `Makefile`:
-
-<pre>
-cd plugins/input/templates/helloworld
-make
-make deploy
-</pre>
-
+To get started developing see the sample repository at github: <https://github.com/mapnik/hello-world-input-plugin>.
