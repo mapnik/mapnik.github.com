@@ -9,6 +9,10 @@ body,html
   background-color:white;
 }
 
+.fill-ltblue {
+	background-color: #4B94D0;
+}
+
 .errorlist {
 	color: #f00;
 }
@@ -17,7 +21,39 @@ body,html
 	color: #f00;
 }
 
-h1,h2,h3,h4,h5 {color:#073f93;font-weight:normal;}
+.big {
+  font-size: 36px;
+  line-height:50px;
+  color: #aaa;
+}
+
+.big2 {
+  font-size: 36px;
+  line-height:50px;
+  color: #939FB3;
+}
+
+code,
+pre {
+  background:rgba(0,0,0,0.025);
+  font-size:12px;
+  line-height:20px;
+  padding:3px;
+  border-radius: 3px;
+  }
+pre {
+  display:block;
+  padding:10px;
+  word-break:break-all;
+  word-wrap:break-word;
+  white-space:pre;
+  white-space:pre-wrap;
+  -moz-tab-size:4;
+  tab-size: 2;
+  height: 250px;
+}
+
+/* h1,h2,h3,h4,h5 {color:#073f93;font-weight:normal;} */
 h1 {font-size: 16pt;}
 h2 {font-size: 14pt;}
 :link, :visited {

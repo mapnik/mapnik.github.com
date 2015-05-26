@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include mapnik.meta %}
+	<title>{{ page.title }}</title>
+</head>
+
+<body>
+	<!-- header -->
+	<div class='col12 clearfix prose fill-ltblue'>
+		<div class='col2 margin3 pad4y'>
+			<h2 class='fancy dark'>MAPNIK</h2>
+			<!--<a href="/"><img src="/images/mapnik-logo.png" /></a>-->
+		</div>
+		<div class='col3 dark pad4y prose pad1x'>
+			an open-source toolkit for building, styling, and rendering fast, beautiful web maps
+		</div>
+	</div>
+
+	<!-- jump nav -->
+	<div class='col12 clearfix fill-blue pad1y'>
+		<div class='col12 margin3'>
+			<div class='col12 pill'><!--
+			  --><a href='#code' class='button fill-lighten1 short col2'>build</a><!--
+			  --><a href='#xml' class='button fill-lighten1 short col2'>style</a><!--
+			  --><a href='#extend' class='button fill-lighten1 short col2'>extend</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- code bindings -->
+	<a name="code"></a>
+	<div class='prose col12 clearfix fill-gray pad2y'>
+		<div class='col8 margin3 space-bottom2'>
+		<div class='col12 pad4y big'>build with code bindings</div>
+		<div class='col3 pad2y space-bottom2'>
+			<h1>PYTHON</h1>
+			<a href='install.html' class='button col9 fill-green'>install bindings</a>
+		</div>
+		<div class='col8 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
+    
+			<div class='pill col9 space-bottom2'><!--
+			  --><a href='python/docs.html' class='button short col3'>docs</a><!--
+			  --><a href='python/app.html' class='button short col3'>API</a><!--
+			  --><a href='python/examples.html' class='button short col3'>examples</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- xml stylesheets -->
+	<a name="xml"></a>
+	<div class='col12 clearfix fill-light'>
+		<div class='col5'><img src='images/contours.png'></div>
+		<div class='col7 pad4x'>
+			<div class='col12 pad4y big2'>style with XML stylesheets</div>
+
+			{% highlight xml %}
+
+			Duis vel aliquet eros. 
+			Donec mollis est nec metus elementum.
+			Send uon tincidunt libero porttitor. 
+			Cras ac tempor augue, at porta tellus. 
+			Sed fermentum neque mi, sit amet purus fermentum bibendum.
+			Duis vel aliquet eros. 
+			Donec mollis est nec metus elementum, non tincidunt libero porttitor. 
+
+			Cras ac tempor augue, at porta tellus. 
+			Sed fermentum neque mi, sit amet purus fermentum bibendum.
+			Duis vel aliquet eros. 
+			Donec mollis est nec metus elementum,.
+			Penon tincidunt libero porttitor. 
+
+			Cras ac tempor augue, at porta tellus. 
+			Sed fermentum neque mi, sit amet purus fermentum bibendum.
+			Duis vel aliquet eros. Donec mollis est nec metus elementum. 
+			Non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. 
+			Sed fermentum neque mi, sit amet purus fermentum bibendum.
+
+			{% endhighlight xml %}
+		</div>
+	</div>
+
+	<div class='col12 clearfix fill-white pad4y'>
+
+		<div class='col3 margin2 pad2y space-bottom2'>
+			<h2>wget data + XML stylesheet</h2>
+			<div class='col12 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
+			<div class='pill col12 pad1y'><!--
+				--><a href='docs.html' class='button short col6'>docs</a><!--
+				--><a href='examples.html' class='button short col6'>examples</a>
+			</div>
+		</div>
+
+		<div class='col4 margin1'>
+			<img src='images/contours.png'>
+		</div>
+
+	</div>
+</div>
+
+	<!-- extend apps -->
+	<a name="extend"></a>
+	<div class='col12 clearfix fill-denim pad4y'>
+		<div class='col8 margin2 big2 space-bottom2'>extend to mapping apps</div>
+
+		<div class='col3 margin2 pad1y'>
+			<img src='images/contours.png'>
+		</div>
+
+		<div class='col5 pad4x pad2y space-bottom2 dark'>
+			<h2>Mapbox Studio</h2>
+			<div class='col12 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
+			<div class='pill col12 pad1y'><!--
+				--><a href='docs.html' class='button short col6'>more</a><!--
+				--><a href='examples.html' class='button short col6'>play</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class='col12 center caption small fill-darkblue dark pad1y'>
+		Copyright © 2013 Artem Pavlenko
+	</div>
+  <!-- end content -->
+</body>
+</html>
+
