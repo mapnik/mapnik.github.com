@@ -1,0 +1,15 @@
+- name: Python
+  color: cyan
+  slug: python
+
+- name: Node
+  color: purple
+  slug: node
+
+- name: C++
+  color: blue
+  slug: core
+
+- name: XML
+  color: mustard
+  slug: xml

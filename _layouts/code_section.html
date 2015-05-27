@@ -26,9 +26,9 @@
 			<div class='clearfix fill-{{color}} dark center pad1y'><a href="/splash.html"><h3>MAPNIK</h3></a> + {{code}}
 				<div class='col12 inline pad2y'>
 					<div class='pill col12 margin1 fill-{{color}}'><!--
-			  			--><a href='{{site.baseurl}}/{{type}}/docs.html' class='button fill-lighten1 short col3'>docs</a><!--
-			  			--><a href='{{type}}' class='button fill-lighten1 short col3'>api</a><!--
-			 			--><a href='{{type}}' class='button fill-lighten1 short col4'>examples</a>
+			  			--><a href='#' class='button fill-lighten1 short col3'>docs</a><!--
+			  			--><a href='#' class='button fill-lighten1 short col3'>api</a><!--
+			 			--><a href='#' class='button fill-lighten1 short col4'>examples</a>
 					</div>
 				</div>
 			</div>
@@ -62,7 +62,28 @@
 		<div class='col8 fill-white limiter margin3 pad2x pad2y'>
 
       	
-		{{content}}
+		<div class='fill-light'>
+			<div class="limiter contain pad4y clearfix">
+				{% for post in site.categories[category] reversed %}
+				<div class="fill-white pad4 pad4x space-bottom2 round post contain clearfix">
+					<div class="post-side fill-{{color}} clearfix"></div>
+					<div class="col7 pad2x keyline-right">
+	        			<h3 class="pad1y"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
+	        			<p class="prose quiet">{% if post.deprecated %}<span class="inline fill-notice pad0y pad1x round small">Deprecated</span>{% endif %} {{post.summary}}</p>
+      				</div>
+	      			<div class="col5 pad1y pad2x">
+	        			<a class="round pad1y small strong pad2x fill-{{color}} rcon next space-bottom2" href="{{site.baseurl}}{{post.url}}">Read this guide</a>
+	        			<div class="col12">
+	          				{% for tag in post.tags %}
+	          				<small class='tag'> {{tag}} </small>
+	          				{% endfor %}
+	        			</div>
+	      			</div>
+    			</div>
+    			{% endfor %}
+
+			</div>
+		</div>
 
 
     </div>
