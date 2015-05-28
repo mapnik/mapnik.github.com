@@ -2,7 +2,7 @@
 layout: code_page
 title: Getting started with Python
 category: Python
-type: example
+type: examples
 date: 0000-01-01
 ---
 

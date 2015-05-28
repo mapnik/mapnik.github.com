@@ -4,19 +4,15 @@
 <head>
     {% include mapnik.meta %}
 	<title>{{ page.title }}</title>
-
-
-{% assign category = page.title | downcase %}
-{% assign type = page.type %}
-{% for cat in site.data.categories %}
-{% if cat.name == page.category %}
-{% assign code = cat.name %}
-{% assign color = cat.color %}
-{% assign slug = cat.slug %}
-{% endif %}
-{% endfor %}
-
-
+		{% assign category = page.title | downcase %}
+		{% assign type = page.type %}
+		{% for cat in site.data.categories %}
+		{% if cat.name == page.category %}
+		{% assign code = cat.name %}
+		{% assign color = cat.color %}
+		{% assign slug = cat.slug %}
+		{% endif %}
+		{% endfor %}
 </head>
 
 <body>
@@ -26,48 +22,72 @@
 			<div class='clearfix fill-{{color}} dark center pad1y'><a href="/splash.html"><h3>MAPNIK</h3></a> + {{code}}
 				<div class='col12 inline pad2y'>
 					<div class='pill col12 margin1 fill-{{color}}'><!--
-			  			--><a href='{{site.baseurl}}/{{type}}/docs.html' class='button fill-lighten1 short col3'>docs</a><!--
-			  			--><a href='{{type}}' class='button fill-lighten1 short col3'>api</a><!--
-			 			--><a href='{{type}}' class='button fill-lighten1 short col4'>examples</a>
+			  			--><a href='{{site.baseurl}}/pages/{{code}}-docs.html' class='button fill-lighten1 short col3'>docs</a><!--
+			  			--><a href='{{site.baseurl}}/pages/{{code}}-api.html' class='button fill-lighten1 short col3'>api</a><!--
+			  			--><a href='{{site.baseurl}}/pages/{{code}}-examples.html' class='button fill-lighten1 short col4'>examples</a>
 					</div>
 				</div>
 			</div>
-			<div class='small fill-gray pad2x'>
-				<div class='pad1y'>
-					<h3 class='pad1y'>Section 1</h3>
-					    <nav class='col12 pad1'>
-					      <a class='block' href='#'>Welcome</a>
-					      <a class='block' href='#'>Where to go</a>
-					      <a class='block' href='#'>Places to stay</a>
-					      <a class='block' href='#'>Mars only offers</a>
-					      <a class='block' href='#'>Book online today</a>
-					    </nav>
-				</div>
 
-				<div class='pad1y'>
-					<h3>Section 2</h3>
-					    <nav class='col12 pad1'>
-					      <a class='block' href='#'>Welcome</a>
-					      <a class='block' href='#'>Where to go</a>
-					      <a class='block' href='#'>Places to stay</a>
-					      <a class='block' href='#'>Mars only offers</a>
-					      <a class='block' href='#'>Book online today</a>
-					    </nav>
-				</div>
 
+		<div class='small fill-gray pad2x'>
+     		<div class='pad1y'>
+				<nav class='col12 pad1'>
+
+					{% for post in site.categories[category] reversed %}
+
+						{% if post.type == 'docs' and page.type == 'docs' %}
+						  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+						{% endif %}
+
+						{% if post.type == 'api' and page.type == 'api' %}
+						  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+						{% endif %}
+
+						{% if post.type == 'examples' and page.type == 'examples' %}
+						  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+						{% endif %}
+
+					{% endfor %}
+
+				</nav>
 			</div>
 		</div>
 
-		<!-- content -->
-		<div class='col8 fill-white limiter margin3 pad2x pad2y'>
 
-      	
-		{{content}}
+	</div>
+</div>
 
+<!-- content -->
+<div class='col8 fill-white limiter margin3 pad2x pad2y'>
 
-    </div>
+	{% for post in site.categories[category] reversed %}
+
+		{% if post.type == 'docs' and page.type == 'docs' %}
+			<h2>{{post.title}}</h2>
+			{{post.content}}
+			
+		{% endif %}
+
+		{% if post.type == 'api' and page.type == 'api' %}
+		  {{post.content}}
+		{% endif %}
+
+		{% if post.type == 'examples' and page.type == 'examples' %}
+			{{post.content}}
+		{% endif %}
+
+	{% endfor %}
+
+	
+
+</div>
+
 </div>
 
 
 </body>
 </html>
+
+
+

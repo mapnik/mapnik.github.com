@@ -4,19 +4,15 @@
 <head>
     {% include mapnik.meta %}
 	<title>{{ page.title }}</title>
-
-
-{% assign category = page.title | downcase %}
-{% assign type = page.type %}
-{% for cat in site.data.categories %}
-{% if cat.name == page.category %}
-{% assign code = cat.name %}
-{% assign color = cat.color %}
-{% assign slug = cat.slug %}
-{% endif %}
-{% endfor %}
-
-
+		{% assign category = page.title | downcase %}
+		{% assign type = page.type %}
+		{% for cat in site.data.categories %}
+		{% if cat.name == page.category %}
+		{% assign code = cat.name %}
+		{% assign color = cat.color %}
+		{% assign slug = cat.slug %}
+		{% endif %}
+		{% endfor %}
 </head>
 
 <body>
@@ -24,65 +20,40 @@
 		<!-- side nav -->
 		<div class='hide-mobile pin-left pint-top pin-bottom col3 quiet-scroll scroll-styled fixed fill-gray'>
 			<div class='clearfix fill-{{color}} dark center pad1y'><a href="/splash.html"><h3>MAPNIK</h3></a> + {{code}}
+
+				
 				<div class='col12 inline pad2y'>
 					<div class='pill col12 margin1 fill-{{color}}'><!--
-			  			--><a href='#' class='button fill-lighten1 short col3'>docs</a><!--
-			  			--><a href='#' class='button fill-lighten1 short col3'>api</a><!--
-			 			--><a href='#' class='button fill-lighten1 short col4'>examples</a>
+			  			--><a href='{{site.baseurl}}/pages/{{code}}-docs.html' class='button fill-lighten1 short col3'>docs</a><!--
+			  			--><a href='{{site.baseurl}}/pages/{{code}}-api.html' class='button fill-lighten1 short col3'>api</a><!--
+			  			--><a href='{{site.baseurl}}/pages/{{code}}-examples.html' class='button fill-lighten1 short col4'>examples</a>
 					</div>
 				</div>
 			</div>
+
+
 			<div class='small fill-gray pad2x'>
 				<div class='pad1y'>
-					<h3 class='pad1y'>Section 1</h3>
-					    <nav class='col12 pad1'>
-					      <a class='block' href='#'>Welcome</a>
-					      <a class='block' href='#'>Where to go</a>
-					      <a class='block' href='#'>Places to stay</a>
-					      <a class='block' href='#'>Mars only offers</a>
-					      <a class='block' href='#'>Book online today</a>
+					<h3 class='pad1y'>Docs</h3>
+						<nav class='col12 pad1'>
+						{% for post in site.categories[category] reversed %}{% if post.type == 'docs' %}
+					    	<a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+						{% endif %}{% endfor %}
 					    </nav>
 				</div>
 
-				<div class='pad1y'>
-					<h3>Section 2</h3>
-					    <nav class='col12 pad1'>
-					      <a class='block' href='#'>Welcome</a>
-					      <a class='block' href='#'>Where to go</a>
-					      <a class='block' href='#'>Places to stay</a>
-					      <a class='block' href='#'>Mars only offers</a>
-					      <a class='block' href='#'>Book online today</a>
-					    </nav>
-				</div>
 
 			</div>
 		</div>
 
 		<!-- content -->
 		<div class='col8 fill-white limiter margin3 pad2x pad2y'>
-
       	
-		<div class='fill-light'>
 			<div class="limiter contain pad4y clearfix">
-				{% for post in site.categories[category] reversed %}
-				<div class="fill-white pad4 pad4x space-bottom2 round post contain clearfix">
-					<div class="post-side fill-{{color}} clearfix"></div>
-					<div class="col7 pad2x keyline-right">
-	        			<h3 class="pad1y"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
-	        			<p class="prose quiet">{% if post.deprecated %}<span class="inline fill-notice pad0y pad1x round small">Deprecated</span>{% endif %} {{post.summary}}</p>
-      				</div>
-	      			<div class="col5 pad1y pad2x">
-	        			<a class="round pad1y small strong pad2x fill-{{color}} rcon next space-bottom2" href="{{site.baseurl}}{{post.url}}">Read this guide</a>
-	        			<div class="col12">
-	          				{% for tag in post.tags %}
-	          				<small class='tag'> {{tag}} </small>
-	          				{% endfor %}
-	        			</div>
-	      			</div>
-    			</div>
-    			{% endfor %}
-
-			</div>
+				{% for post in site.categories[category] reversed %}{% if post.type == 'install' %}
+					{{post.content}}
+    		</div>
+				{% endif %}{% endfor %}
 		</div>
 
 
