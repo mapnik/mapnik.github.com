@@ -1,5 +1,5 @@
 ---
-layout: code_page
+layout: 00_page
 title: Getting started with Python
 category: Python
 type: examples

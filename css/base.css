@@ -33,25 +33,144 @@ body,html
   color: #939FB3;
 }
 
-code,
-pre {
+
+/* TOC NAV */
+
+
+.toc-wrap.affix {
+  position: fixed;
+  bottom: 15px;
+  top: 10px;
+}
+
+.toc-wrap.affix-bottom {
+  top: auto !important;
+  /* bottom: 265px; position: absolute; */
+}
+
+
+@media (min-width: 640px) {
+
+  .toc {
+    max-width: 250px;
+    float: left;
+  }
+
+  .toc-wrap {
+    max-width: 175px;
+    font-size: 13px;
+    padding-right: 20px;
+  }
+  .toc-wrap.affix,
+  .toc-wrap.affix-bottom {
+    overflow: auto;
+    /* max-width: 17%; */
+  }
+}
+
+
+
+@media only screen and (max-width: 640px) {
+
+  .toc-wrap.affix-bottom,
+  .toc-wrap.affix {
+    position: static;
+    width: 100%;
+  }
+
+}
+
+
+@media only screen and (max-width: 640px) {
+
+  .toc {
+    border: 1px solid rgba(0,0,0,0.10);
+    margin-bottom: 20px;
+  }
+
+  .toc li {
+    padding:0;
+    margin:0;
+  }
+
+  .toc li a { padding:10px; }
+
+  .toc li:not(:last-child) a { border-bottom:1px solid rgba(0, 0 ,0 , .10); }
+
+}
+
+
+/* OLD version
+
+#sidebar a.active {
+  	border:0 #ddd solid;
+  	border-right-width:5px;
+	background-color: #eee;
+}
+
+.affix-top,.affix{
+	position: static;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+  	width: 300px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    width: 300px;
+  }
+
+*/
+
+/* Links */
+.dark a.white,
+.dark a:visited.white,
+.dark a.active .white ,
+.dark a.white :hover,
+.dark a:link.white, :visited {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: none;
+  background: transparent;
+  }
+
+.highlight code {
+  font-size:12px;
+  line-height:20px;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 20px;
+  }
+
+.highlight pre {
   background:rgba(0,0,0,0.025);
   font-size:12px;
   line-height:20px;
-  padding:3px;
+  padding: 3px;
   border-radius: 3px;
+  margin: 20px;
   }
-pre {
+
+.highlight pre {
   display:block;
-  padding:10px;
+  padding: 10px;
   word-break:break-all;
   word-wrap:break-word;
   white-space:pre;
   white-space:pre-wrap;
   -moz-tab-size:4;
   tab-size: 2;
-  height: 250px;
+  /*height: 250px;*/
+  margin: 20px;
 }
+
+/* added above */
+
+
+
 
 /* h1,h2,h3,h4,h5 {color:#073f93;font-weight:normal;} */
 h1 {font-size: 16pt;}
@@ -137,7 +256,6 @@ margin: 0.2em 260px 0 0;
 float: right;
 width: 260px;
 margin-right:0;
-padding-top: 1em;
 }
 
 #footer

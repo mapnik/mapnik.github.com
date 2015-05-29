@@ -37,8 +37,7 @@
 						{% for post in site.categories[category] reversed %}
 
 							{% if post.type == 'docs' and page.type == 'docs' %}
-							  <a class='block' href="/pages/{{code}}-{{type}}{{post.url}}">{{post.title}}</a> | 
-<!--/pages/{{code}}-{{type}}-->{{post.url}}
+							  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
 							{% endif %}
 
 							{% if post.type == 'api' and page.type == 'api' %}
@@ -46,6 +45,10 @@
 							{% endif %}
 
 							{% if post.type == 'examples' and page.type == 'examples' %}
+							  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+							{% endif %}
+
+							{% if post.type == 'install' and page.type == 'install' %}
 							  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
 							{% endif %}
 
@@ -75,6 +78,10 @@
 					{% endif %}
 
 					{% if post.type == 'examples' and page.type == 'examples' %}
+						{{post.content}}
+					{% endif %}
+
+					{% if post.type == 'install' and page.type == 'install' %}
 						{{post.content}}
 					{% endif %}
 
