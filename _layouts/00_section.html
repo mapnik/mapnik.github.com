@@ -17,82 +17,70 @@
 
 <body>
 	<div class='grid'>
-		<!-- side nav -->
-		<div class='hide-mobile pin-left pint-top pin-bottom col3 quiet-scroll scroll-styled fixed fill-gray'>
-			<div class='clearfix fill-{{color}} dark center pad1y'><a href="/splash.html"><h3>MAPNIK</h3></a> + <a class="white" href="{{site.baseurl}}/pages/{{code}}.html">{{code}}</a>
-				<div class='col12 inline pad2y'>
-					<div class='pill col12 margin1 fill-{{color}}'><!--
-			  			--><a href='{{site.baseurl}}/pages/{{code}}-docs.html' class='button fill-lighten1 short col3'>docs</a><!--
-			  			--><a href='{{site.baseurl}}/pages/{{code}}-api.html' class='button fill-lighten1 short col3'>api</a><!--
-			  			--><a href='{{site.baseurl}}/pages/{{code}}-examples.html' class='button fill-lighten1 short col4'>examples</a>
+
+		<div class='col12 clearfix'>
+			<!-- side nav -->
+		    <nav class='col3 fill-gray'>
+
+				<div class='clearfix fill-{{color}} dark center pad1y'><a href="/splash.html"><h3>MAPNIK</h3></a> + <a class="white" href="{{site.baseurl}}/pages/{{code}}.html">{{code}}</a>
+					<div class='col12 inline pad2y'>
+						<div class='pill col12 margin1 fill-{{color}}'><!--
+				  			--><a href='{{site.baseurl}}/pages/{{code}}-docs.html' class='button fill-lighten1 short col3'>docs</a><!--
+				  			--><a href='{{site.baseurl}}/pages/{{code}}-api.html' class='button fill-lighten1 short col3'>api</a><!--
+				  			--><a href='{{site.baseurl}}/pages/{{code}}-examples.html' class='button fill-lighten1 short col4'>examples</a>
+						</div>
 					</div>
 				</div>
-			</div>
-
-
-			<div class='small fill-gray pad2x'>
-	     		<div class='pad1y'>
-					<nav class='col12 pad1'>
-
-						{% for post in site.categories[category] reversed %}
-
-							{% if post.type == 'docs' and page.type == 'docs' %}
-							  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-							{% endif %}
-
-							{% if post.type == 'api' and page.type == 'api' %}
-							  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-							{% endif %}
-
-							{% if post.type == 'examples' and page.type == 'examples' %}
-							  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-							{% endif %}
-
-							{% if post.type == 'install' and page.type == 'install' %}
-							  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-							{% endif %}
-
-						{% endfor %}
-
-					</nav>
+				<div class='small fill-gray pad2x'>
+		     		<div class='pad1y'>
+						<nav class='col12 pad1'>
+							{% for post in site.categories[category] reversed %}
+								{% if post.type == 'docs' and page.type == 'docs' %}
+								  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+								{% endif %}
+								{% if post.type == 'api' and page.type == 'api' %}
+								  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+								{% endif %}
+								{% if post.type == 'examples' and page.type == 'examples' %}
+								  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+								{% endif %}
+								{% if post.type == 'install' and page.type == 'install' %}
+								  <a class='block' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+								{% endif %}
+							{% endfor %}
+						</nav>
+					</div>
 				</div>
-			</div>
-		</div>
-
-<!-- content -->
-
-		<div class='col8 fill-white limiter margin3 pad2x pad2y'>
-
-			<div class="limiter contain pad4y clearfix">
-
+			</nav>
+		<!-- content -->
+		<div class='col9 fill-white limiter pad4'>
+			<div class="contain pad4y clearfix">
 				{% for post in site.categories[category] reversed %}
-
 					{% if post.type == 'docs' and page.type == 'docs' %}
 						<h2>{{post.title}}</h2>
 						{{post.content}}
-						
 					{% endif %}
-
 					{% if post.type == 'api' and page.type == 'api' %}
 					  {{post.content}}
 					{% endif %}
-
 					{% if post.type == 'examples' and page.type == 'examples' %}
 						{{post.content}}
 					{% endif %}
-
 					{% if post.type == 'install' and page.type == 'install' %}
 						{{post.content}}
 					{% endif %}
-
 				{% endfor %}
-			
 			</div>
-
 		</div>
 	</div>
 
-   {% include scripts.html %}
+	<div id='guide-footer' class='footer col12 fill-blue small dark center pad4y'>
+		the footer
+	</div>
+
+</div>
+
+{% include scripts.html %}
 
 </body>
 </html>

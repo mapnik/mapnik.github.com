@@ -1,16 +1,13 @@
-<h2 id='mapnik-install'>Mapnik Installation</h2>
+<h2 id='mapnik-install' class='pad2y'>Mapnik Installation</h2>
 
 Mapnik is cross platform and runs on Linux, Mac OSX, Solaris, *BSD, and Windows.
 
 
 To configure and build Mapnik do:
 
-{% highlight bash %}
-
     ./configure
     make
 
-{% endhighlight %}
 
 NOTE: the above will not work on windows, rather see [https://github.com/mapnik/mapnik/wiki/WindowsInstallation](https://github.com/mapnik/mapnik/wiki/WindowsInstallation)
 
@@ -33,7 +30,7 @@ Platform specific install guides at https://github.com/mapnik/mapnik/wiki/Mapnik
 For troubleshooting help see https://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting
 
 
-<h2 id='depends'>Depends</h2>
+<h2 id='depends' class='pad2y'>Depends</h2>
 
 Build system dependencies are:
 
@@ -85,7 +82,7 @@ various platforms can be found at the Mapnik Wiki:
 https://github.com/mapnik/mapnik/wiki/Mapnik-Installation
 
 
-<h2 id='building'>Building</h2>
+<h2 id='building' class='pad2y'>Building</h2>
 
 The build system uses SCons, a pure python equivalent to autotools or cmake.
 
@@ -134,7 +131,7 @@ For more details on usage see:
     https://github.com/mapnik/mapnik/wiki/UsingScons
 
 
-<h2 id='testing-install'>Testing Installation</h2>
+<h2 id='testing-install' class='pad2y'>Testing Installation</h2>
 
 You can run the Mapnik tests locally (without installing) like:
 
@@ -150,9 +147,9 @@ Many of the tests are written in python and you can run them individually like:
     python tests/python_tests/shapefile_test.py
 
 
-<h2 id='learning-mapnik'>Learning Mapnik</h2>
+<h2 id='learning-mapnik' class='pad2y'>Learning Mapnik</h2>
 
-<h3 id='help'>Help</h3>
+<h3 id='help' class='pad1y'>Help</h3>
 
 Mapnik has an active community of talented users and developers making beautiful maps.
 
@@ -162,17 +159,17 @@ If you need help or want to participate starting points include:
 - Join and ask questions on the #mapnik channel on irc://irc.freenode.net/mapnik
 - Add your help questions to https://github.com/mapnik/mapnik-support
 
-<h3 id='cartographers'>Cartographers</h3>
+<h3 id='cartographers' class='pad1y'>Cartographers</h3>
 
 TileMill, which uses Mapnik internally, offers great step by step tutorials for
 learning advanced map styling: http://mapbox.com/tilemill/docs/crashcourse/introduction/
 
-<h3 id='programmers'>Programmers</h3>
+<h3 id='programmers' class='pad1y'>Programmers</h3>
 
 Mapnik is great for building your own mapping applications. Visit
 https://github.com/mapnik/mapnik/wiki/LearningMapnik for basic
 tutorials on how to programmatically use Mapnik.
 
-<h3 id='contributers'>Contributers</h3>
+<h3 id='contributers' class='pad1y'>Contributers</h3>
 
 Read docs/contributing.markdown for resources for getting involved with Mapnik development.

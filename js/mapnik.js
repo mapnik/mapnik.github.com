@@ -14,22 +14,3 @@ $(function() {
     })
 
 });
-
-/* Previous attempt
-
-var $body   = $(document.body);
-var navHeight = $('.navbar').outerHeight(true) + 10;
-
-$body.scrollspy({
-	target: '#navbar',
-	offset: navHeight
-});
-
-// activate sidebar
-$('#sidebar').affix({
-  offset: {
-    top: -90
-  }
-});
-
- */
