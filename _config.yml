@@ -1,7 +1,7 @@
 port:        4000
 url:         mapnik.org
 lsi:         false
-highlighter: true
+highlighter: pygments
 markdown:    rdiscount
 permalink:   /:title
 rdiscount:

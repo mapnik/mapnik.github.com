@@ -15,7 +15,13 @@
 			<!--<a href="/"><img src="/images/mapnik-logo.png" /></a>-->
 		</div>
 		<div class='col3 space-top2 dark pad4y prose'>
-			an open-source toolkit for building, styling, and rendering fast, beautiful web maps
+			an open source toolkit for spatial data access, visualization, and development of mapping applications 
+		</div>
+	</div>
+
+	<div class='col12 clearfix prose'>
+		<div class='col7 margin3 pad4y dark'>
+Mapnik is about making beautiful maps. It uses the AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data. It is written from scratch in modern C++ and doesn’t suffer from design decisions made a decade ago. When it comes to handling common software tasks such as memory management, filesystem access, regular expressions, parsing and so on, Mapnik utilizes best of breed <a href="boost.org">http://boost.org</a> industry standard libraries.
 		</div>
 	</div>
 
@@ -25,7 +31,7 @@
 			<div class='col12 pill'><!--
 			  --><a href='#code' class='button stroke short col2'>build</a><!--
 			  --><a href='#xml' class='button stroke short col2'>style</a><!--
-			  --><a href='#extend' class='button stroke short col2'>extend</a>
+			  --><a href='#extend' class='button stroke short col2'>stack</a>
 			</div>
 		</div>
 	</div>
@@ -35,7 +41,7 @@
 	<a name="code"></a>
 	<div class='prose col12 clearfix fill-gray pad2y'>
 		<div class='col8 margin3 space-bottom2'>
-		<div class='col12 pad4y big'>build with code bindings</div>
+		<div class='col12 pad4y big'>code bindings</div>
 		<div class='col3 pad2y space-bottom2'>
 			<h1 class='big2'>PYTHON</h1>
 			<a href='pages/python.html' class='button col9 fill-green'>install bindings</a>
@@ -56,30 +62,26 @@
 	<a name="xml"></a>
 	<div class='col12 clearfix fill-light'>
 		<div class='col5'><img src='images/contours.png'></div>
-		<div class='col7 pad4x'>
-			<div class='col12 pad4y big2'>style with XML stylesheets</div>
+		<div class='col8 pad2x'>
+			<div class='col12 space-top4 space-bottom2 big'>XML stylesheets</div>
 
-			{% highlight xml %}
+			{% highlight xml linenos %}
 
-			Duis vel aliquet eros. 
-			Donec mollis est nec metus elementum.
-			Send uon tincidunt libero porttitor. 
-			Cras ac tempor augue, at porta tellus. 
-			Sed fermentum neque mi, sit amet purus fermentum bibendum.
-			Duis vel aliquet eros. 
-			Donec mollis est nec metus elementum, non tincidunt libero porttitor. 
-
-			Cras ac tempor augue, at porta tellus. 
-			Sed fermentum neque mi, sit amet purus fermentum bibendum.
-			Duis vel aliquet eros. 
-			Donec mollis est nec metus elementum,.
-			Penon tincidunt libero porttitor. 
-
-			Cras ac tempor augue, at porta tellus. 
-			Sed fermentum neque mi, sit amet purus fermentum bibendum.
-			Duis vel aliquet eros. Donec mollis est nec metus elementum. 
-			Non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. 
-			Sed fermentum neque mi, sit amet purus fermentum bibendum.
+			<Map background-color="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+			  <Style name="My Style">
+			    <Rule>
+			      <PolygonSymbolizer fill="#f2eff9" />
+			      <LineSymbolizer stroke="rgb(50%,50%,50%)" stroke-width="0.1" />
+			    </Rule>
+			  </Style>
+			  <Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+			    <StyleName>My Style</StyleName>
+			    <Datasource>
+			      <Parameter name="type">shape</Parameter>
+			      <Parameter name="file">ne_110m_admin_0_countries.shp</Parameter>
+			    </Datasource>
+			  </Layer>
+			</Map>
 
 			{% endhighlight %}
 		</div>
@@ -88,11 +90,11 @@
 	<div class='col12 clearfix fill-white pad4y'>
 
 		<div class='col3 margin2 pad2y space-bottom2'>
-			<h2>wget data + XML stylesheet</h2>
+			<h2 class='big'>wget data + XML stylesheet</h2>
 			<div class='col12 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
 			<div class='pill col12 pad1y'><!--
-				--><a href='docs.html' class='button short col6'>docs</a><!--
-				--><a href='examples.html' class='button short col6'>examples</a>
+				--><a href='docs.html' class='button stroke light short col6'>docs</a><!--
+				--><a href='examples.html' class='button stroke light short col6'>examples</a>
 			</div>
 		</div>
 
@@ -105,8 +107,8 @@
 
 	<!-- extend apps -->
 	<a name="extend"></a>
-	<div class='col12 clearfix fill-denim pad4y'>
-		<div class='col8 margin2 big2 space-bottom2'>extend to mapping apps</div>
+	<div class='col12 clearfix fill-sky pad4y'>
+		<div class='col8 margin2 big light space-bottom2'>build your own map stack</div>
 
 		<div class='col3 margin2 pad1y'>
 			<img src='images/contours.png'>
@@ -116,14 +118,14 @@
 			<h2>Mapbox Studio</h2>
 			<div class='col12 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
 			<div class='pill col12 pad1y'><!--
-				--><a href='docs.html' class='button short col6'>more</a><!--
-				--><a href='examples.html' class='button short col6'>play</a>
+				--><a href='docs.html' class='button stroke short col6'>more</a><!--
+				--><a href='examples.html' class='button stroke short col6'>play</a>
 			</div>
 		</div>
 
 	</div>
 
-	<div class='col12 center caption small fill-darkblue dark pad1y'>
+	<div class='col12 center caption small fill-sea dark pad1y'>
 		Copyright © 2013 Artem Pavlenko
 	</div>
   <!-- end content -->

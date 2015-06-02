@@ -1,5 +1,6 @@
+// toc fixed
+
 $(function() {
-    // Sign up form at the bottom of posts.
 
     $('body').scrollspy({ target: '.toc' });
     $('.toc-wrap').affix({
