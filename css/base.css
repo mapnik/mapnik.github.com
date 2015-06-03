@@ -10,7 +10,7 @@ body,html
 }
 
 .gradient {
-  height: 550px;
+  height: 450px;
   padding-bottom: 30px;
   background-color: white;
   background-image:
@@ -50,6 +50,42 @@ body,html
     url('/images/mapdesign.png') 100% 100% repeat;
   background-size: cover;
   height: 175px;
+}
+
+/* TABS */
+
+.container{
+  width: 600px;
+  margin: 0 auto;
+}
+
+ul.tabs{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+ }
+
+ul.tabs li{
+  /*background: none;
+  color: #222;*/
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+ul.tabs li.current{
+  background: #8BD1D6;
+  color: #fff;
+}
+
+.tab-content{
+  display: none;
+  background: #FFF;
+  padding: 15px;
+}
+
+.tab-content.current{
+  display: inherit;
 }
 
 
@@ -109,16 +145,16 @@ body,html
 /* 2nd buttons  */
 .pill .button.stroke.light {
   border: none;
-  box-shadow: 0px 0px 0px 1px rgb(150, 189, 192) inset;
+  box-shadow: 0px 0px 0px 2px rgb(139, 209, 214) inset;
   /* yellow: rgb(150, 189, 192)  olive: rgba(191, 192, 178, 0.5) light: 251, 252, 239 yellow: 244, 247, 216 */
   border-right-width: 1px;
   border-left-width: 0;
-  color: rgb(150, 189, 192);
+  color: rgb(48, 177, 187);
 }
 
 .pill .button.stroke.light:hover,
 .button.stroke.light:hover {
-  background-color: rgb(79, 177, 187);
+  background-color: rgb(147, 212, 218);
   /* light blue: rgba(244, 247, 216, 0.5); yellow: rgb(150, 189, 192); |  rgba(244, 247, 216, 0.35); */
   color: rgb(255,255,255) ;
 }
@@ -167,6 +203,14 @@ body,html
   font-size: 36px;
   line-height:50px;
   color:rgba(255,255,255,0.35);
+  /* color: rgba(150, 189, 192, 1); */
+  /* deep blue: rgba(150, 189, 192, 1)  olive green: rgba(89, 105, 73, 0.5); */
+}
+
+.lite {
+  line-height:50px;
+  color:rgba(255,255,255,0.35);
+  word-spacing: 15px;
   /* color: rgba(150, 189, 192, 1); */
   /* deep blue: rgba(150, 189, 192, 1)  olive green: rgba(89, 105, 73, 0.5); */
 }

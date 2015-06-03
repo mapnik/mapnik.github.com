@@ -20,99 +20,153 @@
 		</div>
 
 		<div class='col7 margin3 pad2y dark big'><!--<strong>Mapnik is the core of geospatial visualization &amp; processing.</strong> It-->Mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.<!--A library for building tools to make beautiful maps. Written in modern C++ and paired with Python or Node.js bindings and get started now.--></div>
-			<div class='col9 margin3 pad2y dark clearfix prose big'>
-				<a href='pages/mapnik.html' class='button col9 stroke'>INSTALL</a>
-			</div>
 		</div>
 	</div>
 
 	<div class='module pad8y'></div>
 
-	<!-- code bindings -->
+	<!-- mapnik features -->
 	<a name="code"></a>
-	<div class='prose col12 clearfix fill-gray pad2'>
-		<div class='col3 margin2 space-bottom2 pad2'>
-			<h2 class='med'>core algorithms</h2>
-			AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
-		</div>
-		<div class='col3 space-bottom2 pad2'>
-			<h2 class='med'>data access</h2>
-			AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
-		</div>
-		<div class='col3 space-bottom2 pad2'>
-			<h2 class='med'>geometry operations</h2>
-			AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+			<div class='prose col12 clearfix fill-white pad2'>
+				<div class='col3 margin2 space-bottom2 pad2'>
+					<h2 class='med'>core algorithms</h2>
+					AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+				</div>
+				<div class='col3 space-bottom2 pad2'>
+					<h2 class='med'>data access</h2>
+					AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+				</div>
+				<div class='col3 space-bottom2 pad2'>
+					<h2 class='med'>geometry operations</h2>
+					AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+				</div>
+			</div>
 		</div>
 	</div>
 
-		</div>
 
+<!-- code bindings -->
+	<a name="code"></a>
+	<div class='col12 clearfix fill-gray pad2y'>
+		<div class='prose col4 margin2 pad2y pad2x'>
+            <div class='big'>Mapnik in your language</div>
+            <p class='space-top1'>Mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
+				<div class='col12 pill'><!--
+				  --><a href='https://github.com/mapnik/node-mapnik' class='button stroke light short col6'>Node.js</a><!--
+				  --><a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
+				</div>
+			</div>
+
+		<div class='col7 pad2x clearfix'>
+			<div class='col12 pad2y clearfix'>
+
+				<div class="container">
+					<ul class='tabs'>
+			            <li class='tab-link current' data-tab='tab-1'>Python</a></li><!--
+				  --><li class='tab-link' data-tab='tab-2'>Node</a><!--
+				  --><li class='tab-link' data-tab='tab-3'>C++</a>
+					</ul>
+					<div id="tab-1" class="tab-content current">
+{% highlight python %}
+import mapnik
+m = mapnik.Map(256,256)
+mapnik.load_map(m, 'path/to/file.xml')
+m.zoom_all()
+mapnik.render_to_file(m, 'the_image.png')
+{% endhighlight %}
+					</div>
+
+					<div id="tab-2" class="tab-content">
+{% highlight javascript %}
+var mapnik = require('mapnik');
+var fs = require('fs');
+// register fonts and datasource plugins
+mapnik.register_default_fonts();
+mapnik.register_default_input_plugins();
+var map = new mapnik.Map(256, 256);
+map.load('./test/stylesheet.xml', function(err,map) {
+	if (err) throw err;
+	map.zoomAll();
+	var im = new mapnik.Image(256, 256);
+	map.render(im, function(err,im) {
+		if (err) throw err;
+		im.encode('png', function(err,buffer) {
+			if (err) throw err;
+			fs.writeFile('map.png',buffer, function(err) {
+				if (err) throw err;
+				console.log('saved map image to map.png');
+			});
+		});
+	});
+});
+{% endhighlight %}
+					</div>
+
+					<div id="tab-3" class="tab-content">
+{% highlight python %}
+#include <mapnik/map.hpp>
+#include <mapnik/load_map.hpp>
+#include <mapnik/agg_renderer.hpp>
+#include <mapnik/image.hpp>
+#include <mapnik/image_util.hpp>
+
+main() {
+	mapnik::Map m(256,256);
+	mapnik::load_map(m, 'path/to/file.xml');
+	m.zoom_all();
+	mapnik::image_rgba8 im(256,256);
+	mapnik::agg_renderer<mapnik::image_rgba8> ren(m, im);
+	ren.apply();
+	mapnik::save_to_file(im, 'the_image.png');
+}
+{% endhighlight %}
+					</div>
+
+				</div>
+	        </div>
+        </div>
 	</div>
+
 
 	<!-- xml stylesheets -->
 	<a name="xml"></a>
-	<div class='col12 clearfix fill-light'>
-		<div class='col5'><img src='images/contours.png'></div>
-		<div class='col8 pad2x'>
-			<div class='col12 space-top4 space-bottom2 big'>XML stylesheets</div>
+	<div class='col12 clearfix fill-light pad4y'>
 
-			{% highlight xml linenos %}
-
-			<Map background-color="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-			  <Style name="My Style">
-			    <Rule>
-			      <PolygonSymbolizer fill="#f2eff9" />
-			      <LineSymbolizer stroke="rgb(50%,50%,50%)" stroke-width="0.1" />
-			    </Rule>
-			  </Style>
-			  <Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-			    <StyleName>My Style</StyleName>
-			    <Datasource>
-			      <Parameter name="file">ne_110m_countries.shp</Parameter>
-			    </Datasource>
-			  </Layer>
-			</Map>
-
-			{% endhighlight %}
-		</div>
-	</div>
-
-	<div class='col12 clearfix fill-white pad4y'>
-
-		<div class='col3 margin2 pad2y space-bottom2'>
-			<h2 class='big'>wget data + XML stylesheet</h2>
-			<div class='col12 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
-			<div class='pill col12 pad1y'><!--
-				--><a href='docs.html' class='button stroke light short col6'>docs</a><!--
-				--><a href='examples.html' class='button stroke light short col6'>examples</a>
-			</div>
+		<div class='col3 margin2 pad2y pad4x space-bottom2'>
+			<h2 class='big'>Single XML stylesheet</h2>
+			<div class='col12 pad2y'>Write only one style for your map regardless of the code binding.</div>
+			<a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='button stroke light short col12'>XML Configuration</a>
 		</div>
 
-		<div class='col4 margin1'>
-			<img src='images/contours.png'>
+		<div class='col7 fill-cream'>
+{% highlight xml linenos %}
+<Map background-color="blue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+	<Style name="My Style">
+		<Rule>
+			<PolygonSymbolizer fill="#f2eff9" />
+			<LineSymbolizer stroke="rgb(50%,50%,50%)" stroke-width="0.1" />
+		</Rule>
+	</Style>
+	<Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+		<StyleName>My Style</StyleName>
+		<Datasource>
+			<Parameter name="file">ne_110m_countries.shp</Parameter>
+		</Datasource>
+	</Layer>
+</Map>
+{% endhighlight %}
 		</div>
-
 	</div>
 </div>
 
 	<!-- extend apps -->
 	<a name="extend"></a>
 	<div class='col12 clearfix fill-sky pad4y'>
-		<div class='col8 margin2 big light space-bottom2'>build your own map stack</div>
+		<div class='col10 margin2 big light space-bottom2 center'>stacks built with mapnik</div>
 
-		<div class='col3 margin2 pad1y'>
-			<img src='images/contours.png'>
+		<div class='col10 margin2 pad1y center lite'>
+			OpenStreetMap | Mapbox | CartoDB | Stamen | MapQuest | Kosmtik
 		</div>
-
-		<div class='col5 pad4x pad2y space-bottom2 dark'>
-			<h2>Mapbox Studio</h2>
-			<div class='col12 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
-			<div class='pill col12 pad1y'><!--
-				--><a href='docs.html' class='button stroke short col6'>more</a><!--
-				--><a href='examples.html' class='button stroke short col6'>play</a>
-			</div>
-		</div>
-
 	</div>
 
 	<div class='col12 center caption small fill-sea dark pad1y'>

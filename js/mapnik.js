@@ -1,17 +1,14 @@
-// toc fixed
+// tabs
+$(document).ready(function(){
+	console.log('heiel');
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
 
-$(function() {
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
 
-    $('body').scrollspy({ target: '.toc' });
-    $('.toc-wrap').affix({
-      offset: {
-        top: function () {
-          return (this.top = $('.splash').outerHeight(true))
-        },
-        bottom: function () {
-          return (this.bottom = $('.footer').outerHeight(true) + $('#guide-footer').outerHeight(true))
-        }
-      }
-    })
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
 
-});
+})
