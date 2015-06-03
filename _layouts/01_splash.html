@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include mapnik.meta %}
+	<title>{{ page.title }}</title>
+</head>
+
+<body>
+	<!-- header -->
+	<div class='gradient'>
+		<div class='col12 clearfix prose'>
+			<div class='col3 margin3 pad4y'>
+				<h1 class='fancy dark'>mapnik</h1>
+				<!--<a href="/"><img src="/images/mapnik-logo.png" /></a>-->
+			</div>
+			<div class='col4 space-top4 dark pad4y prose'>the core of geospatial visualization &amp; processing
+				<!--open source toolkit for spatial data access and visualization -->
+			</div>
+		</div>
+
+		<div class='col7 margin3 pad2y dark big'><!--<strong>Mapnik is the core of geospatial visualization &amp; processing.</strong> It-->Mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.<!--A library for building tools to make beautiful maps. Written in modern C++ and paired with Python or Node.js bindings and get started now.--></div>
+			<div class='col9 margin3 pad2y dark clearfix prose big'>
+				<a href='pages/mapnik.html' class='button col9 stroke'>INSTALL</a>
+			</div>
+		</div>
+	</div>
+
+	<div class='module pad8y'></div>
+
+	<!-- code bindings -->
+	<a name="code"></a>
+	<div class='prose col12 clearfix fill-gray pad2'>
+		<div class='col3 margin2 space-bottom2 pad2'>
+			<h2 class='med'>core algorithms</h2>
+			AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+		</div>
+		<div class='col3 space-bottom2 pad2'>
+			<h2 class='med'>data access</h2>
+			AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+		</div>
+		<div class='col3 space-bottom2 pad2'>
+			<h2 class='med'>geometry operations</h2>
+			AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+		</div>
+	</div>
+
+		</div>
+
+	</div>
+
+	<!-- xml stylesheets -->
+	<a name="xml"></a>
+	<div class='col12 clearfix fill-light'>
+		<div class='col5'><img src='images/contours.png'></div>
+		<div class='col8 pad2x'>
+			<div class='col12 space-top4 space-bottom2 big'>XML stylesheets</div>
+
+			{% highlight xml linenos %}
+
+			<Map background-color="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+			  <Style name="My Style">
+			    <Rule>
+			      <PolygonSymbolizer fill="#f2eff9" />
+			      <LineSymbolizer stroke="rgb(50%,50%,50%)" stroke-width="0.1" />
+			    </Rule>
+			  </Style>
+			  <Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+			    <StyleName>My Style</StyleName>
+			    <Datasource>
+			      <Parameter name="file">ne_110m_countries.shp</Parameter>
+			    </Datasource>
+			  </Layer>
+			</Map>
+
+			{% endhighlight %}
+		</div>
+	</div>
+
+	<div class='col12 clearfix fill-white pad4y'>
+
+		<div class='col3 margin2 pad2y space-bottom2'>
+			<h2 class='big'>wget data + XML stylesheet</h2>
+			<div class='col12 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
+			<div class='pill col12 pad1y'><!--
+				--><a href='docs.html' class='button stroke light short col6'>docs</a><!--
+				--><a href='examples.html' class='button stroke light short col6'>examples</a>
+			</div>
+		</div>
+
+		<div class='col4 margin1'>
+			<img src='images/contours.png'>
+		</div>
+
+	</div>
+</div>
+
+	<!-- extend apps -->
+	<a name="extend"></a>
+	<div class='col12 clearfix fill-sky pad4y'>
+		<div class='col8 margin2 big light space-bottom2'>build your own map stack</div>
+
+		<div class='col3 margin2 pad1y'>
+			<img src='images/contours.png'>
+		</div>
+
+		<div class='col5 pad4x pad2y space-bottom2 dark'>
+			<h2>Mapbox Studio</h2>
+			<div class='col12 pad2y'>Duis vel aliquet eros. Donec mollis est nec metus elementum, non tincidunt libero porttitor. Cras ac tempor augue, at porta tellus. Sed fermentum neque mi, sit amet purus fermentum bibendum.</div>
+			<div class='pill col12 pad1y'><!--
+				--><a href='docs.html' class='button stroke short col6'>more</a><!--
+				--><a href='examples.html' class='button stroke short col6'>play</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class='col12 center caption small fill-sea dark pad1y'>
+		Copyright © 2013 Artem Pavlenko
+	</div>
+  <!-- end content -->
+</body>
+</html>
+

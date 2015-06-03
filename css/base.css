@@ -10,16 +10,48 @@ body,html
 }
 
 .gradient {
-  /*height: 250px;*/
+  height: 550px;
   padding-bottom: 30px;
   background-color: white;
   background-image:
     linear-gradient(
        #9AD8DD, #45ACB6
     );
-/*linear-gradient( #9AD8DD, #45ACB6 )
-#67b2db, #3384B1*/
 }
+
+.gradient-blend {
+	background: -moz-linear-gradient(top,  rgba(69,172,182,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,172,182,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(69,172,182,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(69,172,182,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(69,172,182,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(69,172,182,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45acb6', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+.map-gradient {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('/images/mapdesign.png') no-repeat;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
+  height: 494px;
+  width: 620px;
+}
+
+.module {
+  background: 
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(69, 172, 182, 1)
+    ),
+    url('/images/mapdesign.png') 100% 100% repeat;
+  background-size: cover;
+  height: 175px;
+}
+
 
 /* Colors */
 
@@ -125,8 +157,8 @@ body,html
 .big {
   font-size: 36px;
   line-height:50px;
-  color:rgba(0,0,0,0.35);
-  /* color: rgba(205, 217, 218, 1); */
+  color:rgba(48, 177, 187, 1);
+  /* rgba(0,0,0,0.35); color: rgba(205, 217, 218, 1); */
   /* ice blue: rgba(205, 217, 218, 1)  deep green: (145, 147, 119) soft green: rgb(176, 178, 157) */
   font-family:'Open Sans Light';
 }
@@ -139,6 +171,14 @@ body,html
   /* deep blue: rgba(150, 189, 192, 1)  olive green: rgba(89, 105, 73, 0.5); */
 }
 
+.med {
+  font-size: 24px;
+  line-height:50px;
+  color:rgba(48, 177, 187, 1);
+  /* color: rgba(205, 217, 218, 1); */
+  /* ice blue: rgba(205, 217, 218, 1)  deep green: (145, 147, 119) soft green: rgb(176, 178, 157) */
+  font-family:'Open Sans Light';
+}
 
 /* TOC NAV */
 .toc-wrap.affix {
@@ -236,7 +276,7 @@ body,html
   line-height:20px;
   border-radius: 3px;
   margin-bottom: 3px;
-  max-width: 60%;
+  /* max-width: 60%; */
   }
 
 .highlight pre {

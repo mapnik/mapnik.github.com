@@ -13,3 +13,7 @@
 - name: XML
   color: mustard
   slug: xml
+
+- name: Mapnik
+  color: sky
+  slug: mapnik
