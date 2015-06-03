@@ -102,7 +102,7 @@ body,html
 /* CODE BINDINGS TABS */
 
 .bindings {
-  background: #f0f4f5;
+  background: #E9EDEE;
   border: 1px solid;
   border-left-width: 10px;
   border-color: rgb(150, 189, 192);
@@ -110,8 +110,8 @@ body,html
   direction: ltr;
   font-size: 0.8rem;
   margin: 1em 0 2em;
-  padding: 1em;
   text-align: left;
+  max-width: 50%;
 }
 
 .errorlist {
@@ -228,18 +228,15 @@ body,html
 .highlight code {
   font-size:12px;
   line-height:20px;
-  padding: 3px;
   border-radius: 3px;
-  margin: 20px;
   }
 
 .highlight pre {
-  background:rgba(0,0,0,0.025);
   font-size:12px;
   line-height:20px;
-  padding: 3px;
   border-radius: 3px;
-  margin: 20px;
+  margin-bottom: 3px;
+  max-width: 60%;
   }
 
 .highlight pre {
@@ -252,7 +249,6 @@ body,html
   -moz-tab-size:4;
   tab-size: 2;
   /*height: 250px;*/
-  margin: 20px;
 }
 
 
@@ -407,11 +403,8 @@ code
 
 pre
 {
-   background: #f0f0ff;
-   border: 1px solid #d7d7ff;
    padding: 0.6em; 
    margin:0 10px 0 0;
-   -moz-box-shadow:0 3px 0 #fff;-webkit-box-shadow:0 3px 0 #fff;box-shadow:0 3px 0 #fff;
    overflow: scroll;
    width:95%;
    border-radius: 2px;

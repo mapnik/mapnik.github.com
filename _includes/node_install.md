@@ -1,4 +1,4 @@
-<h2 id='mapnik-install' class='pad2y'>Python Installation</h2>
+<h2 id='mapnik-install' class='pad2y'>Node Installation</h2>
 
 Mapnik is cross platform and runs on Linux, Mac OSX, Solaris, *BSD, and Windows.
 

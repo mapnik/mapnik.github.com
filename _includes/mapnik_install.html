@@ -1,0 +1,362 @@
+
+        <h2 class='pad2y' id='install'>
+            Install Mapnik
+        </h2>
+
+        <p>
+            Mapnik is cross platform and runs on Linux, Mac OSX, Solaris, *BSD,
+            and Windows.
+        </p>
+
+        <p>
+            To configure and build Mapnik do:
+        </p>
+        {% highlight sh %} ./configure make {% endhighlight %}
+        <p>
+            NOTE: the above will not work on windows, rather see <a href=
+            "https://github.com/mapnik/mapnik/wiki/WindowsInstallation">https://github.com/mapnik/mapnik/wiki/WindowsInstallation</a>
+        </p>
+
+        <p>
+            Then to run the tests locally (without needing to install):
+        </p>
+        {% highlight sh %}make test-local {% endhighlight %}
+        <p>
+            Install like:
+        </p>
+        {% highlight sh %}sudo make install {% endhighlight %}
+        <p>
+            If you need to uninstall do:
+        </p>
+        {% highlight sh %}sudo make uninstall {% endhighlight %}
+        <p>
+            For more details see the <code>Building</code> Section below.
+        </p>
+
+        <p>
+            Platform specific install guides at <a href=
+            "https://github.com/mapnik/mapnik/wiki/Mapnik-Installation">https://github.com/mapnik/mapnik/wiki/Mapnik-Installation</a>
+        </p>
+
+        <p>
+            For troubleshooting help see <a href=
+            "https://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting">
+            https://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting</a>
+        </p>
+
+        <p>
+        </p>
+
+        <h2 class='pad2y' id='depends'>
+            Dependencies
+        </h2>
+
+        <p>
+        </p>
+
+        <p>
+            Build system dependencies are:
+        </p>
+
+        <ul>
+            <li>C++ compiler (like g++ or clang++)
+            </li>
+
+            <li>
+                <blockquote>
+                    <p>
+                        = 2 GB RAM
+                    </p>
+                </blockquote>
+            </li>
+
+            <li>Python 2.4-2.7
+            </li>
+
+            <li>Scons (a copy is bundled)
+            </li>
+        </ul>
+
+        <p>
+            Mapnik Core depends on:
+        </p>
+
+        <ul>
+            <li>Boost
+                <ul>
+                    <li>
+                        <blockquote>
+                            <p>
+                                = 1.47 is required.
+                            </p>
+                        </blockquote>
+                    </li>
+
+                    <li>These libraries are used:
+                        <ul>
+                            <li>filesystem
+                            </li>
+
+                            <li>system
+                            </li>
+
+                            <li>thread (if mapnik threadsafe support is
+                            required, default on)
+                            </li>
+
+                            <li>regex (optionally built with icu regex support)
+                            </li>
+
+                            <li>program_options (optionally for mapnik command
+                            line programs)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>libicuuc &gt;= 4.0 (ideally &gt;= 4.2) - International
+            Components for Unicode
+            </li>
+
+            <li>libpng &gt;= 1.2.x - PNG graphics
+            </li>
+
+            <li>libjpeg - JPEG graphics
+            </li>
+
+            <li>libtiff - TIFF graphics
+            </li>
+
+            <li>libz - Zlib compression
+            </li>
+
+            <li>libfreetype - Freetype2 for font support (Install requires
+            freetype-config)
+            </li>
+
+            <li>libxml2 - XML parsing (Install requires xml2-config)
+            </li>
+
+            <li>libproj - PROJ.4 projection library
+            </li>
+        </ul>
+
+        <p>
+            Mapnik Python bindings depend on:
+        </p>
+
+        <ul>
+            <li>Python 2.5-2.7 or &gt;= 3.2
+            </li>
+
+            <li>Boost python
+            </li>
+        </ul>
+
+        <p>
+            Note: Python3k is supported, see: <a href=
+            "https://github.com/mapnik/mapnik/wiki/Python3k">https://github.com/mapnik/mapnik/wiki/Python3k</a>
+        </p>
+
+        <p>
+            Optional dependencies:
+        </p>
+
+        <ul>
+            <li>Cairo &gt;= 1.6.0 - Graphics library for output formats like
+            PDF, PS, and SVG
+                <ul>
+                    <li>pkg-config - Required for building with cairo support
+                    </li>
+
+                    <li>pycairo - Python bindings for cairo
+                    </li>
+                </ul>
+            </li>
+
+            <li>libpq - PostgreSQL libraries (For PostGIS plugin support)
+            </li>
+
+            <li>libgdal - GDAL/OGR input (For gdal and ogr plugin support)
+            </li>
+
+            <li>libsqlite3 - SQLite input (needs RTree support builtin) (sqlite
+            plugin support)
+            </li>
+
+            <li>libocci - Oracle input plugin support
+            </li>
+
+            <li>libcurl - OSM input plugin support
+            </li>
+        </ul>
+
+        <p>
+            Instructions for installing many of these dependencies on various
+            platforms can be found at the Mapnik Wiki:
+        </p>
+
+        <p>
+            <a href=
+            "https://github.com/mapnik/mapnik/wiki/Mapnik-Installation">https://github.com/mapnik/mapnik/wiki/Mapnik-Installation</a>
+        </p>
+
+        <p>
+        </p>
+
+        <h2 class='pad2y' id='building'>Build
+        </h2>
+
+        <p>
+        </p>
+
+        <p>
+            The build system uses SCons, a pure python equivalent to autotools
+            or cmake.
+        </p>
+
+        <p>
+            We provide a simple Makefile wrapper that can be used like:
+        </p>
+        {% highlight sh %}./configure make make install {% endhighlight %}
+        <p>
+            For help on what options are accepted do:
+        </p>
+        {% highlight sh %}./configure --help {% endhighlight %}
+        <p>
+            To interact with the local copy of scons directly you can do:
+        </p>
+        {% highlight sh %}python scons/scons.py configure {% endhighlight %}
+        <p>
+            You can also use a globally installed scons:
+        </p>
+        {% highlight sh %}scons configure {% endhighlight %}
+        <p>
+            If you want to clean your build do:
+        </p>
+        {% highlight sh %}make clean {% endhighlight %}
+        <p>
+            If you experience odd configure errors, try cleaning the configure
+            caches:
+        </p>
+        {% highlight sh %}make distclean {% endhighlight %}
+        <p>
+            To install in a custom location do:
+        </p>
+        {% highlight sh %}./configure PREFIX=/opt/mapnik {% endhighlight %}
+        <p>
+            To pass custom CXXFLAGS or LDFLAGS do:
+        </p>
+        {% highlight sh %}./configure CUSTOM_CXXFLAGS="-g -I/usr/include"
+        CUSTOM_LDFLAGS="-L/usr/lib" {% endhighlight %}
+        <p>
+            To pass custom paths to a dependency, like boost, do:
+        </p>
+        {% highlight sh %}./configure BOOST_INCLUDES=/opt/boost/include
+        BOOST_LIBS=/opt/boost/lib {% endhighlight %}
+        <p>
+            To pass custom paths to a dependency, like icu, do:
+        </p>
+        {% highlight sh %}./configure ICU_INCLUDES=/usr/local/include
+        ICU_LIBS=/usr/local/include {% endhighlight %}
+        <p>
+            For more details on usage see:
+        </p>
+			https://github.com/mapnik/mapnik/wiki/UsingScons
+        <p>
+        </p>
+
+        <h2 class='pad2y' id='testing-install'>
+            Testing
+        </h2>
+
+        <p>
+        </p>
+
+        <p>
+            You can run the Mapnik tests locally (without installing) like:
+        </p>
+        {% highlight sh %}make test-local # see the Makefile for how this works
+        {% endhighlight %}
+        <p>
+            Or you can install and test like:
+        </p>
+        {% highlight sh %}make install
+        make test {% endhighlight %}
+        <p>
+            Many of the tests are written in python and you can run them
+            individually like:
+        </p>
+        {% highlight sh %}make install python
+        tests/python_tests/shapefile_test.py {% endhighlight %}
+        <p>
+        </p>
+
+        <h2 class='pad2y' id='learning-mapnik'>
+            Learning Mapnik
+        </h2>
+
+        <p>
+        </p>
+
+        <p>
+        </p>
+
+        <h3 class='pad1y' id='help'>Help</h3>
+        <p>
+        <p>
+            Mapnik has an active community of talented users and developers
+            making beautiful maps.
+        </p>
+
+        <p>
+            If you need help or want to participate starting points include:
+        </p>
+
+        <ul>
+            <li>Sign up and post to the mailing list: <a href="mailto:http://mapnik.org/contact/">http://mapnik.org/contact/</a>
+            </li>
+
+            <li>Join and ask questions on the #mapnik channel on
+            irc://irc.freenode.net/mapnik
+            </li>
+
+            <li>Add your help questions to <a href="https://github.com/mapnik/mapnik-support">https://github.com/mapnik/mapnik-support</a>
+            </li>
+        </ul>
+
+        <p>
+        </p>
+
+        <h3 class='pad1y' id='cartographers'>
+            Cartographers
+        </h3>
+        <p>
+        <p>
+            TileMill, which uses Mapnik internally, offers great step by step
+            tutorials for learning advanced map styling: <a href="http://mapbox.com/tilemill/docs/crashcourse/introduction/">http://mapbox.com/tilemill/docs/crashcourse/introduction/</a>
+        </p>
+
+        <p>
+        </p>
+
+        <h3 class='pad1y' id='programmers'>
+            Programmers
+        </h3>
+        <p>
+        <p>
+            Mapnik is great for building your own mapping applications. Visit <a href="https://github.com/mapnik/mapnik/wiki/LearningMapnik">https://github.com/mapnik/mapnik/wiki/LearningMapnik</a> for basic tutorials on how to programmatically use Mapnik.
+        </p>
+
+        <p>
+        </p>
+
+        <h3 class='pad1y' id='contributers'>
+            Contributers
+        </h3>
+        <p>
+        <p>
+            Read docs/contributing.markdown for resources for getting involved
+            with Mapnik development.
+        </p>

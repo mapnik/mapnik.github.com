@@ -1,4 +1,4 @@
-<h2 id='mapnik-install' class='pad2y'>Python Installation</h2>
+<h2 id='mapnik-install' class='pad2y'>Mapnik Installation</h2>
 
 Mapnik is cross platform and runs on Linux, Mac OSX, Solaris, *BSD, and Windows.
 
@@ -7,7 +7,6 @@ To configure and build Mapnik do:
 
     ./configure
     make
-
 
 NOTE: the above will not work on windows, rather see [https://github.com/mapnik/mapnik/wiki/WindowsInstallation](https://github.com/mapnik/mapnik/wiki/WindowsInstallation)
 
