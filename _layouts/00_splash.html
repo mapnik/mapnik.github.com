@@ -12,13 +12,12 @@
 	<div class='col12 clearfix prose'>
 		<div class='col3 margin3 pad4y'>
 			<h1 class='fancy dark space-top4'>mapnik</h1>
-			<!--<a href="/"><img src="/images/mapnik-logo.png" /></a>-->
 		</div>
 		<div class='col3 space-top2 dark pad4y prose'>
             <strong>Mapnik is the core of geospatial
                 visualization &amp; processing.</strong> It combines pixel-perfect image
             output with lightning-fast cartographic algorithms, and exposes
-            interfaces in C++, Python, and Node.
+            interfaces in C++, Python, and Node.js.
 		</div>
 	</div>
 
@@ -37,22 +36,68 @@
 	<!-- code bindings -->
 	<a name="code"></a>
 	<div class='prose col12 clearfix fill-gray pad2y'>
-		<div class='col8 margin3 space-bottom2'>
-		<div class='col12 pad4y big'>installation and code bindings</div>
-		<div class='col3 pad2y space-bottom2'>
-			<h1 class='big2'>MAPNIK</h1>
-			<a href='pages/mapnik.html' class='button col9 fill-green'>install now</a>
+		<div class='col5 pad2y pad4x'>
+            <div class='big'>use mapnik in your language</div>
+            <p class='space-top1'>Mapnik's high-quality bindings let you use it from JavaScript,
+            Python, and C++.</p>
+                <h3>Python</h3>
+                    <ul>
+                        <li><a href='pages/python.html'>Installation</a></li>
+                        <li><a href='pages/python.html'>API Documentation</a></li>
+                    </ul>
+                <h3>JavaScript</h3>
+                    <ul>
+                        <li><a href='pages/python.html'>Installation</a></li>
+                        <li><a href='pages/python.html'>API Documentation</a></li>
+                    </ul>
+                <h3>C++</h3>
+                    <ul>
+                        <li><a href='pages/python.html'>Installation</a></li>
+                        <li><a href='pages/python.html'>API Documentation</a></li>
+                    </ul>
 		</div>
-		<div class='col8 pad2y'>Mapnik is a cross platform toolkit that runs
-            on Windows, Mac, and Linux (Since release 0.4). Pair Mapnik
-            installation with code bindings of your choice for faster development.</div>
+		<div class='col7 pad2x'>
+            <a href='pages/python.html' class='button active unround col4'>Python</a>
+            <a href='pages/node.html' class='button unround col4'>Node</a>
+            <a href='pages/python-examples.html' class='button unround col4'>C++</a>
+            <div class='fill-white'>
+			{% highlight javascript %}
+var mapnik = require('mapnik');
+var fs = require('fs');
 
-			<div class='pill col9 space-bottom2'><!--
-			  --><a href='pages/python.html' class='button stroke light short col3'>Python</a><!--
-			  --><a href='pages/node.html' class='button stroke light short col3'>Node</a><!--
-			  <a href='pages/python-examples.html' class='button stroke light short col3'>examples</a>-->
-			</div>
-		</div>
+// register fonts and datasource plugins
+mapnik.register_default_fonts();
+mapnik.register_default_input_plugins();
+
+var map = new mapnik.Map(256, 256);
+map.load('./test/stylesheet.xml', function(err,map) {
+    if (err) throw err;
+    map.zoomAll();
+    var im = new mapnik.Image(256, 256);
+    map.render(im, function(err,im) {
+      if (err) throw err;
+      im.encode('png', function(err,buffer) {
+          if (err) throw err;
+          fs.writeFile('map.png',buffer, function(err) {
+              if (err) throw err;
+              console.log('saved map image to map.png');
+          });
+      });
+    });
+});
+            {% endhighlight %}
+            </div>
+
+            <div class='fill-white'>
+			{% highlight python %}
+import mapnik
+m = mapnik.Map(800, 600)
+m.background = mapnik.Color('white')
+mapnik.save_map(m, "map.xml")
+            {% endhighlight %}
+            </div>
+
+        </div>
 	</div>
 
 	<!-- xml stylesheets -->
