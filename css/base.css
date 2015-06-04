@@ -9,6 +9,24 @@ body,html
   background-color:white;
 }
 
+.splash {
+  background-position-x: 50%;
+  background-position-y: 0px;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  width: 100%;
+  position: fixed;
+}
+
+.full-content {
+  padding: 625px 0 0 0;
+  background-size: cover;
+}
+
 .gradient {
   height: 450px;
   padding-bottom: 30px;
@@ -17,27 +35,6 @@ body,html
     linear-gradient(
        #9AD8DD, #45ACB6
     );
-}
-
-.gradient-blend {
-	background: -moz-linear-gradient(top,  rgba(69,172,182,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,172,182,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(69,172,182,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(69,172,182,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(69,172,182,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(69,172,182,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45acb6', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
-}
-
-.map-gradient {
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('/images/mapdesign.png') no-repeat;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/mapdesign.png') no-repeat;
-  height: 494px;
-  width: 620px;
 }
 
 .module {
@@ -55,7 +52,7 @@ body,html
 /* TABS */
 
 .container{
-  width: 600px;
+  width: 500px;
   margin: 0 auto;
 }
 

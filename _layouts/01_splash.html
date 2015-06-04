@@ -8,65 +8,63 @@
 
 <body>
 	<!-- header -->
-	<div class='gradient'>
-		<div class='col12 clearfix prose'>
-			<div class='col3 margin3 pad4y'>
-				<h1 class='fancy dark'>mapnik</h1>
-				<!--<a href="/"><img src="/images/mapnik-logo.png" /></a>-->
+	<div class='splash'>
+		<div class='gradient'>
+			<div class='col12 clearfix prose'>
+				<div class='col3 margin3 pad4y'>
+					<h1 class='fancy dark'>mapnik</h1>
+				</div>
+				<div class='col4 space-top4 dark pad4y prose'>the core of geospatial visualization &amp; processing</div>
 			</div>
-			<div class='col4 space-top4 dark pad4y prose'>the core of geospatial visualization &amp; processing
-				<!--open source toolkit for spatial data access and visualization -->
-			</div>
+			<div class='col7 margin3 pad2y dark big'>Mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
 		</div>
-
-		<div class='col7 margin3 pad2y dark big'><!--<strong>Mapnik is the core of geospatial visualization &amp; processing.</strong> It-->Mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.<!--A library for building tools to make beautiful maps. Written in modern C++ and paired with Python or Node.js bindings and get started now.--></div>
-		</div>
+		<!-- map design -->
+		<div class='module pad8y'></div>
 	</div>
-
-	<div class='module pad8y'></div>
-
-	<!-- mapnik features -->
-	<a name="code"></a>
-			<div class='prose col12 clearfix fill-white pad2'>
-				<div class='col3 margin2 space-bottom2 pad2'>
-					<h2 class='med'>core algorithms</h2>
-					AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+	
+	<div class='full-content'>
+		<!-- mapnik features -->
+		<a name="code"></a>
+				<div class='content prose col12 clearfix fill-white pad2'>
+					<div class='col3 margin2 space-bottom2 pad2'>
+						<h2 class='med'>core algorithms</h2>
+						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+					</div>
+					<div class='col3 space-bottom2 pad2'>
+						<h2 class='med'>data access</h2>
+						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+					</div>
+					<div class='col3 space-bottom2 pad2'>
+						<h2 class='med'>geometry operations</h2>
+						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+					</div>
 				</div>
-				<div class='col3 space-bottom2 pad2'>
-					<h2 class='med'>data access</h2>
-					AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+			<!--</div>
+		</div>-->
+
+
+		<!-- code bindings -->
+		<a name="code"></a>
+		<div class='content col12 clearfix fill-gray pad2y'>
+			<div class='prose col4 margin2 pad2y pad2x'>
+	            <div class='big'>Mapnik in your language</div>
+	            <p class='space-top1'>Mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
+					<div class='col12 pill'><!--
+					  --><a href='https://github.com/mapnik/node-mapnik' class='button stroke light short col6'>Node.js</a><!--
+					  --><a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
+					</div>
 				</div>
-				<div class='col3 space-bottom2 pad2'>
-					<h2 class='med'>geometry operations</h2>
-					AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
-				</div>
-			</div>
-		</div>
-	</div>
 
+			<div class='col6 pad2x clearfix'>
+				<div class='col12 pad2y clearfix'>
 
-<!-- code bindings -->
-	<a name="code"></a>
-	<div class='col12 clearfix fill-gray pad2y'>
-		<div class='prose col4 margin2 pad2y pad2x'>
-            <div class='big'>Mapnik in your language</div>
-            <p class='space-top1'>Mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
-				<div class='col12 pill'><!--
-				  --><a href='https://github.com/mapnik/node-mapnik' class='button stroke light short col6'>Node.js</a><!--
-				  --><a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
-				</div>
-			</div>
-
-		<div class='col7 pad2x clearfix'>
-			<div class='col12 pad2y clearfix'>
-
-				<div class="container">
-					<ul class='tabs'>
-			            <li class='tab-link current' data-tab='tab-1'>Python</a></li><!--
-				  --><li class='tab-link' data-tab='tab-2'>Node</a><!--
-				  --><li class='tab-link' data-tab='tab-3'>C++</a>
-					</ul>
-					<div id="tab-1" class="tab-content current">
+					<div class="container">
+						<ul class='tabs'>
+				            <li class='tab-link current' data-tab='tab-1'>Python</a></li><!--
+					  --><li class='tab-link' data-tab='tab-2'>Node</a><!--
+					  --><li class='tab-link' data-tab='tab-3'>C++</a>
+						</ul>
+						<div id="tab-1" class="tab-content current">
 {% highlight python %}
 import mapnik
 m = mapnik.Map(256,256)
@@ -120,17 +118,17 @@ main() {
 	mapnik::save_to_file(im, 'the_image.png');
 }
 {% endhighlight %}
-					</div>
+						</div>
 
-				</div>
+					</div>
+		        </div>
 	        </div>
-        </div>
-	</div>
+		</div>
 
 
 	<!-- xml stylesheets -->
 	<a name="xml"></a>
-	<div class='col12 clearfix fill-light pad4y'>
+	<div class='content col12 clearfix fill-light pad4y'>
 
 		<div class='col3 margin2 pad2y pad4x space-bottom2'>
 			<h2 class='big'>Single XML stylesheet</h2>
@@ -138,7 +136,7 @@ main() {
 			<a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='button stroke light short col12'>XML Configuration</a>
 		</div>
 
-		<div class='col7 fill-cream'>
+		<div class='col7 fill-white'>
 {% highlight xml linenos %}
 <Map background-color="blue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
 	<Style name="My Style">
@@ -157,22 +155,23 @@ main() {
 {% endhighlight %}
 		</div>
 	</div>
-</div>
+<!--</div>-->
 
 	<!-- extend apps -->
 	<a name="extend"></a>
-	<div class='col12 clearfix fill-sky pad4y'>
-		<div class='col10 margin2 big light space-bottom2 center'>stacks built with mapnik</div>
+	<div class='content col12 clearfix fill-sky pad4y'>
+		<div class='col9 margin2 big light space-bottom2 center'>stacks built with mapnik</div>
 
-		<div class='col10 margin2 pad1y center lite'>
+		<div class='col9 margin2 pad1y center lite'>
 			OpenStreetMap | Mapbox | CartoDB | Stamen | MapQuest | Kosmtik
 		</div>
 	</div>
 
-	<div class='col12 center caption small fill-sea dark pad1y'>
+	<div class='content col12 center caption small fill-sea dark pad1y'>
 		Copyright © 2013 Artem Pavlenko
 	</div>
   <!-- end content -->
+</div>
 </body>
 </html>
 
