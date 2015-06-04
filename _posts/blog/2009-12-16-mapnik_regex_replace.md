@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "Regex replace"
 author: Artem Pavlenko
+category: Mapnik
 ---
 
 Regular expressions are very useful when working with text.

@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "Simple Mapnik Python Installs"
 author: Blake Thompson
+category: Mapnik
 ---
 
 I have been hard at work the past couple weeks trying to do something that has been asked for many times from people in the python community. A simple way for Python Mapnik to be installed via `pip` or `easy_install`. While we already had a way for a pypi package to be installed in [mapnik2](https://github.com/mapnik/pymapnik2) which is on [pypi](https://pypi.python.org/pypi/mapnik2) it took some time to configure everything properly.

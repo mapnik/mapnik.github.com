@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "Windows binaries (Release Candidate 0)"
 author: Artem Pavlenko
+category: Mapnik
 ---
 
 Hello, Windows users! Thank you for your patience.

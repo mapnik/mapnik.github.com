@@ -1,8 +1,10 @@
 ---
-layout: post
+layout: 01_page
 title: "Mapnik Code Sprint 2012"
 author: Artem Pavlenko
+category: Mapnik
 ---
+
 ![mapnik code sprint](https://s3.amazonaws.com/mapnik-github-issues/MCS02-devseed.png)
 
 Second Mapnik Code Sprint is fast approaching! We're gathering in DC on 16-17 June.

@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "Cartographic trick of the day"
 author: Artem Pavlenko
+category: Mapnik
 ---
 
 This is a short post to share some techniques I came up with while implementing compositing and image filtering in Mapnik core. 

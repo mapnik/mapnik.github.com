@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include mapnik.meta %}
+	<title>{{ page.title }}</title>
+
+</head>
+
+<body>
+
+{% include 00_fixednav.html %}
+
+<div class="contain col12 clearfix">
+	<div class='space-top4 pad4y clearfix col2 pad2x'>
+		<h3 class='space-bottom2 big'>news</h3>
+		{% for post in site.categories.mapnik %}
+			{% if post.type != 'install' %}
+				<a class='block news' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> <span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span><br>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div class="space-top4 pad4y clearfix pad2x col6">
+
+		<div class='space-top2'>
+
+		{% for post in site.categories.mapnik %}
+			{% if post.type != 'install' %}
+				<p><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
+<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
+				<div class='col12 space-bottom2'>
+					<p> {{ post.excerpt }}</p>
+					<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
+				</div>
+				<div class='col12 space-bottom4 '>
+					<p><hr></p>
+				</div>
+
+			{% endif %}
+		{% endfor %}
+
+		</div>
+
+	</div>
+</div>
+
+   {% include footer.html %}
+   {% include scripts.html %}
+
+</body>
+</html>
+
+

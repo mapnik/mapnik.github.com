@@ -45,8 +45,8 @@
 
 		<!-- code bindings -->
 		<a name="code"></a>
-		<div class='content col12 clearfix fill-gray pad2y'>
-			<div class='prose col4 margin2 pad2y pad2x'>
+		<div class='content col12 clearfix fill-gray'>
+			<div class='prose col4 margin2 space-top2 pad8y'>
 	            <div class='big'>Mapnik in your language</div>
 	            <p class='space-top1'>Mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
 					<div class='col12 pill'><!--
@@ -56,7 +56,7 @@
 				</div>
 
 			<div class='col6 pad2x clearfix'>
-				<div class='col12 pad2y clearfix'>
+				<div class='col12 pad8y clearfix'>
 
 					<div class="container">
 						<ul class='tabs'>
@@ -128,15 +128,14 @@ main() {
 
 	<!-- xml stylesheets -->
 	<a name="xml"></a>
-	<div class='content col12 clearfix fill-light pad4y'>
-
-		<div class='col3 margin2 pad2y pad4x space-bottom2'>
+	<div class='content col12 clearfix fill-gray'>
+		<div class='col3 margin2 pad2y'>
 			<h2 class='big'>Single XML stylesheet</h2>
 			<div class='col12 pad2y'>Write only one style for your map regardless of the code binding.</div>
-			<a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='button stroke light short col12'>XML Configuration</a>
+			<a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='button stroke light short col8'>XML Configuration</a>
 		</div>
 
-		<div class='col7 fill-white'>
+		<div class='col7 fill-white space-bottom8'>
 {% highlight xml linenos %}
 <Map background-color="blue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
 	<Style name="My Style">
@@ -157,6 +156,53 @@ main() {
 	</div>
 <!--</div>-->
 
+	<!-- blog -->
+	<div class='content col12 clearfix fill-lightblue pad2y'>
+
+		<div class='col9 margin2 big pad2y space-top4'>latest mapnik news</div>
+
+
+		{% for post in site.categories.mapnik limit:3 %}{% if post.type != 'install' %}
+		{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
+
+					{% if modulo == '0' or forloop.first %}
+					<div class='col3 margin2 space-bottom2 space-top2'>
+						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
+						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
+						<div class='col10 space-bottom2'>
+							<p> {{ post.excerpt }}</p>
+							<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
+						</div>
+					</div>
+					{% endif %}
+
+					{% if modulo == '1' %}
+					<div class='col3 space-bottom2 space-top2'>
+						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
+						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
+						<div class='col10 space-bottom2'>
+							<p> {{ post.excerpt }}</p>
+							<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
+						</div>
+					</div>
+					{% endif %}
+
+					{% if modulo == '2' %}
+					<div class='col3 space-bottom2 space-top2'>
+						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
+						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
+						<div class='col10 space-bottom2'>
+							<p> {{ post.excerpt }}</p>
+							<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
+						</div>
+					</div>
+					{% endif %}
+
+
+		{% endif %}{% endfor %}
+
+	</div>
+
 	<!-- extend apps -->
 	<a name="extend"></a>
 	<div class='content col12 clearfix fill-sky pad4y'>
@@ -167,9 +213,8 @@ main() {
 		</div>
 	</div>
 
-	<div class='content col12 center caption small fill-sea dark pad1y'>
-		Copyright © 2013 Artem Pavlenko
-	</div>
+	{% include footer.html %}
+
   <!-- end content -->
 </div>
 </body>

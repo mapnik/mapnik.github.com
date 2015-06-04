@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: 01_page
 title: "Faster Map Loading"
 comments : true
 author: Dane Springmeyer                                                                                                               
+category: Mapnik
 ---
 
 ## Optimizing map parsing performance

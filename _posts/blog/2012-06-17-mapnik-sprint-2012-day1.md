@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "Mapnik Code Sprint 2012 - Day 1 Recap"
 author: Dane Springmeyer
+category: Mapnik
 ---
 
 Yesterday was the first day of the June 2012, Washington DC Mapnik code sprint.

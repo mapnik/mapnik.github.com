@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "Managing large XML files"
-author: artem
+author: Artem Pavlenko
+category: Mapnik
 ---
 
 <p>As a new Mapnik release <a href="http://trac.mapnik.org/milestone/0.5.0">0.5.0</a> is not far away, it is a good time to present some very nifty new features. There are quite a few of them and each one deserves a news item, but today I'd like to introduce <a href="http://trac.mapnik.org/wiki/ManagingLargeXmlFiles">Managing large XML files in Mapnik</a> - a long-awaited feature which brings sanity (parameterization,re-usability,readability) into the domain of managing complex maps aka OSM. While I mention OSM as an example, the same techniques can be applied to any map.</p><p>Last year, shortly after Mapnik was deployed to render tiles for <a href="http://www.openstreetmap.org">OpenStreetMap</a> and users started adding new styles to the <a href="http://trac.openstreetmap.org/browser/applications/rendering/mapnik/osm.xml">osm.xml</a> file, it become apparent that editing map definition is not a trivial task. I saw this problem coming but at the time I didn't have a good solution. I just blamed XML for being designed for machines and not humans, which is true of course, but...Well, it turned out that some lesser known (advanced) XML features can be used to greatly improve the situation. Thanks to David Siegel, for implementing support for <a href="http://www.libxml.org">libxml2</a> parser in Mapnik and also for writing <a href="http://trac.mapnik.org/wiki/ManagingLargeXmlFiles">HOWTO</a> which is a great starting point. <p><i>P.S. I just modified my local osm.xml to use external entities for things like database connection parameters and I really like it! </i></p><p>Happy New Year!  </p>

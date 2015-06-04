@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "Using image filters and compositing together"
 author: Artem Pavlenko
+category: Mapnik
 ---
 
 Following up last week's post about  [smart halos](http://mapnik.org/news/2012/04/20/smart-halos/), I wanted to share some ways of using compositing and filters together to achieve interesting effects.

@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "WKT geometry parsing benchmark"
 author: Dane Springmeyer
+category: Mapnik
 ---
 
 In addition to beautiful rendering capabilities Mapnik also offers a fast C++ and Python API for working with raw geo features. You can create them on the fly from a variety of formats including wkt, wkb, and geojson. This feature allows creative programers to use Mapnik like you would OGR to read or create data and output it to other formats.

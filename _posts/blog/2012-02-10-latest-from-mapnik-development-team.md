@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: 01_page
 title: "Latest from mapnik development team"
 comments : true
 author: Artem Pavlenko                                                                                                               
+category: Mapnik
 ---
 
 ### Text placement re-factoring

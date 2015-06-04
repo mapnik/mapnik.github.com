@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: 01_page
 title: "A simplest Mapnik plugin"
 author: Dane Springmeyer
+category: Mapnik
 ---
 
 I've written a starter "hello world" datasource plugin (aka `input`) for Mapnik.
