@@ -179,14 +179,16 @@ em {
 h1.fancy,
 h2.fancy,
 h3.fancy {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Maven Pro Bold', sans-serif;
   }
 
 h1.fancy {
   font-size:60px;
   line-height:80px;
   letter-spacing:3px;
+  text-shadow: 1px 1px 1px rgba(70, 173, 182, 0.2);
   }
+
 h2.fancy {
   padding-top: 0;
   padding-bottom: 0;

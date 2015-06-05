@@ -11,12 +11,12 @@
 	<div class='splash'>
 		<div class='gradient'>
 			<div class='col12 clearfix prose'>
-				<div class='col3 margin3 pad4y'>
+				<div class='col3 margin2 pad4y'>
 					<h1 class='fancy dark'>mapnik</h1>
 				</div>
 				<div class='col4 space-top4 dark pad4y prose'>the core of geospatial visualization &amp; processing</div>
 			</div>
-			<div class='col7 margin3 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
+			<div class='col7 margin2 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
 		</div>
 		<!-- map design -->
 		<div class='module pad8y'></div>
@@ -26,15 +26,15 @@
 		<!-- mapnik features -->
 		<a name="code"></a>
 				<div class='content prose col12 clearfix fill-white pad2'>
-					<div class='col3 margin2 space-bottom2 pad2'>
+					<div class='col3 margin2 pad2y'>
 						<h2 class='med'>core algorithms</h2>
 						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
 					</div>
-					<div class='col3 space-bottom2 pad2'>
+					<div class='col3 pad2y'>
 						<h2 class='med'>data access</h2>
 						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
 					</div>
-					<div class='col3 space-bottom2 pad2'>
+					<div class='col3 pad2'>
 						<h2 class='med'>geometry operations</h2>
 						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
 					</div>
@@ -157,19 +157,19 @@ main() {
 <!--</div>-->
 
 	<!-- blog -->
-	<div class='content col12 clearfix fill-lightblue pad2y'>
+	<div class='fill-lightblue content col12 clearfix pad2y'>
 
-		<div class='col9 margin2 big pad2y space-top4'>latest news</div>
+		<div class='col9 margin2 big space-top4'>latest news</div>
 
 
 		{% for post in site.categories.mapnik limit:3 %}{% if post.type != 'install' %}
 		{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
 
 					{% if modulo == '0' or forloop.first %}
-					<div class='col3 margin2 space-bottom2 space-top2'>
+					<div class='col3 margin2 space-bottom4 space-top2'>
 						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
 						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
-						<div class='col10 space-bottom2'>
+						<div class='col10 space-bottom4'>
 							<p> {{ post.excerpt }}</p>
 							<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
 						</div>
@@ -177,7 +177,7 @@ main() {
 					{% endif %}
 
 					{% if modulo == '1' %}
-					<div class='col3 space-bottom2 space-top2'>
+					<div class='col3 space-bottom4 space-top2'>
 						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
 						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
 						<div class='col10 space-bottom2'>
@@ -188,7 +188,7 @@ main() {
 					{% endif %}
 
 					{% if modulo == '2' %}
-					<div class='col3 space-bottom2 space-top2'>
+					<div class='col3 space-bottom4 space-top2'>
 						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
 						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
 						<div class='col10 space-bottom2'>

@@ -129,6 +129,15 @@ hr {
   height: 175px;
 }
 
+.gradient2 {
+  height: 220px;
+  background-image:
+    linear-gradient(
+       #9AD8DD, #388991
+    );
+}
+
+
 /* TABS */
 
 .container{
@@ -275,33 +284,25 @@ ul.tabs li.current{
   font-size: 36px;
   line-height:50px;
   color:rgba(48, 177, 187, 1);
-  /* rgba(0,0,0,0.35); color: rgba(205, 217, 218, 1); */
-  /* ice blue: rgba(205, 217, 218, 1)  deep green: (145, 147, 119) soft green: rgb(176, 178, 157) */
   font-family:'Open Sans Light';
 }
 
 .big.light {
   font-size: 36px;
   line-height:50px;
-  color:rgba(255,255,255,0.35);
-  /* color: rgba(150, 189, 192, 1); */
-  /* deep blue: rgba(150, 189, 192, 1)  olive green: rgba(89, 105, 73, 0.5); */
+  color:rgba(255,255,255,0.5);
 }
 
 .lite {
   line-height:50px;
   color:rgba(255,255,255,0.35);
   word-spacing: 15px;
-  /* color: rgba(150, 189, 192, 1); */
-  /* deep blue: rgba(150, 189, 192, 1)  olive green: rgba(89, 105, 73, 0.5); */
 }
 
 .med {
   font-size: 24px;
   line-height:50px;
   color:rgba(48, 177, 187, 1);
-  /* color: rgba(205, 217, 218, 1); */
-  /* ice blue: rgba(205, 217, 218, 1)  deep green: (145, 147, 119) soft green: rgb(176, 178, 157) */
   font-family:'Open Sans Light';
 }
 
@@ -312,9 +313,6 @@ ul.tabs li.current{
   left: 0px;
   padding-left: 30px;
   top: 143px;
-  /*
-  margin-top: -200px;
-  */
 }
 
 .toc-wrap.affix-bottom {
@@ -322,10 +320,6 @@ ul.tabs li.current{
   bottom: inherit;
   left: 0px;
   top: 43px;
-  
-  /*   top: auto !important; 
-  margin-top: -200px;
-   bottom: 265px; position: absolute; */
 }
 
 
@@ -344,7 +338,6 @@ ul.tabs li.current{
   .toc-wrap.affix-bottom {
     overflow: auto;
 	width: 100%;
-    /* max-width: 17%; */
   }
 }
 
@@ -372,7 +365,6 @@ ul.tabs li.current{
   }
 
   .toc li a { padding:10px; }
-
   .toc li:not(:last-child) a { border-bottom:1px solid rgba(0, 0 ,0 , .10); }
 
 }
@@ -401,19 +393,16 @@ ul.tabs li.current{
   line-height:20px;
   border-radius: 3px;
   margin-bottom: 3px;
-  /* max-width: 60%; */
   }
 
 .highlight pre {
   display:block;
-  /* padding: 10px; */
   word-break:break-all;
   word-wrap:break-word;
   white-space:pre;
   white-space:pre-wrap;
   -moz-tab-size:4;
   tab-size: 2;
-  /*height: 250px;*/
 }
 
 
