@@ -3,6 +3,6 @@ url:         mapnik.org
 lsi:         false
 highlighter: pygments
 markdown:    rdiscount
-permalink:   /:title
+permalink:   /news/:title
 rdiscount:
   extensions: [smart]

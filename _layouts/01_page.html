@@ -13,7 +13,7 @@
 
 <div class="contain col12 clearfix">
 	<div class='space-top4 pad4y fill-lightblue clearfix col2 pad2x'>
-		<a href='{{site.baseurl}}/pages/news.html'><h3 class='space-bottom2 big'>news</h3></a>
+		<a href='{{site.baseurl}}/news/'><h3 class='space-bottom2 big'>news</h3></a>
 		{% for post in site.categories.mapnik limit:20 %}
 			{% if post.type != 'install' %}
 				<a class='block news' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> <span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span><br>
@@ -21,7 +21,8 @@
 		{% endfor %}
 	</div>
 	<div class="space-top4 pad4y clearfix pad2x col6">
-		<p><h2>{{page.title}}</h2></p>
+		<h2>{{page.title}}</h2>
+		<p><span class='date'>{{page.date | date: "%b %d, %y" }} | {{page.author}}</span></p>
 
 		<div class='space-top2'>
 			{{ content }}
