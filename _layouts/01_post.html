@@ -27,7 +27,13 @@
 			
 			<div class='col12 pad2y'>
 				<div class='col6 small'>BY: <span class='pad1x'><img class='dot' src='{{ author[0].image }}' width='30'>
-				{{ page.author }}</div></span>
+				&nbsp;
+				{% if author[0].github != null %}
+					<a  href='{{ author[0].github }}'>{{ page.author }}</a>
+				{% else %}
+					{{ page.author }}
+				{% endif %}
+				</div></span>
 			</div>
 
 			<div class='col12 pad4y space-bottom4'>
