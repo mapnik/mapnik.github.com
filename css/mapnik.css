@@ -4,8 +4,6 @@ You may not duplicate, copy, or reuse any portion without express written
 permission from Mapbox.
 ------------------------------------------------------- */
 
-/* Reset â™¥ Adapted from http://meyerweb.com/eric/tools/css/reset/
-------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -147,7 +145,7 @@ small,
 .prose.small,
 .small {
   font-size:12px;
-  line-height:20px;
+  line-height:30px;
   letter-spacing:0;
   }
 
@@ -179,7 +177,7 @@ em {
 h1.fancy,
 h2.fancy,
 h3.fancy {
-  font-family: 'Maven Pro Bold', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   }
 
 h1.fancy {
@@ -1379,7 +1377,7 @@ table.fixed {
 .prose object,
 .prose div.highlight {
   display:block;
-  margin-bottom:20px;
+  margin-bottom:10px;
   word-wrap:break-word;
   }
 .prose h2 {

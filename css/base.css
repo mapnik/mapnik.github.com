@@ -39,21 +39,24 @@ header {
     linear-gradient(
        #99D7DC, #8BCCD2
     );
-  // set animation
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
  }
         
 header.sticky {
-  font-size: 24px;
+  font-size: 14px;
   line-height: 48px;
-  height: 50px;
+  height: 85px;
   background-color: white;
   background-image:
     linear-gradient(
        #99D7DC, #8BCCD2
     );
-  padding-left: 20px;
+  padding-left: 0px;
+  z-index: 30;
+}
+
+.stickymove {
+  padding-top: 140px;
+  padding-bottom: 20px;
 }
 
 .fixednav {
@@ -70,15 +73,15 @@ header.sticky {
   z-index: 20;
  }
 
-h1.fixed {
+.fixed {
+  font-size: 30px;
+  line-height:50px;
+  letter-spacing:2px;
+  color: rgba(255,255,255, 1);
+  text-shadow: 1px 1px 1px rgba(70, 173, 182, 0.2);
   font-family: 'Maven Pro', sans-serif;
-  }
+}
 
-h1.fixed {
-  font-size:28px;
-  letter-spacing:3px;
-  line-height: 30px;
-  }
 
 #navbar a { color:#fff; border:none; }
 
@@ -103,6 +106,13 @@ hr {
     height: 1px;
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+hr.sm {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(204, 204, 204, 0) 20%, rgba(51, 51, 51, 0.12), rgba(204, 204, 204, 0));
+	margin: 20px 0px 0px 0px;
 }
 
 /* background */
@@ -206,7 +216,6 @@ ul.tabs li.current{
 }
 
 
-
 /* Buttons */
 .button.stroke {
   background-color: transparent;
@@ -293,6 +302,12 @@ ul.tabs li.current{
   color:rgba(255,255,255,0.5);
 }
 
+.big.quote {
+  font-size: 30px;
+  line-height:50px;
+  color: rgba(48, 177, 187, 0.3);
+}
+
 .lite {
   line-height:50px;
   color:rgba(255,255,255,0.35);
@@ -302,6 +317,13 @@ ul.tabs li.current{
 .med {
   font-size: 24px;
   line-height:50px;
+  color:rgba(48, 177, 187, 1);
+  font-family:'Open Sans Light';
+}
+
+.med-news {
+  font-size: 24px;
+  line-height:34px;
   color:rgba(48, 177, 187, 1);
   font-family:'Open Sans Light';
 }
@@ -382,6 +404,16 @@ ul.tabs li.current{
   background: transparent;
   }
 
+h1 a.white,
+h1 a:visited.white,
+h1 a.active .white ,
+h1 a:link.white, :visited {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: none;
+  background: transparent;
+  }
+
 .highlight code {
   font-size:12px;
   line-height:20px;
@@ -407,12 +439,7 @@ ul.tabs li.current{
 
 
 
-
-
 /* added above */
-
-
-
 
 /* h1,h2,h3,h4,h5 {color:#073f93;font-weight:normal;} */
 h1 {font-size: 16pt;}
@@ -573,4 +600,3 @@ pre
    width: 33%;
    float: left;
 }
-

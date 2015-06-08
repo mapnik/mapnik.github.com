@@ -7,16 +7,17 @@
 </head>
 
 <body>
+
 	<!-- header -->
 	<div class='splash'>
 		<div class='gradient'>
 			<div class='col12 clearfix prose'>
-				<div class='col3 margin2 pad4y'>
+				<div class='col3 margin3 pad4y'>
 					<h1 class='fancy dark'>mapnik</h1>
 				</div>
 				<div class='col4 space-top4 dark pad4y prose'>the core of geospatial visualization &amp; processing</div>
 			</div>
-			<div class='col7 margin2 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
+			<div class='col7 margin3 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
 		</div>
 		<!-- map design -->
 		<div class='module pad8y'></div>
@@ -24,23 +25,58 @@
 	
 	<div class='full-content'>
 		<!-- mapnik features -->
-		<a name="code"></a>
-				<div class='content prose col12 clearfix fill-white pad2'>
-					<div class='col3 margin2 pad2y'>
-						<h2 class='med'>core algorithms</h2>
-						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+		<div class='content prose col12 clearfix fill-white pad2'>
+			<div class='col10 margin2 pad2y big'>latest news</div>
+			{% for post in site.categories.mapnik limit:4 %}{% if post.type != 'install' %}
+			{% capture modulo %}{{ forloop.index0 | mod:4 }}{% endcapture %}
+			{% assign author = site.data.author[post.author] %}
+			{% if modulo == '0' or forloop.first %}
+				{% assign post1-author = post.author %}{% assign post1-title = post.title %}{% assign post1-date = post.date %}
+				{% assign post1-url = post.url %}{% assign post1-img = author[0].image %}{% assign post1-excerpt = post.excerpt %}
+			{% endif %}
+			{% if modulo == '1' %}
+				{% assign post2-author = post.author %}{% assign post2-title = post.title %}{% assign post2-date = post.date %}
+				{% assign post2-url = post.url %}{% assign post2-img = author[0].image %}{% assign post2-excerpt = post.excerpt %}
+			{% endif %}
+			{% if modulo == '2' %}
+				{% assign post3-author = post.author %}{% assign post3-title = post.title %}{% assign post3-date = post.date %}
+				{% assign post3-url = post.url %}{% assign post3-img = author[0].image %}{% assign post3-excerpt = post.excerpt %}
+			{% endif %}
+			{% if modulo == '3' or forloop.last %}
+				{% assign post4-author = post.author %}{% assign post4-title = post.title %}{% assign post4-date = post.date %}
+				{% assign post4-url = post.url %}{% assign post4-img = author[0].image %}{% assign post4-excerpt = post.excerpt %}
+			{% endif %}
+			{% endif %}{% endfor %}
+
+				<div class='col6 margin2 pad1y space-bottom4'>
+					<div class='col3'>		
+						<h2 class='med-news'><a href="{{site.baseurl}}{{ post1-url }}"> {{ post1-title }}</a></h2>
+						<div class='col12'>
+							<div class='col12'><span class='date'>{{ post1-date | date: "%b %d, %y" }}</span></div>
+							<div class='col2 space-top2'><img class='dot fl' src='{{ post1-img }}' width='20'></div>
+							<div class='col9 space-top2'><span class='date'>{{ post1-author }}</span></div>
+						</div>
 					</div>
-					<div class='col3 pad2y'>
-						<h2 class='med'>data access</h2>
-						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
-					</div>
-					<div class='col3 pad2'>
-						<h2 class='med'>geometry operations</h2>
-						AGG library and offers world class anti-aliasing rendering with subpixel accuracy for geographic data
+					<div class='col9'>
+						<div class='col1'><img class='fr' src='images/quote-L.png' width='20'></div>
+						<div class='col11 pad1x'>{{ post1-excerpt }} <a class='news' href="{{site.baseurl}}{{ post1-url }}">read more...</a></div>
 					</div>
 				</div>
-			<!--</div>
-		</div>-->
+				<div class='col4 pad4x space-top1'>
+					<div class='col12 space-bottom2'>
+						<a href="{{site.baseurl}}{{ post2-url }}">{{ post2-title }}</a><br>
+						<span class='date'>{{ post2-date | date: "%b %d, %y" }} | {{ post2-author }}</span></p>
+					</div>
+					<div class='col12 space-bottom2'>
+						<a href="{{site.baseurl}}{{ post3-url }}">{{ post3-title }}</a><br>
+						<span class='date'>{{ post3-date | date: "%b %d, %y" }} | {{ post3-author }}</span></p>
+					</div>
+					<div class='col12'>
+						<a href="{{site.baseurl}}{{ post4-url }}">{{ post4-title }}</a><br>
+						<span class='date'>{{ post4-date | date: "%b %d, %y" }} | {{ post4-author }}</span></p>
+					</div>
+				</div>
+		</div>
 
 
 		<!-- code bindings -->
@@ -157,58 +193,19 @@ main() {
 <!--</div>-->
 
 	<!-- blog -->
-	<div class='fill-lightblue content col12 clearfix pad2y'>
+	<div class='fill-gray content col12 clearfix pad1y'>
 
-		<div class='col9 margin2 big space-top4'>latest news</div>
+		<div class='big quote center space-bottom4'>above all else, beautiful maps</div>
 
-
-		{% for post in site.categories.mapnik limit:3 %}{% if post.type != 'install' %}
-		{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
-
-					{% if modulo == '0' or forloop.first %}
-					<div class='col3 margin2 space-bottom4 space-top2'>
-						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
-						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
-						<div class='col10 space-bottom4'>
-							<p> {{ post.excerpt }}</p>
-							<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
-						</div>
-					</div>
-					{% endif %}
-
-					{% if modulo == '1' %}
-					<div class='col3 space-bottom4 space-top2'>
-						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
-						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
-						<div class='col10 space-bottom2'>
-							<p> {{ post.excerpt }}</p>
-							<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
-						</div>
-					</div>
-					{% endif %}
-
-					{% if modulo == '2' %}
-					<div class='col3 space-bottom4 space-top2'>
-						<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
-						<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
-						<div class='col10 space-bottom2'>
-							<p> {{ post.excerpt }}</p>
-							<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
-						</div>
-					</div>
-					{% endif %}
-
-
-		{% endif %}{% endfor %}
 
 	</div>
 
 	<!-- extend apps -->
 	<a name="extend"></a>
 	<div class='content col12 clearfix fill-sky pad4y'>
-		<div class='col9 margin2 big light space-bottom2 center'>stacks built with mapnik</div>
+		<div class='big light space-bottom2 center'>stacks built with mapnik</div>
 
-		<div class='col9 margin2 pad1y center lite'>
+		<div class='pad1y center lite'>
 			OpenStreetMap | Mapbox | CartoDB | Stamen | MapQuest | Kosmtik
 		</div>
 	</div>

@@ -11,12 +11,12 @@ $(document).ready(function(){
 	})
 })
 
-// sticky header
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 1){  
-        $('header').addClass("sticky");
-    }
-    else{
-        $('header').removeClass("sticky");
-    }
-});
+// figure out the height
+var mainContent = $("#main-content");
+var aside = $("#aside");
+var height = mainContent.outerHeight();
+
+if (height > aside.outerHeight()) {
+  // load in more sidebar content
+  console.log("i see you.");
+}
