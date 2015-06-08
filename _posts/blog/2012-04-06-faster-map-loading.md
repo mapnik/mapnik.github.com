@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Faster Map Loading"
 comments : true
 author: Dane Springmeyer                                                                                                               

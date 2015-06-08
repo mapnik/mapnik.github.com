@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Simple Mapnik Python Installs"
 author: Blake Thompson
 category: Mapnik

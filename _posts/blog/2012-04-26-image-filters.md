@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Using image filters and compositing together"
 author: Artem Pavlenko
 category: Mapnik

@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Cartographic trick of the day"
 author: Artem Pavlenko
 category: Mapnik

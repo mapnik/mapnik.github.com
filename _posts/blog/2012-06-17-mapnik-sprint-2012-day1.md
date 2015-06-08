@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Mapnik Code Sprint 2012 - Day 1 Recap"
 author: Dane Springmeyer
 category: Mapnik

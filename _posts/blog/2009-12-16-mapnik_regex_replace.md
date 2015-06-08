@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Regex replace"
 author: Artem Pavlenko
 category: Mapnik

@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Stamen, Compositing, and Mapnik 2.1"
 author: Dane Springmeyer
 category: Mapnik

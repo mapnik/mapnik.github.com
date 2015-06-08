@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Latest from mapnik development team"
 comments : true
 author: Artem Pavlenko                                                                                                               

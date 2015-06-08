@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Approaching 3.0 Release"
 author: Blake Thompson
 category: Mapnik

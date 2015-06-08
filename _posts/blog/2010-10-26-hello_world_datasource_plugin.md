@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "A simplest Mapnik plugin"
 author: Dane Springmeyer
 category: Mapnik

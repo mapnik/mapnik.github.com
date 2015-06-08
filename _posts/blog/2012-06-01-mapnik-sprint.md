@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "Mapnik Code Sprint 2012"
 author: Artem Pavlenko
 category: Mapnik

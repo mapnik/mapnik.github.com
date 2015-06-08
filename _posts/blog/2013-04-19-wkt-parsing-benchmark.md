@@ -1,5 +1,5 @@
 ---
-layout: 01_page
+layout: 01_post
 title: "WKT geometry parsing benchmark"
 author: Dane Springmeyer
 category: Mapnik
