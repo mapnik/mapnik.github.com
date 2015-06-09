@@ -12,12 +12,10 @@
 	<div class='splash'>
 		<div class='gradient'>
 			<div class='col12 clearfix prose'>
-				<div class='col3 margin3 pad4y'>
-					<h1 class='fancy dark'>mapnik</h1>
-				</div>
-				<div class='col4 space-top4 dark pad4y prose'>the core of geospatial visualization &amp; processing</div>
+				<div class='col4 margin2 pad4y fl'><h1 class='fancy dark'>mapnik</h1></div>
+				<div id='tagline' class='col6 space-top4 dark pad4y prose fr'>the core of geospatial visualization &amp; processing</div>
 			</div>
-			<div class='col7 margin3 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
+			<div id='intro' class='col9 margin2 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
 		</div>
 		<!-- map design -->
 		<div class='module pad8y'></div>
@@ -25,7 +23,7 @@
 	
 	<div class='full-content'>
 		<!-- mapnik features -->
-		<div class='content prose col12 clearfix fill-white pad2'>
+		<div class='content prose col12 clearfix fill-white'>
 			<div class='col10 margin2 pad2y big'>latest news</div>
 			{% for post in site.categories.mapnik limit:4 %}{% if post.type != 'install' %}
 			{% capture modulo %}{{ forloop.index0 | mod:4 }}{% endcapture %}
@@ -58,8 +56,8 @@
 						</div>
 					</div>
 					<div class='col9'>
-						<div class='col1'><img class='fr' src='images/quote-L.png' width='20'></div>
-						<div class='col11 pad1x'>{{ post1-excerpt }} <a class='news' href="{{site.baseurl}}{{ post1-url }}">read more...</a></div>
+						<div class='col1'><img class='fl' src='images/quote-L.png' width='20'></div>
+						<div class='col11 pad1x'>{{ post1-excerpt }} <a class='news' href="{{site.baseurl}}{{ post1-url }}">read more >> </a></div>
 					</div>
 				</div>
 				<div class='col4 pad4x space-top1'>
@@ -71,9 +69,12 @@
 						<a href="{{site.baseurl}}{{ post3-url }}">{{ post3-title }}</a><br>
 						<span class='date'>{{ post3-date | date: "%b %d, %y" }} | {{ post3-author }}</span></p>
 					</div>
-					<div class='col12'>
+					<!-- <div class='col12'>
 						<a href="{{site.baseurl}}{{ post4-url }}">{{ post4-title }}</a><br>
 						<span class='date'>{{ post4-date | date: "%b %d, %y" }} | {{ post4-author }}</span></p>
+					</div> -->
+					<div class='col12'>
+						<a class='news' href="{{site.baseurl}}/news/archive.html">read news archive >> </a>
 					</div>
 				</div>
 		</div>
@@ -82,16 +83,16 @@
 		<!-- code bindings -->
 		<a name="code"></a>
 		<div class='content col12 clearfix fill-gray'>
-			<div class='prose col4 margin2 space-top2 pad8y'>
+			<div class='col3 margin2 pad8y prose'>
 	            <div class='big'>code in your language</div>
 	            <p class='space-top1'>mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
 					<div class='col12 pill'><!--
-					  --><a href='https://github.com/mapnik/node-mapnik' class='button stroke light short col6'>Node.js</a><!--
+					  --><a href='http://mapnik.org/node-mapnik/documentation/' class='button stroke light short col6'>Node.js</a><!--
 					  --><a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
 					</div>
 				</div>
 
-			<div class='col6 pad2x clearfix'>
+			<div class='col7 space-top2 pad4x clearfix'>
 				<div class='col12 pad8y clearfix'>
 
 					<div class="container">
@@ -171,8 +172,8 @@ main() {
 			<a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='space-top1 button stroke light short col8'>XML Configuration</a>
 		</div>
 
-		<div class='col7 fill-white space-bottom8'>
-{% highlight xml linenos %}
+		<div class='col7 pad4x space-bottom8'>
+<div class='fill-white'>{% highlight xml linenos %}
 <Map background-color="blue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
 	<Style name="My Style">
 		<Rule>
@@ -187,7 +188,7 @@ main() {
 		</Datasource>
 	</Layer>
 </Map>
-{% endhighlight %}
+{% endhighlight %}</div>
 		</div>
 	</div>
 <!--</div>-->

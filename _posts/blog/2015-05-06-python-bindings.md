@@ -9,9 +9,9 @@ I have been hard at work the past couple weeks trying to do something that has b
 
 I am proud to say it should now be as easy as:
 
-```
+{% highlight bash %}
 pip install mapnik
-```
+{% endhighlight %}
 
 This now works for OSX 10.8+ and some Linux systems through the magic of [python wheels](http://pythonwheels.com/). This requires zero compiling and includes all the binaries necessary for mapnik to work! 
 

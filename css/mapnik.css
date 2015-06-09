@@ -26,9 +26,11 @@ body,html
   position: fixed;
 }
 
+
 .full-content {
   padding: 625px 0 0 0;
   background-size: cover;
+  width: 100%;
 }
 
 /* nav bar */
@@ -44,7 +46,7 @@ header {
        #99D7DC, #8BCCD2
     );
  }
-        
+    
 header.sticky {
   font-size: 14px;
   line-height: 48px;
@@ -155,7 +157,6 @@ hr.sm {
 /* TABS */
 
 .container{
-  width: 500px;
   margin: 0 auto;
 }
 
@@ -400,10 +401,30 @@ h1.fancy {
   letter-spacing:3px;
   text-shadow: 1px 1px 1px rgba(70, 173, 182, 0.2);
   }
-
-
-
 }
+
+@media only screen and (max-width: 640px) {
+  #navbar .pad4y {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #mapnik .splash { text-size: 12; } 
+  #tagline.pad4y  { 
+  	padding-top: 0px;
+  	padding-bottom: 5px; 
+  }
+  #tagline.space-top4 {
+    margin-top: 5px;
+  }
+  #intro.big {
+	font-size: 32px;
+    line-height: 45px;
+  }
+}
+
 
 @media only screen and (max-width: 640px) {
 
@@ -2964,8 +2985,8 @@ img.inline, .inline           { display:inline-block; }
   .mobile-cols > .margin11 { margin-left:91.6666%; }
   .mobile-cols > .margin12 { margin-left:100.0000%; }
 
-  /* Fanct gets too big, revert to defaults */
-  h1.fancy { font-size:40px;line-height:60px;}
+  /* Fanct gets too big, revert to defaults 
+  h1.fancy { font-size:40px;line-height:60px;} */
   h2.fancy {
     font-size:30px;
     line-height:40px;
