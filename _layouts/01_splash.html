@@ -31,18 +31,22 @@
 			{% if modulo == '0' or forloop.first %}
 				{% assign post1-author = post.author %}{% assign post1-title = post.title %}{% assign post1-date = post.date %}
 				{% assign post1-url = post.url %}{% assign post1-img = author[0].image %}{% assign post1-excerpt = post.excerpt %}
+				{% assign post1-github = author[0].github %}
 			{% endif %}
 			{% if modulo == '1' %}
 				{% assign post2-author = post.author %}{% assign post2-title = post.title %}{% assign post2-date = post.date %}
 				{% assign post2-url = post.url %}{% assign post2-img = author[0].image %}{% assign post2-excerpt = post.excerpt %}
+				{% assign post2-github = author[0].github %}
 			{% endif %}
 			{% if modulo == '2' %}
 				{% assign post3-author = post.author %}{% assign post3-title = post.title %}{% assign post3-date = post.date %}
 				{% assign post3-url = post.url %}{% assign post3-img = author[0].image %}{% assign post3-excerpt = post.excerpt %}
+				{% assign post3-github = author[0].github %}
 			{% endif %}
 			{% if modulo == '3' or forloop.last %}
 				{% assign post4-author = post.author %}{% assign post4-title = post.title %}{% assign post4-date = post.date %}
 				{% assign post4-url = post.url %}{% assign post4-img = author[0].image %}{% assign post4-excerpt = post.excerpt %}
+				{% assign post4-github = author[0].github %}
 			{% endif %}
 			{% endif %}{% endfor %}
 
@@ -53,8 +57,8 @@
 							<div class='col12'><span class='date'>{{ post1-date | date: "%b %d, %y" }}</span></div>
 							<div class='col2 space-top1'><img class='dot fl' src='{{ post1-img }}' width='30'></div>
 							<div class='col9 space-top1'><span class='date pad1x'>
-								{% if author[0].github != null %}
-									<a  href='{{ author[0].github }}'>{{ post1-author }}</a>
+								{% if post1-github != null %}
+									<a  href='{{ post1-github }}'>{{ post1-author }}</a>
 								{% else %}
 									{{ post1-author }}
 								{% endif %}
@@ -69,11 +73,11 @@
 				<div class='col4 pad4x space-top1'>
 					<div class='col12 space-bottom2'>
 						<a href="{{site.baseurl}}{{ post2-url }}">{{ post2-title }}</a><br>
-						<span class='date'>{{ post2-date | date: "%b %d, %y" }} | {% if author[0].github != null %}<a  href='{{ author[0].github }}'>{{ post2-author }}</a>{% else %}{{ post2-author }}{% endif %}</span></p>
+						<span class='date'>{{ post2-date | date: "%b %d, %y" }} | {% if post2-github != null %}<a  href='{{ post2-github }}'>{{ post2-author }}</a>{% else %}{{ post2-author }}{% endif %}</span></p>
 					</div>
 					<div class='col12 space-bottom2'>
 						<a href="{{site.baseurl}}{{ post3-url }}">{{ post3-title }}</a><br>
-						<span class='date'>{{ post3-date | date: "%b %d, %y" }} | {% if author[0].github != null %}<a  href='{{ author[0].github }}'>{{ post3-author }}</a>{% else %}{{ post3-author }}{% endif %}</span></p>
+						<span class='date'>{{ post3-date | date: "%b %d, %y" }} | {% if post3-github != null %}<a  href='{{ post3-github }}'>{{ post3-author }}</a>{% else %}{{ post3-author }}{% endif %}</span></p>
 					</div>
 					<div class='col12'>
 						<a class='news' href="{{site.baseurl}}/news/archive.html">read news archive >> </a>
