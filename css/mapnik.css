@@ -414,9 +414,13 @@ h1.fancy {
 
 @media only screen and (max-width: 640px) {
   #mapnik .splash { text-size: 12; } 
+  #logo.pad4y {
+  	padding-top: 10px;
+  	padding-bottom: 0px; 
+  }
   #tagline.pad4y  { 
   	padding-top: 0px;
-  	padding-bottom: 5px; 
+  	padding-bottom: 25px; 
   }
   #tagline.space-top4 {
     margin-top: 5px;
