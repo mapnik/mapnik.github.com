@@ -4,6 +4,9 @@ Home for the Mapnik project on the web.
 
 Uses [jekyll](https://github.com/mojombo/jekyll).
 
+
+[![Build Status](https://travis-ci.org/mapnik/mapnik.github.com.svg?branch=master)](https://travis-ci.org/mapnik/mapnik.github.com)
+
 ## Setup
 
 ### Install jekyll (depends on Ruby, rubygems and Ruby development packages)
