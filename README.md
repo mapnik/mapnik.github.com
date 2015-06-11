@@ -25,7 +25,7 @@ Why forcing gcc? (https://github.com/Orc/discount/pull/35)
 
 ### Run jekyll
 
-    jekyll
+    jekyll serve
 
 ### View the site at:
 
