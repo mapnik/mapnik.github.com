@@ -5,16 +5,9 @@ author: Amy Lee Walton
 category: Mapnik
 ---
 
-Mapnik.org has a new look. Not just a fresh coat, the goals for the redesign include:
+Mapnik.org has a new look and easier access to updates, code, and documentation. Quickly copy code snippets to run and render maps using Node.js, Python, or C++, pair with a stylesheet for custom styling, and link to detailed API docs. 
 
- - Get started with Mapnik faster.
- - Better documentation for Mapnik code, bindings, and styling.
- - More accessible news regarding Mapnik.
-
-
-Quickly copy code snippets to run and render maps using Node.js, Python, or C++. Pair with a stylesheet for custom styling. Detailed API docs are available.
-
-[The latest news post]({{site.baseurl}}#latest-news) or [the entire news archive]({{site.baseurl}}/news/archive.html) are now only a click away.
+And [latest news posts]({{site.baseurl}}#latest-news) and [entire news archive]({{site.baseurl}}/news/archive.html) are now only a click away.
 
 ## Logo
 
