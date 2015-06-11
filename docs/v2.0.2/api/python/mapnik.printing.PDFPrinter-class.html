@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mapnik.printing.PDFPrinter</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mapnik-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://mapnik.org">mapnik</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="mapnik-module.html">Package&nbsp;mapnik</a> ::
+        <a href="mapnik.printing-module.html">Module&nbsp;printing</a> ::
+        Class&nbsp;PDFPrinter
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class PDFPrinter</h1><p class="nomargin-top"></p>
+<p>Main class for creating PDF print outs, basically contruct an instance
+  with appropriate options and then call render_map with your mapnik 
+  map</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mapnik.printing.PDFPrinter-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pagesize</span>=<span class="summary-sig-default"><code class="variable-group">(</code>0.21<code class="variable-op">, </code>0.297<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">margin</span>=<span class="summary-sig-default">0.005</span>,
+        <span class="summary-sig-arg">box</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">percent_box</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">scale</span>=<span class="summary-sig-default">&lt;function default_scale at 0x102da5500&gt;</span>,
+        <span class="summary-sig-arg">resolution</span>=<span class="summary-sig-default">72</span>,
+        <span class="summary-sig-arg">preserve_aspect</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">centering</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">is_latlon</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_ocg_layers</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Creates a cairo surface and context to render a PDF with.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="finish"></a><span class="summary-sig-name">finish</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mapnik.printing.PDFPrinter-class.html#add_geospatial_pdf_header" class="summary-sig-name">add_geospatial_pdf_header</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">filename</span>,
+        <span class="summary-sig-arg">epsg</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">wkt</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Postprocessing step to add geospatial PDF information to PDF file as 
+      per PDF standard 1.7 extension level 3 (also in draft PDF v2 standard
+      at time of writing)</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_context"></a><span class="summary-sig-name">get_context</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      allow access so that extra 'bits' can be rendered to the page 
+      directly</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_width"></a><span class="summary-sig-name">get_width</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_height"></a><span class="summary-sig-name">get_height</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_margin"></a><span class="summary-sig-name">get_margin</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="write_text"></a><span class="summary-sig-name">write_text</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ctx</span>,
+        <span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">box_width</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">size</span>=<span class="summary-sig-default">10</span>,
+        <span class="summary-sig-arg">fill_color</span>=<span class="summary-sig-default"><code class="variable-group">(</code>0.0<code class="variable-op">, </code>0.0<code class="variable-op">, </code>0.0<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">alignment</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="render_map"></a><span class="summary-sig-name">render_map</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">filename</span>)</span><br />
+      Render the given map to filename</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="render_on_map_lat_lon_grid"></a><span class="summary-sig-name">render_on_map_lat_lon_grid</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">dec_degrees</span>=<span class="summary-sig-default">True</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="render_on_map_scale"></a><span class="summary-sig-name">render_on_map_scale</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mapnik.printing.PDFPrinter-class.html#render_scale" class="summary-sig-name">render_scale</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">ctx</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">width</span>=<span class="summary-sig-default">0.05</span>)</span><br />
+      m: map to render scale for
+ctx: A cairo context to render the scale to.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mapnik.printing.PDFPrinter-class.html#render_legend" class="summary-sig-name">render_legend</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">page_break</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">ctx</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">collumns</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">width</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">height</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">item_per_rule</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">attribution</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">legend_item_box_size</span>=<span class="summary-sig-default"><code class="variable-group">(</code>0.015<code class="variable-op">, </code>0.0075<code class="variable-group">)</code></span>)</span><br />
+      m: map to render legend for
+ctx: A cairo context to render the legend to.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pagesize</span>=<span class="sig-default"><code class="variable-group">(</code>0.21<code class="variable-op">, </code>0.297<code class="variable-group">)</code></span>,
+        <span class="sig-arg">margin</span>=<span class="sig-default">0.005</span>,
+        <span class="sig-arg">box</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">percent_box</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">scale</span>=<span class="sig-default">&lt;function default_scale at 0x102da5500&gt;</span>,
+        <span class="sig-arg">resolution</span>=<span class="sig-default">72</span>,
+        <span class="sig-arg">preserve_aspect</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">centering</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">is_latlon</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">use_ocg_layers</span>=<span class="sig-default">False</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Creates a cairo surface and context to render a PDF with.
+
+pagesize: tuple of page size in meters, see predefined sizes in pagessizes dict (default a4)
+margin: page margin in meters (default 0.01)
+box: box within the page to render the map into (will not render over margin). This should be 
+     a Mapnik Box2d object. Default is the full page within the margin
+percent_box: as per box, but specified as a percent (0-&gt;1) of the full page size. If both box
+             and percent_box are specified percent_box will be used.
+scale: scale helper to use when rounding the map scale. This should be a function that
+       takes a single float and returns a float which is at least as large as the value
+       passed in. This is a 1:x scale.
+resolution: the resolution to render non vector elements at (in DPI), defaults to 72 DPI
+preserve_aspect: whether to preserve map aspect ratio. This defaults to True and it
+                 is recommended you do not change it unless you know what you are doing
+                 scales and so on will not work if this is False.
+centering: Centering rules for maps where the scale rounding has reduced the map size.
+           This should be a value from the centering class. The default is to center on the
+           maps constrained axis, typically this will be horizontal for portrait pages and
+           vertical for landscape pages.
+is_latlon: Is the map in lat lon degrees. If true magic anti meridian logic is enabled
+use_ocg_layers: Create OCG layers in the PDF, requires pyPdf &gt;= 1.13
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_geospatial_pdf_header"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_geospatial_pdf_header</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>,
+        <span class="sig-arg">filename</span>,
+        <span class="sig-arg">epsg</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">wkt</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Postprocessing step to add geospatial PDF information to PDF file as 
+  per PDF standard 1.7 extension level 3 (also in draft PDF v2 standard at 
+  time of writing)</p>
+  <p>one of either the epsg code or wkt text for the projection must be 
+  provided</p>
+  <p>Should be called *after* the page has had .finish() called</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="render_scale"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">render_scale</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>,
+        <span class="sig-arg">ctx</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">width</span>=<span class="sig-default">0.05</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+m: map to render scale for
+ctx: A cairo context to render the scale to. If this is None (the default) then
+    automatically create a context and choose the best location for the scale bar.
+width: Width of area available to render scale bar in (in m)
+
+will return the size of the rendered scale block in pts
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="render_legend"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">render_legend</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>,
+        <span class="sig-arg">page_break</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">ctx</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">collumns</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">width</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">height</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">item_per_rule</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">attribution</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">legend_item_box_size</span>=<span class="sig-default"><code class="variable-group">(</code>0.015<code class="variable-op">, </code>0.0075<code class="variable-group">)</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+m: map to render legend for
+ctx: A cairo context to render the legend to. If this is None (the default) then
+    automatically create a context and choose the best location for the legend.
+width: Width of area available to render legend in (in m)
+page_break: move to next page if legen over flows this one
+collumns: number of collumns available in legend box
+attribution: additional text that will be rendered in gray under the layer name. keyed by layer name
+legend_item_box_size:  two tuple with width and height of legend item box size in meters
+
+will return the size of the rendered block in pts
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mapnik-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://mapnik.org">mapnik</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Aug  3 18:07:11 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
