@@ -4,6 +4,7 @@ Home for the Mapnik project on the web.
 
 Uses [jekyll](https://github.com/mojombo/jekyll).
 
+[![Build Status](https://travis-ci.org/mapnik/mapnik.github.com.svg?branch=master)](https://travis-ci.org/mapnik/mapnik.github.com)
 
 ## Setup
 
