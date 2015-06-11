@@ -1,8 +1,0 @@
----
-layout: post
-title: "Carto parser wrapup"
-author: Colin Rundel
----
-
-<p>Similar to Herm I wanted to update the community on the status of my work this summer on the native carto parser. There has been a lot of progress since the midterm update and we are now very close to being completely compatible with the current javascript carto parser.</p><p>Recent work has focused on implementing the dynamic features of carto, namely variable and expression handling. A simple example demonstrating this processing is included in the gist below:</p><p><script src="https://gist.github.com/1202535.js"> </script></p><p>With these features implemented we are able to work with complex styles like the <a href="https://github.com/rundel/carto-parser/tree/master/tests/open-streets-dc">open_street_dc map</a> from the tilemill project. While more debugging is necessary the parser is able to produce valid output which can be rendered:</p>carto C++:<img src="http://i.imgur.com/Jp0XE.png"><br><br>carto javascript:<img src="http://i.imgur.com/l0Axy.png"><p>Hopefully we will be able to resolve the remaining issues in the near future with the goal of merge both the parser and generator into trunk to be part of Mapnik 2.1. </p>
-

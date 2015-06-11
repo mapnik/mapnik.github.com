@@ -1,0 +1,9 @@
+---
+layout: 01_post
+title: "Mapnik goes Unicode (properly)"
+author: Artem Pavlenko
+category: Mapnik
+---
+
+<p>Well, we had &quot;Unicode&quot; for a while in Mapnik - first it was ad-hoc utf8 and latin1 to UCS-2/4 transcoders, then iconv and fribidi. It kind of worked (sometimes) but it wasn't a proper solution. There were a few problems with the previous approaches - std::wstring is not portable, fribidi was choking in multi-threaded rendering and had to be disabled.</p><p>Result? It was constantly brought to my attention by <a href="http://www.openstreetmap.org/?lat=34.0123&lon=-6.8365&zoom=14&layers=B0FT">Morocco in OSM</a> and others.Arabic is a &quot;right-to-left&quot; language for starters and it also requires &quot;shaping&quot; (this is when characters change depending on where they are in the text to form smooth connections between letters). </p><p>So here is the solution - <a href="http://www.icu-project.org/">ICU</a>. I hope it will be final :).</p><img  src="/images/arabic.png"/>
+

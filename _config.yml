@@ -1,11 +1,8 @@
-auto:        true
-server:      true
-server_port: 4000
+port:        4000
 url:         mapnik.org
 lsi:         false
-pygments:    true
+highlighter: pygments
 markdown:    rdiscount
-permalink:   /news/:year/:month/:day/:title
-
+permalink:   /news/:title
 rdiscount:
   extensions: [smart]

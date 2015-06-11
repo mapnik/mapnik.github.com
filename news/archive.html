@@ -1,22 +1,5 @@
 ---
-layout: news
-title: New archive
+layout: 01_section
+title: news archive
+category: Mapnik
 ---
-
-<div id="none">
-  <h2>Mapnik News Archive</h2>
-  <ul>
-    {% for news in site.posts %}
-    {% unless news.next %}
-    <h3>{{ news.date | date: '%Y' }}</h3>
-    {% else %}
-    {% capture year %}{{ news.date | date: '%Y' }}{% endcapture %}
-    {% capture nyear %}{{ news.next.date | date: '%Y' }}{% endcapture %}
-    {% if year != nyear %}
-    <h3>{{ news.date | date: '%Y' }}</h3>
-    {% endif %}
-    {% endunless %}
-    <li>{{ news.date | date:"%d %b" }} <a href="{{ news.url }}">{{ news.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>

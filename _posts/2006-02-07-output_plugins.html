@@ -1,8 +1,0 @@
----
-layout: post
-title: "Mapnik development"
-author: artemp
----
-
-<p>Jean-Francois Doyon has developed *new*  building scripts for mapnik. Very cool! We're planning to add support for more platforms and toolkits.</p><p>I re-worked mapnik's feature processing pipeline and as a result we can have multiple back-ends. At the moment only the AGG renderer is implemented but writing a new one should be very straightforward. For those interested in implementation details have a look at <a href="http://svn.berlios.de/wsvn/mapnik/trunk/include/feature_style_processor.hpp?op=file&rev=0&sc=0">feature_style_processor</a></p><p>New design based on CRTP (Curiously Recurring Template  Pattern) e.g.<pre class="code">struct MyCoolRenderer :          public feature_style_processor &lt;MyCoolRenderer&gt;{    void process(xxx_symbolizer const& sym,        Feature const& feature)     {                 //do something    }};</pre></p><p>Also symbolizers are simple POD objects and not related to each other. In fact there are no virtual functions at all which is good  :-) .  Symbolizers are managed in boost::variant type and static visitation is used to dispatch calls to relevant 'process' methods in the Derived class. One improvement would be to 'trick' the compiler into generating missing methods from implementation to make it even more user-friendly. </p>
-
