@@ -1,0 +1,13 @@
+language: c
+
+before_install:
+ - gem install bundle
+
+install:
+ - bundle install --path .bundle
+
+before_script:
+ - bundle exec jekyll build
+
+script:
+ - echo "done"
