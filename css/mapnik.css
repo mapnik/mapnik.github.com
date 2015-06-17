@@ -124,7 +124,7 @@ hr.sm {
 /* background */
 
 .gradient {
-  height: 450px;
+  height: 500px;
   padding-bottom: 30px;
   background-color: white;
   background-image:
@@ -405,14 +405,18 @@ h1.fancy {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  #intro.big {
+	font-size: 30px;
+    line-height: 40px;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   #navbar .pad4y {
   padding-top: 10px;
   padding-bottom: 10px;
   }
-}
-
-@media only screen and (max-width: 640px) {
   #mapnik .splash { text-size: 12; } 
   #logo.pad4y {
   	padding-top: 10px;
@@ -429,11 +433,6 @@ h1.fancy {
 	font-size: 32px;
     line-height: 45px;
   }
-}
-
-
-@media only screen and (max-width: 640px) {
-
   .toc {
     border: 1px solid rgba(0,0,0,0.10);
     margin-bottom: 20px;
@@ -1006,6 +1005,21 @@ a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
   background-color: transparent;
   box-shadow: 0px 0px 0px 2px rgba(255,255,255,.5) inset;
   color: rgba(255,255,255,.75);
+}
+
+.dark .button.white {
+  border: none;
+  box-shadow: 0px 0px 0px 2px white inset;
+  color: white;
+  text-transform:uppercase;
+  letter-spacing: 2;
+  font-size: 14px;
+}
+
+.dark .button.white:hover,
+.dark .button.white.active {
+  color: rgb(86, 181, 190);
+  background-color: white;
 }
 
 .dark .button.stroke.quiet {

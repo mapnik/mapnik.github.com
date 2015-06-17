@@ -1,6 +1,6 @@
 ---
 layout: 01_page
-title: Download
+title: Downloads
 ---
 
 ## Latest Major Release
