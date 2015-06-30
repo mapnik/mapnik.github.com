@@ -15,14 +15,14 @@
 		<div class='col2 stickymove pad2x fill-light'>
 		{% for post in site.categories.mapnik limit:12 %}
 			{% if post.type != 'install' %}
-				<a class='block news' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> <span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span><br>
+				<a class='block news' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> <span class='date'>{{post.date | date: "%b %d, %Y" }} | {{post.author}}</span><br>
 			{% endif %}
 		{% endfor %}
 		</div>
 
 		<div class='col8 pad4x stickymove'><h3 class='space-bottom2 big'>latest news</h3>
 			<h1 class='space-bottom2' ><a href="{{site.baseurl}}{{post.url}}">{{ page.title }}</a></h1>
-			<p>{{ page.date | date: "%b %d, %y" }}</p>
+			<p>{{ page.date | date: "%b %d, %Y" }}</p>
 			
 			<div class='col12 pad2y'>
 				<div class='col6 small'>BY: <span class='pad1x'><img class='dot' src='{{ author[0].image }}' width='30'>

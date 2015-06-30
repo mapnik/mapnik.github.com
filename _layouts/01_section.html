@@ -15,7 +15,7 @@
 	<div class='stickymove clearfix fill-light col2 pad2x'>
 		{% for post in site.categories.mapnik %}
 			{% if post.type != 'install' %}
-				<a class='block news' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> <span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span><br>
+				<a class='block news' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> <span class='date'>{{post.date | date: "%b %d, %Y" }} | {{post.author}}</span><br>
 			{% endif %}
 		{% endfor %}
 	</div>
@@ -28,7 +28,7 @@
 		{% for post in site.categories.mapnik %}
 			{% if post.type != 'install' %}
 				<p><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
-<span class='date'>{{post.date | date: "%b %d, %y" }} | {{post.author}}</span></p>
+<span class='date'>{{post.date | date: "%b %d, %Y" }} | {{post.author}}</span></p>
 				<div class='col12 space-bottom2'>
 					<p> {{ post.excerpt }}</p>
 					<a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
