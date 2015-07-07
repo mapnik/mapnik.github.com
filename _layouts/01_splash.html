@@ -58,7 +58,7 @@
 					<div class='col3'>		
 						<h2 class='med-news'><a href="{{site.baseurl}}{{ post1-url }}"> {{ post1-title }}</a></h2>
 						<div class='col12'>
-							<div class='col12'><span class='date'>{{ post1-date | date: "%b %d, %y" }}</span></div>
+							<div class='col12'><span class='date'>{{ post1-date | date: "%b %d, %Y" }}</span></div>
 							<div class='col2 space-top1'><img class='dot fl' src='{{ post1-img }}' width='30'></div>
 							<div class='col9 space-top1'><span class='date pad1x'>
 								{% if post1-github != null %}
@@ -77,11 +77,11 @@
 				<div class='col4 pad4x space-top1'>
 					<div class='col12 space-bottom2'>
 						<a href="{{site.baseurl}}{{ post2-url }}">{{ post2-title }}</a><br>
-						<span class='date'>{{ post2-date | date: "%b %d, %y" }} | {% if post2-github != null %}<a  href='{{ post2-github }}'>{{ post2-author }}</a>{% else %}{{ post2-author }}{% endif %}</span></p>
+						<span class='date'>{{ post2-date | date: "%b %d, %Y" }} | {% if post2-github != null %}<a  href='{{ post2-github }}'>{{ post2-author }}</a>{% else %}{{ post2-author }}{% endif %}</span></p>
 					</div>
 					<div class='col12 space-bottom2'>
 						<a href="{{site.baseurl}}{{ post3-url }}">{{ post3-title }}</a><br>
-						<span class='date'>{{ post3-date | date: "%b %d, %y" }} | {% if post3-github != null %}<a  href='{{ post3-github }}'>{{ post3-author }}</a>{% else %}{{ post3-author }}{% endif %}</span></p>
+						<span class='date'>{{ post3-date | date: "%b %d, %Y" }} | {% if post3-github != null %}<a  href='{{ post3-github }}'>{{ post3-author }}</a>{% else %}{{ post3-author }}{% endif %}</span></p>
 					</div>
 					<div class='col12'>
 						<a class='news' href="{{site.baseurl}}/news/archive.html">read news archive >> </a>
