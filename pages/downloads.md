@@ -17,10 +17,12 @@ We plan on providing prebuilt binaries soon for Mapnik 3.0.0.
 
 ### Source Installation
 
-To build Mapnik v2.2.0 from source either download the [v3.0.0 tarball](https://mapnik.s3.amazonaws.com/dist/v3.0.0/mapnik-v3.0.0.tar.bz2) or pull directly from github:
+To build Mapnik v3.3.0 from source either download the [v3.0.0 tarball](https://mapnik.s3.amazonaws.com/dist/v3.0.0/mapnik-v3.0.0.tar.bz2) or pull directly from github:
 
     git clone https://github.com/mapnik/mapnik.git
     git checkout v3.0.0
+    git submodule update --init
+    ./configure && make && make test
 
 For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v3.0.0/INSTALL.md)
 
