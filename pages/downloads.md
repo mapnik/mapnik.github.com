@@ -5,7 +5,7 @@ title: Downloads
 
 ## Latest Major Release
 
-The latest release is Mapnik v3.0.2.
+The latest release is Mapnik v3.0.3.
 
 ## Mapnik 3.0
 
@@ -13,27 +13,27 @@ Release Date: July 30th, 2015
 
 ### Prebuilt Binaries
 
-We plan on providing prebuilt binaries soon for Mapnik 3.0.2.
+We plan on providing prebuilt binaries soon for Mapnik 3.0.3.
 
 ### Source Installation
 
-To build Mapnik v3.0.1 from source either download the [v3.0.2 tarball](https://mapnik.s3.amazonaws.com/dist/v3.0.2/mapnik-v3.0.2.tar.bz2) or pull directly from github:
+To build Mapnik v3.0.3 from source either download the [v3.0.3 tarball](https://mapnik.s3.amazonaws.com/dist/v3.0.3/mapnik-v3.0.3.tar.bz2) or pull directly from github:
 
-    git clone https://github.com/mapnik/mapnik.git
-    git checkout v3.0.2
-    git submodule update --init
-    ./configure && make && make test
+	git clone https://github.com/mapnik/mapnik.git
+	git checkout v3.0.3
+	git submodule update --init
+	./configure && make && make test
 
-For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v3.0.2/INSTALL.md)
+For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v3.0.3/INSTALL.md)
 
 You can also use git to fetch the latest code (will default to `master` branch):
 
-    git clone https://github.com/mapnik/mapnik.git
+	git clone https://github.com/mapnik/mapnik.git
 
 Browse the code at [github](https://github.com/mapnik/mapnik).
 
 Download a snapshot as a [zip archive](https://github.com/mapnik/mapnik/archive/master.zip).
- 
+
 
 ## Mapnik 2.2
 
@@ -45,7 +45,7 @@ Release Date: June 3rd, 2013
 
 The recommend install method on OS X is `homebrew`. If you are running `homebrew` simply do:
 
-    brew update && brew install mapnik
+	brew update && brew install mapnik
 
 We also provide a pre-built [OS X 64 bit package](http://mapnik.s3.amazonaws.com/dist/v2.2.0/mapnik-osx-v2.2.0.dmg) that will install into the same place (`/usr/local`) as homebrew.
 
@@ -68,8 +68,8 @@ We also provide a pre-built [OS X 64 bit package](http://mapnik.s3.amazonaws.com
 
 To build Mapnik v2.2.0 from source either download the [v2.2.0 tarball](http://mapnik.s3.amazonaws.com/dist/v2.2.0/mapnik-v2.2.0.tar.bz2) or pull directly from github:
 
-    git clone https://github.com/mapnik/mapnik.git
-    git checkout v2.2.0
+	git clone https://github.com/mapnik/mapnik.git
+	git checkout v2.2.0
 
 For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v2.2.0/INSTALL.md)
 
