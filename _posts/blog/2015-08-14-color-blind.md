@@ -1,6 +1,6 @@
 ---
 layout: 01_post
-title: Viewing Maps As If Colorblind
+title: Introducing a Color Blind Filter
 author: Blake Thompson
 category: Mapnik
 ---
