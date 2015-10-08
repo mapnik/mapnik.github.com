@@ -11,11 +11,11 @@ Uses [jekyll](https://github.com/mojombo/jekyll).
 
 ### Install jekyll (depends on Ruby, rubygems and Ruby development packages)
 
-    gem install jekyll nokogiri
+    bundle install
 
 ### Run jekyll
 
-    jekyll serve
+    bundle exec jekyll serve
 
 ### View the site at:
 
