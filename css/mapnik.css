@@ -935,6 +935,7 @@ a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
   z-index: 20;
   /*border-top: 2px solid #f2f2f2;*/
   -webkit-transform: translate3d(0, 0, 0);
+  max-width: 1200px;
 }
 
 /* Buttons */
