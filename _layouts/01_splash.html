@@ -19,12 +19,16 @@
 			<div id='intro' class='col9 margin2 pad2y dark big'>
 				<a href='{{site.baseurl}}/pages/downloads.html' class='button stroke white col5'>Download mapnik</a>
 			</div>
+			<div>
+			  <a class="github-button" href="https://github.com/mapnik/mapnik/fork" data-style="mega" data-count-href="/mapnik/mapnik/network" data-count-api="/repos/mapnik/mapnik#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork mapnik/mapnik on GitHub">Fork</a>
+			  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+			</div>
 
 		</div>
 		<!-- map design -->
 		<div class='module pad8y'></div>
 	</div>
-	
+
 	<div class='full-content'>
 		<!-- mapnik latest news --><a name='latest-news'></a>
 		<div class='content prose col12 clearfix fill-white'>
@@ -55,7 +59,7 @@
 			{% endif %}{% endfor %}
 
 				<div class='col6 margin2 pad1y space-bottom4'>
-					<div class='col3'>		
+					<div class='col3'>
 						<h2 class='med-news'><a href="{{site.baseurl}}{{ post1-url }}"> {{ post1-title }}</a></h2>
 						<div class='col12'>
 							<div class='col12'><span class='date'>{{ post1-date | date: "%b %d, %Y" }}</span></div>
@@ -94,8 +98,8 @@
 		<a name="code"></a>
 		<div class='content col12 clearfix fill-gray'>
 			<div class='col3 margin2 pad8y prose'>
-	            <div class='big'>code in your language</div>
-	            <p class='space-top1'>mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
+		    <div class='big'>code in your language</div>
+		    <p class='space-top1'>mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
 					<div class='col12 pill'><!--
 					  --><a href='http://mapnik.org/node-mapnik/documentation/' class='button stroke light short col6'>Node.js</a><!--
 					  --><a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
@@ -107,7 +111,7 @@
 
 					<div class="container">
 						<ul class='tabs'>
-				            <li class='tab-link current' data-tab='tab-1'>Python</a></li><!--
+					    <li class='tab-link current' data-tab='tab-1'>Python</a></li><!--
 					  --><li class='tab-link' data-tab='tab-2'>Node</a><!--
 					  --><li class='tab-link' data-tab='tab-3'>C++</a>
 						</ul>
@@ -168,8 +172,8 @@ main() {
 						</div>
 
 					</div>
-		        </div>
-	        </div>
+			</div>
+		</div>
 		</div>
 
 
@@ -219,4 +223,3 @@ main() {
 </div>
 </body>
 </html>
-
