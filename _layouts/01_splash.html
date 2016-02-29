@@ -1,226 +1,226 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
     {% include mapnik.meta %}
-	<title>Mapnik.org - the core of geospatial visualization &amp; processing</title>
-</head>
+    <title>Mapnik.org - the core of geospatial visualization &amp; processing</title>
+  </head>
 
-<body>
+  <body>
 
-	<!-- header -->
-	<div class='splash'>
-		<div class='gradient'>
-			<div class='col12 clearfix prose'>
-				<div id='logo' class='col5 margin2 pad4y fl'><h1 class='fancy dark'>mapnik</h1></div>
-				<div id='tagline' class='col5 space-top4 dark pad4y prose fr'>the core of geospatial visualization &amp; processing</div>
-			</div>
-			<div id='intro' class='col9 margin2 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
-			<div id='intro' class='col9 margin2 pad2y dark big'>
-				<a href='{{site.baseurl}}/pages/downloads.html' class='button stroke white col5'>Download mapnik</a>
-			</div>
-			<div id='intro' class='col9 margin2 pad2y'>
-			  <a class="github-button" href="https://github.com/mapnik/mapnik/fork" data-style="mega" data-count-href="/mapnik/mapnik/network" data-count-api="/repos/mapnik/mapnik#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork mapnik/mapnik on GitHub">Fork</a>
-			  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-			</div>
-
-		</div>
-		<!-- map design -->
-		<div class='module pad8y'></div>
+    <!-- header -->
+    <div class='splash'>
+      <div class='gradient'>
+	<div class='col12 clearfix prose'>
+	  <div id='logo' class='col5 margin2 pad4y fl'><h1 class='fancy dark'>mapnik</h1></div>
+	  <div id='tagline' class='col5 space-top4 dark pad4y prose fr'>the core of geospatial visualization &amp; processing</div>
+	</div>
+	<div id='intro' class='col9 margin2 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
+	<div id='intro' class='col9 margin2 pad2y dark big'>
+	  <a href='{{site.baseurl}}/pages/downloads.html' class='button stroke white col5'>Download mapnik</a>
+	</div>
+	<div id='intro' class='col9 margin2 pad2y'>
+	  <a class="github-button" href="https://github.com/mapnik/mapnik/fork" data-style="mega" data-count-href="/mapnik/mapnik/network" data-count-api="/repos/mapnik/mapnik#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork mapnik/mapnik on GitHub">Fork</a>
+	  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 	</div>
 
-	<div class='full-content'>
-		<!-- mapnik latest news --><a name='latest-news'></a>
-		<div class='content prose col12 clearfix fill-white'>
-			<div class='col10 margin2 pad2y big'>latest news</div>
-			{% for post in site.categories.mapnik limit:4 %}{% if post.type != 'install' %}
-			{% capture modulo %}{{ forloop.index0 | mod:4 }}{% endcapture %}
-			{% assign author = site.data.author[post.author] %}
-			{% if modulo == '0' or forloop.first %}
-				{% assign post1-author = post.author %}{% assign post1-title = post.title %}{% assign post1-date = post.date %}
-				{% assign post1-url = post.url %}{% assign post1-img = author[0].image %}{% assign post1-excerpt = post.excerpt %}
-				{% assign post1-github = author[0].github %}
-			{% endif %}
-			{% if modulo == '1' %}
-				{% assign post2-author = post.author %}{% assign post2-title = post.title %}{% assign post2-date = post.date %}
-				{% assign post2-url = post.url %}{% assign post2-img = author[0].image %}{% assign post2-excerpt = post.excerpt %}
-				{% assign post2-github = author[0].github %}
-			{% endif %}
-			{% if modulo == '2' %}
-				{% assign post3-author = post.author %}{% assign post3-title = post.title %}{% assign post3-date = post.date %}
-				{% assign post3-url = post.url %}{% assign post3-img = author[0].image %}{% assign post3-excerpt = post.excerpt %}
-				{% assign post3-github = author[0].github %}
-			{% endif %}
-			{% if modulo == '3' or forloop.last %}
-				{% assign post4-author = post.author %}{% assign post4-title = post.title %}{% assign post4-date = post.date %}
-				{% assign post4-url = post.url %}{% assign post4-img = author[0].image %}{% assign post4-excerpt = post.excerpt %}
-				{% assign post4-github = author[0].github %}
-			{% endif %}
-			{% endif %}{% endfor %}
+      </div>
+      <!-- map design -->
+      <div class='module pad8y'></div>
+    </div>
 
-				<div class='col6 margin2 pad1y space-bottom4'>
-					<div class='col3'>
-						<h2 class='med-news'><a href="{{site.baseurl}}{{ post1-url }}"> {{ post1-title }}</a></h2>
-						<div class='col12'>
-							<div class='col12'><span class='date'>{{ post1-date | date: "%b %d, %Y" }}</span></div>
-							<div class='col2 space-top1'><img class='dot fl' src='{{ post1-img }}' width='30'></div>
-							<div class='col9 space-top1'><span class='date pad1x'>
-								{% if post1-github != null %}
-									<a  href='{{ post1-github }}'>{{ post1-author }}</a>
-								{% else %}
-									{{ post1-author }}
-								{% endif %}
-							</span></div>
-						</div>
-					</div>
-					<div class='col9'>
-						<div class='col1'><img class='fl' src='images/quote-L.png' width='30'></div>
-						<div class='col11 pad1x'>{{ post1-excerpt }} <a class='news' href="{{site.baseurl}}{{ post1-url }}">read more >> </a></div>
-					</div>
-				</div>
-				<div class='col4 pad4x space-top1'>
-					<div class='col12 space-bottom2'>
-						<a href="{{site.baseurl}}{{ post2-url }}">{{ post2-title }}</a><br>
-						<span class='date'>{{ post2-date | date: "%b %d, %Y" }} | {% if post2-github != null %}<a  href='{{ post2-github }}'>{{ post2-author }}</a>{% else %}{{ post2-author }}{% endif %}</span></p>
-					</div>
-					<div class='col12 space-bottom2'>
-						<a href="{{site.baseurl}}{{ post3-url }}">{{ post3-title }}</a><br>
-						<span class='date'>{{ post3-date | date: "%b %d, %Y" }} | {% if post3-github != null %}<a  href='{{ post3-github }}'>{{ post3-author }}</a>{% else %}{{ post3-author }}{% endif %}</span></p>
-					</div>
-					<div class='col12'>
-						<a class='news' href="{{site.baseurl}}/news/archive.html">read news archive >> </a>
-					</div>
-				</div>
-		</div>
+    <div class='full-content'>
+      <!-- mapnik latest news --><a name='latest-news'></a>
+      <div class='content prose col12 clearfix fill-white'>
+	<div class='col10 margin2 pad2y big'>latest news</div>
+	{% for post in site.categories.Mapnik limit:4 %}{% if post.type != 'install' %}
+	{% capture modulo %}{{ forloop.index0 | mod:4 }}{% endcapture %}
+	{% assign author = site.data.author[post.author] %}
+	{% if modulo == '0' or forloop.first %}
+	{% assign post1-author = post.author %}{% assign post1-title = post.title %}{% assign post1-date = post.date %}
+	{% assign post1-url = post.url %}{% assign post1-img = author[0].image %}{% assign post1-excerpt = post.excerpt %}
+	{% assign post1-github = author[0].github %}
+	{% endif %}
+	{% if modulo == '1' %}
+	{% assign post2-author = post.author %}{% assign post2-title = post.title %}{% assign post2-date = post.date %}
+	{% assign post2-url = post.url %}{% assign post2-img = author[0].image %}{% assign post2-excerpt = post.excerpt %}
+	{% assign post2-github = author[0].github %}
+	{% endif %}
+	{% if modulo == '2' %}
+	{% assign post3-author = post.author %}{% assign post3-title = post.title %}{% assign post3-date = post.date %}
+	{% assign post3-url = post.url %}{% assign post3-img = author[0].image %}{% assign post3-excerpt = post.excerpt %}
+	{% assign post3-github = author[0].github %}
+	{% endif %}
+	{% if modulo == '3' or forloop.last %}
+	{% assign post4-author = post.author %}{% assign post4-title = post.title %}{% assign post4-date = post.date %}
+	{% assign post4-url = post.url %}{% assign post4-img = author[0].image %}{% assign post4-excerpt = post.excerpt %}
+	{% assign post4-github = author[0].github %}
+	{% endif %}
+	{% endif %}{% endfor %}
 
-
-		<!-- code bindings -->
-		<a name="code"></a>
-		<div class='content col12 clearfix fill-gray'>
-			<div class='col3 margin2 pad8y prose'>
-		    <div class='big'>code in your language</div>
-		    <p class='space-top1'>mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
-					<div class='col12 pill'><!--
-					  --><a href='http://mapnik.org/node-mapnik/documentation/' class='button stroke light short col6'>Node.js</a><!--
-					  --><a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
-					</div>
-				</div>
-
-			<div class='col7 space-top2 pad4x clearfix'>
-				<div class='col12 pad8y clearfix'>
-
-					<div class="container">
-						<ul class='tabs'>
-					    <li class='tab-link current' data-tab='tab-1'>Python</a></li><!--
-					  --><li class='tab-link' data-tab='tab-2'>Node</a><!--
-					  --><li class='tab-link' data-tab='tab-3'>C++</a>
-						</ul>
-						<div id="tab-1" class="tab-content current">
-{% highlight python %}
-import mapnik
-m = mapnik.Map(256,256)
-mapnik.load_map(m, 'path/to/file.xml')
-m.zoom_all()
-mapnik.render_to_file(m, 'the_image.png')
-{% endhighlight %}
-					</div>
-
-					<div id="tab-2" class="tab-content">
-{% highlight javascript %}
-var mapnik = require('mapnik');
-var fs = require('fs');
-// register fonts and datasource plugins
-mapnik.register_default_fonts();
-mapnik.register_default_input_plugins();
-var map = new mapnik.Map(256, 256);
-map.load('./test/stylesheet.xml', function(err,map) {
-	if (err) throw err;
-	map.zoomAll();
-	var im = new mapnik.Image(256, 256);
-	map.render(im, function(err,im) {
-		if (err) throw err;
-		im.encode('png', function(err,buffer) {
-			if (err) throw err;
-			fs.writeFile('map.png',buffer, function(err) {
-				if (err) throw err;
-				console.log('saved map image to map.png');
-			});
-		});
-	});
-});
-{% endhighlight %}
-					</div>
-
-					<div id="tab-3" class="tab-content">
-{% highlight python %}
-#include <mapnik/map.hpp>
-#include <mapnik/load_map.hpp>
-#include <mapnik/agg_renderer.hpp>
-#include <mapnik/image.hpp>
-#include <mapnik/image_util.hpp>
-
-main() {
-	mapnik::Map m(256,256);
-	mapnik::load_map(m, 'path/to/file.xml');
-	m.zoom_all();
-	mapnik::image_rgba8 im(256,256);
-	mapnik::agg_renderer<mapnik::image_rgba8> ren(m, im);
-	ren.apply();
-	mapnik::save_to_file(im, 'the_image.png');
-}
-{% endhighlight %}
-						</div>
-
-					</div>
-			</div>
-		</div>
-		</div>
+	<div class='col6 margin2 pad1y space-bottom4'>
+	  <div class='col3'>
+	    <h2 class='med-news'><a href="{{site.baseurl}}{{ post1-url }}"> {{ post1-title }}</a></h2>
+	    <div class='col12'>
+	      <div class='col12'><span class='date'>{{ post1-date | date: "%b %d, %Y" }}</span></div>
+	      <div class='col2 space-top1'><img class='dot fl' src='{{ post1-img }}' width='30'></div>
+	      <div class='col9 space-top1'><span class='date pad1x'>
+		  {% if post1-github != null %}
+		  <a  href='{{ post1-github }}'>{{ post1-author }}</a>
+		  {% else %}
+		  {{ post1-author }}
+		  {% endif %}
+	      </span></div>
+	    </div>
+	  </div>
+	  <div class='col9'>
+	    <div class='col1'><img class='fl' src='images/quote-L.png' width='30'></div>
+	    <div class='col11 pad1x'>{{ post1-excerpt }} <a class='news' href="{{site.baseurl}}{{ post1-url }}">read more >> </a></div>
+	  </div>
+	</div>
+	<div class='col4 pad4x space-top1'>
+	  <div class='col12 space-bottom2'>
+	    <a href="{{site.baseurl}}{{ post2-url }}">{{ post2-title }}</a><br>
+	    <span class='date'>{{ post2-date | date: "%b %d, %Y" }} | {% if post2-github != null %}<a  href='{{ post2-github }}'>{{ post2-author }}</a>{% else %}{{ post2-author }}{% endif %}</span></p>
+</div>
+<div class='col12 space-bottom2'>
+  <a href="{{site.baseurl}}{{ post3-url }}">{{ post3-title }}</a><br>
+  <span class='date'>{{ post3-date | date: "%b %d, %Y" }} | {% if post3-github != null %}<a  href='{{ post3-github }}'>{{ post3-author }}</a>{% else %}{{ post3-author }}{% endif %}</span></p>
+</div>
+<div class='col12'>
+  <a class='news' href="{{site.baseurl}}/news/archive.html">read news archive >> </a>
+</div>
+</div>
+</div>
 
 
-	<!-- xml stylesheets -->
-	<a name="xml"></a>
-	<div class='content col12 clearfix fill-gray'>
-		<div class='col3 margin2 pad2y'>
-			<h2 class='big'>style with a stylesheet</h2>
-			<div class='col10 pad2y'>Only a single XML stylesheet for your map, regardless of the code binding.</div>
-			<a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='space-top1 button stroke light short col8'>XML Configuration</a>
-		</div>
+<!-- code bindings -->
+<a name="code"></a>
+<div class='content col12 clearfix fill-gray'>
+  <div class='col3 margin2 pad8y prose'>
+    <div class='big'>code in your language</div>
+    <p class='space-top1'>mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
+    <div class='col12 pill'><!--
+			      --><a href='http://mapnik.org/node-mapnik/documentation/' class='button stroke light short col6'>Node.js</a><!--
+																	    --><a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
+    </div>
+  </div>
 
-		<div class='col7 pad4x space-bottom4'>
-<div class='fill-white'>{% highlight xml linenos %}
-<Map background-color="blue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+  <div class='col7 space-top2 pad4x clearfix'>
+    <div class='col12 pad8y clearfix'>
+
+      <div class="container">
+	<ul class='tabs'>
+	  <li class='tab-link current' data-tab='tab-1'>Python</a></li><!--
+									 --><li class='tab-link' data-tab='tab-2'>Node</a><!--
+															    --><li class='tab-link' data-tab='tab-3'>C++</a>
+</ul>
+<div id="tab-1" class="tab-content current">
+  {% highlight python %}
+  import mapnik
+  m = mapnik.Map(256,256)
+  mapnik.load_map(m, 'path/to/file.xml')
+  m.zoom_all()
+  mapnik.render_to_file(m, 'the_image.png')
+  {% endhighlight %}
+</div>
+
+<div id="tab-2" class="tab-content">
+  {% highlight javascript %}
+  var mapnik = require('mapnik');
+  var fs = require('fs');
+  // register fonts and datasource plugins
+  mapnik.register_default_fonts();
+  mapnik.register_default_input_plugins();
+  var map = new mapnik.Map(256, 256);
+  map.load('./test/stylesheet.xml', function(err,map) {
+  if (err) throw err;
+  map.zoomAll();
+  var im = new mapnik.Image(256, 256);
+  map.render(im, function(err,im) {
+  if (err) throw err;
+  im.encode('png', function(err,buffer) {
+  if (err) throw err;
+  fs.writeFile('map.png',buffer, function(err) {
+  if (err) throw err;
+  console.log('saved map image to map.png');
+  });
+  });
+  });
+  });
+  {% endhighlight %}
+</div>
+
+<div id="tab-3" class="tab-content">
+  {% highlight python %}
+  #include <mapnik/map.hpp>
+    #include <mapnik/load_map.hpp>
+      #include <mapnik/agg_renderer.hpp>
+	#include <mapnik/image.hpp>
+	  #include <mapnik/image_util.hpp>
+
+	    main() {
+	    mapnik::Map m(256,256);
+	    mapnik::load_map(m, 'path/to/file.xml');
+	    m.zoom_all();
+	    mapnik::image_rgba8 im(256,256);
+	    mapnik::agg_renderer<mapnik::image_rgba8> ren(m, im);
+	      ren.apply();
+	      mapnik::save_to_file(im, 'the_image.png');
+	      }
+	      {% endhighlight %}
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- xml stylesheets -->
+<a name="xml"></a>
+<div class='content col12 clearfix fill-gray'>
+  <div class='col3 margin2 pad2y'>
+    <h2 class='big'>style with a stylesheet</h2>
+    <div class='col10 pad2y'>Only a single XML stylesheet for your map, regardless of the code binding.</div>
+    <a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='space-top1 button stroke light short col8'>XML Configuration</a>
+  </div>
+
+  <div class='col7 pad4x space-bottom4'>
+    <div class='fill-white'>{% highlight xml linenos %}
+      <Map background-color="blue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
 	<Style name="My Style">
-		<Rule>
-			<PolygonSymbolizer fill="#f2eff9" />
-			<LineSymbolizer stroke="rgb(50%,50%,50%)" stroke-width="0.1" />
-		</Rule>
+	  <Rule>
+	    <PolygonSymbolizer fill="#f2eff9" />
+	    <LineSymbolizer stroke="rgb(50%,50%,50%)" stroke-width="0.1" />
+	  </Rule>
 	</Style>
 	<Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-		<StyleName>My Style</StyleName>
-		<Datasource>
-			<Parameter name="file">path/to/shapefile.shp</Parameter>
-			<Parameter name="type">shape</Parameter>
-		</Datasource>
+	  <StyleName>My Style</StyleName>
+	  <Datasource>
+	    <Parameter name="file">path/to/shapefile.shp</Parameter>
+	    <Parameter name="type">shape</Parameter>
+	  </Datasource>
 	</Layer>
-</Map>
-{% endhighlight %}</div>
-		</div>
-	</div>
+      </Map>
+      {% endhighlight %}</div>
+  </div>
+</div>
 <!--</div>-->
 
-	<!-- blog -->
-	<div class='fill-gray content col12 clearfix pad1y'>
+<!-- blog -->
+<div class='fill-gray content col12 clearfix pad1y'>
 
-		<div class='big quote center pad4y'>above all else, beautiful maps</div>
+  <div class='big quote center pad4y'>above all else, beautiful maps</div>
 
 
-	</div>
+</div>
 
-	{% include stacks.html %}
+{% include stacks.html %}
 
-	{% include footer.html %}
+{% include footer.html %}
 
-  <!-- end content -->
+<!-- end content -->
 </div>
 </body>
 </html>
