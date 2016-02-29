@@ -100,9 +100,9 @@
   <div class='col3 margin2 pad8y prose'>
     <div class='big'>code in your language</div>
     <p class='space-top1'>mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
-    <div class='col12 pill'><!--
-			      --><a href='http://mapnik.org/node-mapnik/documentation/' class='button stroke light short col6'>Node.js</a><!--
-																	    --><a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
+    <div class='col12 pill'>
+      <a href='http://mapnik.org/node-mapnik/documentation/' class='button stroke light short col6'>Node.js</a>
+      <a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
     </div>
   </div>
 
@@ -111,64 +111,64 @@
 
       <div class="container">
 	<ul class='tabs'>
-	  <li class='tab-link current' data-tab='tab-1'>Python</a></li><!--
-									 --><li class='tab-link' data-tab='tab-2'>Node</a><!--
-															    --><li class='tab-link' data-tab='tab-3'>C++</a>
-</ul>
-<div id="tab-1" class="tab-content current">
-  {% highlight python %}
-  import mapnik
-  m = mapnik.Map(256,256)
-  mapnik.load_map(m, 'path/to/file.xml')
-  m.zoom_all()
-  mapnik.render_to_file(m, 'the_image.png')
-  {% endhighlight %}
-</div>
+	  <li class='tab-link current' data-tab='tab-1'>Python</li>
+	  <li class='tab-link' data-tab='tab-2'>Node</li>
+	  <li class='tab-link' data-tab='tab-3'>C++</li>
+	</ul>
+	<div id="tab-1" class="tab-content current">
+{% highlight python %}
+import mapnik
+m = mapnik.Map(256,256)
+mapnik.load_map(m, 'path/to/file.xml')
+m.zoom_all()
+mapnik.render_to_file(m, 'the_image.png')
+{% endhighlight %}
+	</div>
 
-<div id="tab-2" class="tab-content">
-  {% highlight javascript %}
-  var mapnik = require('mapnik');
-  var fs = require('fs');
-  // register fonts and datasource plugins
-  mapnik.register_default_fonts();
-  mapnik.register_default_input_plugins();
-  var map = new mapnik.Map(256, 256);
-  map.load('./test/stylesheet.xml', function(err,map) {
-  if (err) throw err;
-  map.zoomAll();
-  var im = new mapnik.Image(256, 256);
-  map.render(im, function(err,im) {
-  if (err) throw err;
-  im.encode('png', function(err,buffer) {
-  if (err) throw err;
-  fs.writeFile('map.png',buffer, function(err) {
-  if (err) throw err;
-  console.log('saved map image to map.png');
-  });
-  });
-  });
-  });
-  {% endhighlight %}
-</div>
+	<div id="tab-2" class="tab-content">
+{% highlight js %}
+var mapnik = require('mapnik');
+var fs = require('fs');
+// register fonts and datasource plugins
+mapnik.register_default_fonts();
+mapnik.register_default_input_plugins();
+var map = new mapnik.Map(256, 256);
+map.load('./test/stylesheet.xml', function(err,map) {
+    if (err) throw err;
+    map.zoomAll();
+    var im = new mapnik.Image(256, 256);
+    map.render(im, function(err,im) {
+	if (err) throw err;
+	im.encode('png', function(err,buffer) {
+	    if (err) throw err;
+	    fs.writeFile('map.png',buffer, function(err) {
+		if (err) throw err;
+		console.log('saved map image to map.png');
+	    });
+	 });
+    });
+});
+{% endhighlight %}
+	</div>
+	<div id="tab-3" class="tab-content">
+{% highlight c++ %}
+#include <mapnik/map.hpp>
+#include <mapnik/load_map.hpp>
+#include <mapnik/agg_renderer.hpp>
+#include <mapnik/image.hpp>
+#include <mapnik/image_util.hpp>
 
-<div id="tab-3" class="tab-content">
-  {% highlight python %}
-  #include <mapnik/map.hpp>
-    #include <mapnik/load_map.hpp>
-      #include <mapnik/agg_renderer.hpp>
-	#include <mapnik/image.hpp>
-	  #include <mapnik/image_util.hpp>
-
-	    main() {
-	    mapnik::Map m(256,256);
-	    mapnik::load_map(m, 'path/to/file.xml');
-	    m.zoom_all();
-	    mapnik::image_rgba8 im(256,256);
-	    mapnik::agg_renderer<mapnik::image_rgba8> ren(m, im);
-	      ren.apply();
-	      mapnik::save_to_file(im, 'the_image.png');
-	      }
-	      {% endhighlight %}
+main()
+{
+    mapnik::Map m(256,256);
+    mapnik::load_map(m, "path/to/file.xml");
+    m.zoom_all();
+    mapnik::image_rgba8 im(256,256);
+    mapnik::agg_renderer<mapnik::image_rgba8> ren(m, im);
+    ren.apply();
+    mapnik::save_to_file(im, "the_image.png");
+}
+{% endhighlight %}
 </div>
 
 </div>
@@ -187,22 +187,23 @@
   </div>
 
   <div class='col7 pad4x space-bottom4'>
-    <div class='fill-white'>{% highlight xml linenos %}
-      <Map background-color="blue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-	<Style name="My Style">
-	  <Rule>
-	    <PolygonSymbolizer fill="#f2eff9" />
-	    <LineSymbolizer stroke="rgb(50%,50%,50%)" stroke-width="0.1" />
-	  </Rule>
-	</Style>
-	<Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-	  <StyleName>My Style</StyleName>
-	  <Datasource>
-	    <Parameter name="file">path/to/shapefile.shp</Parameter>
-	    <Parameter name="type">shape</Parameter>
-	  </Datasource>
-	</Layer>
-      </Map>
+    <div class='fill-white'>
+      {% highlight xml%}
+<Map background-color="blue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+  <Style name="My Style">
+    <Rule>
+      <PolygonSymbolizer fill="#f2eff9" />
+      <LineSymbolizer stroke="rgb(50%,50%,50%)" stroke-width="0.1" />
+    </Rule>
+  </Style>
+  <Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>My Style</StyleName>
+    <Datasource>
+      <Parameter name="file">path/to/shapefile.shp</Parameter>
+      <Parameter name="type">shape</Parameter>
+    </Datasource>
+  </Layer>
+</Map >
       {% endhighlight %}</div>
   </div>
 </div>
