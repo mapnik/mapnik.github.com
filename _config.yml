@@ -4,5 +4,3 @@ lsi:         false
 highlighter: rouge
 markdown:    kramdown
 permalink:   /news/:title
-rdiscount:
-  extensions: [smart]
