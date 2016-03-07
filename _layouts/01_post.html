@@ -22,16 +22,18 @@
       <div class='col8 pad4x stickymove'><h3 class='space-bottom2 big'>latest news</h3>
         <h1 class='space-bottom2' ><a href="{{site.baseurl}}{{post.url}}">{{ page.title }}</a></h1>
         <p>{{ page.date | date: "%b %d, %Y" }}</p>
-
-        <div class='col12 pad2y'>
-          <div class='col6 small'>BY: <span class='pad1x'><img class='dot' src='{{ author[0].image }}' width='30'>
+        <div class="col12 pad2y">
+          <div class="col6 small">BY:
+            <span class="pad1x">
+              <img class="dot" alt="{{ author[0].name }}" src="{{ author[0].image }}" width="30"/>
               &nbsp;
               {% if author[0].github != null %}
               <a  href='{{ author[0].github }}'>{{ page.author }}</a>
               {% else %}
               {{ page.author }}
               {% endif %}
-          </div></span>
+            </span>
+          </div>
         </div>
 
         <div class='col12 pad4y space-bottom4'>
