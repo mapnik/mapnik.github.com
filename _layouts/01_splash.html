@@ -15,11 +15,11 @@
           <div id='logo' class='col5 margin2 pad4y fl'><h1 class='fancy dark'>mapnik</h1></div>
           <div id='tagline' class='col5 space-top4 dark pad4y prose fr'>the core of geospatial visualization &amp; processing</div>
         </div>
-        <div id='intro' class='col9 margin2 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
-        <div id='intro' class='col9 margin2 pad2y dark big'>
+        <div id='intro1' class='col9 margin2 pad2y dark big'>mapnik combines pixel-perfect image output with lightning-fast cartographic algorithms, and exposes interfaces in C++, Python, and Node.</div>
+        <div id='intro2' class='col9 margin2 pad2y dark big'>
           <a href='{{site.baseurl}}/pages/downloads.html' class='button stroke white col5'>Download mapnik</a>
         </div>
-        <div id='intro' class='col9 margin2 pad2y'>
+        <div id='intro3' class='col9 margin2 pad2y'>
           <a class="github-button" href="https://github.com/mapnik/mapnik/fork" data-style="mega" data-count-href="/mapnik/mapnik/network" data-count-api="/repos/mapnik/mapnik#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork mapnik/mapnik on GitHub">Fork</a>
           <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
         </div>
@@ -30,7 +30,7 @@
     </div>
 
     <div class='full-content'>
-      <!-- mapnik latest news --><a name='latest-news'></a>
+      <!-- mapnik latest news --><a id='latest-news'></a>
       <div class='content prose col12 clearfix fill-white'>
         <div class='col10 margin2 pad2y big'>latest news</div>
         {% for post in site.categories.Mapnik limit:4 %}{% if post.type != 'install' %}
@@ -63,7 +63,7 @@
             <h2 class='med-news'><a href="{{site.baseurl}}{{ post1-url }}"> {{ post1-title }}</a></h2>
             <div class='col12'>
               <div class='col12'><span class='date'>{{ post1-date | date: "%b %d, %Y" }}</span></div>
-              <div class='col2 space-top1'><img class='dot fl' src='{{ post1-img }}' width='30'></div>
+              <div class='col2 space-top1'><img class='dot fl' alt="dot fl" src='{{ post1-img }}' width='30'></div>
               <div class='col9 space-top1'><span class='date pad1x'>
                   {% if post1-github != null %}
                   <a  href='{{ post1-github }}'>{{ post1-author }}</a>
@@ -74,48 +74,48 @@
             </div>
           </div>
           <div class='col9'>
-            <div class='col1'><img class='fl' src='images/quote-L.png' width='30'></div>
+            <div class='col1'><img class='fl' alt="fl" src='images/quote-L.png' width='30'></div>
             <div class='col11 pad1x'>{{ post1-excerpt }} <a class='news' href="{{site.baseurl}}{{ post1-url }}">read more >> </a></div>
           </div>
         </div>
         <div class='col4 pad4x space-top1'>
           <div class='col12 space-bottom2'>
             <a href="{{site.baseurl}}{{ post2-url }}">{{ post2-title }}</a><br>
-            <span class='date'>{{ post2-date | date: "%b %d, %Y" }} | {% if post2-github != null %}<a  href='{{ post2-github }}'>{{ post2-author }}</a>{% else %}{{ post2-author }}{% endif %}</span></p>
-</div>
-<div class='col12 space-bottom2'>
-  <a href="{{site.baseurl}}{{ post3-url }}">{{ post3-title }}</a><br>
-  <span class='date'>{{ post3-date | date: "%b %d, %Y" }} | {% if post3-github != null %}<a  href='{{ post3-github }}'>{{ post3-author }}</a>{% else %}{{ post3-author }}{% endif %}</span></p>
-</div>
-<div class='col12'>
-  <a class='news' href="{{site.baseurl}}/news/archive.html">read news archive >> </a>
-</div>
-</div>
-</div>
+            <span class='date'>{{ post2-date | date: "%b %d, %Y" }} | {% if post2-github != null %}<a  href='{{ post2-github }}'>{{ post2-author }}</a>{% else %}{{ post2-author }}{% endif %}</span>
+          </div>
+          <div class='col12 space-bottom2'>
+            <a href="{{site.baseurl}}{{ post3-url }}">{{ post3-title }}</a><br>
+            <span class='date'>{{ post3-date | date: "%b %d, %Y" }} | {% if post3-github != null %}<a  href='{{ post3-github }}'>{{ post3-author }}</a>{% else %}{{ post3-author }}{% endif %}</span>
+          </div>
+          <div class='col12'>
+            <a class='news' href="{{site.baseurl}}/news/archive.html">read news archive >> </a>
+          </div>
+        </div>
+      </div>
 
 
-<!-- code bindings -->
-<a name="code"></a>
-<div class='content col12 clearfix fill-gray'>
-  <div class='col3 margin2 pad8y prose'>
-    <div class='big'>code in your language</div>
-    <p class='space-top1'>mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
-    <div class='col12 pill'>
-      <a href='http://mapnik.org/node-mapnik/documentation/' class='button stroke light short col6'>Node.js</a>
-      <a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
-    </div>
-  </div>
+      <!-- code bindings -->
+      <a id="code"></a>
+      <div class='content col12 clearfix fill-gray'>
+        <div class='col3 margin2 pad8y prose'>
+          <div class='big'>code in your language</div>
+          <p class='space-top1'>mapnik's high-quality bindings let's you choose from Node.js, Python, and C++.</p>
+          <div class='col12 pill'>
+            <a href='http://mapnik.org/node-mapnik/documentation/' class='button stroke light short col6'>Node.js</a>
+            <a href='http://mapnik.org/docs/v2.2.0/api/python/index.html' class='button light stroke short col6'>Python</a>
+          </div>
+        </div>
 
-  <div class='col7 space-top2 pad4x clearfix'>
-    <div class='col12 pad8y clearfix'>
+        <div class='col7 space-top2 pad4x clearfix'>
+          <div class='col12 pad8y clearfix'>
 
-      <div class="container">
-        <ul class='tabs'>
-          <li class='tab-link current' data-tab='tab-1'>Python</li>
-          <li class='tab-link' data-tab='tab-2'>Node</li>
-          <li class='tab-link' data-tab='tab-3'>C++</li>
-        </ul>
-        <div id="tab-1" class="tab-content current">
+            <div class="container">
+              <ul class='tabs'>
+                <li class='tab-link current' data-tab='tab-1'>Python</li>
+                <li class='tab-link' data-tab='tab-2'>Node</li>
+                <li class='tab-link' data-tab='tab-3'>C++</li>
+              </ul>
+              <div id="tab-1" class="tab-content current">
 {% highlight python %}
 import mapnik
 m = mapnik.Map(256,256)
@@ -123,9 +123,8 @@ mapnik.load_map(m, 'path/to/file.xml')
 m.zoom_all()
 mapnik.render_to_file(m, 'the_image.png')
 {% endhighlight %}
-        </div>
-
-        <div id="tab-2" class="tab-content">
+              </div>
+              <div id="tab-2" class="tab-content">
 {% highlight js %}
 var mapnik = require('mapnik');
 var fs = require('fs');
@@ -149,8 +148,8 @@ map.load('./test/stylesheet.xml', function(err,map) {
     });
 });
 {% endhighlight %}
-        </div>
-        <div id="tab-3" class="tab-content">
+              </div>
+              <div id="tab-3" class="tab-content">
 {% highlight c++ %}
 #include <mapnik/map.hpp>
 #include <mapnik/load_map.hpp>
@@ -169,23 +168,23 @@ main()
     mapnik::save_to_file(im, "the_image.png");
 }
 {% endhighlight %}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- xml stylesheets -->
-<a name="xml"></a>
-<div class='content col12 clearfix fill-gray'>
-  <div class='col3 margin2 pad2y'>
-    <h2 class='big'>style with a stylesheet</h2>
-    <div class='col10 pad2y'>Only a single XML stylesheet for your map, regardless of the code binding.</div>
-    <a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='space-top1 button stroke light short col8'>XML Configuration</a>
-  </div>
-  <div class='col7 pad4x space-bottom4'>
-    <div class='fill-white'>
-      {% highlight xml%}
+      <!-- xml stylesheets -->
+      <a id="xml"></a>
+      <div class='content col12 clearfix fill-gray'>
+        <div class='col3 margin2 pad2y'>
+          <h2 class='big'>style with a stylesheet</h2>
+          <div class='col10 pad2y'>Only a single XML stylesheet for your map, regardless of the code binding.</div>
+          <a href='https://github.com/mapnik/mapnik/wiki/XMLConfigReference' class='space-top1 button stroke light short col8'>XML Configuration</a>
+        </div>
+        <div class='col7 pad4x space-bottom4'>
+          <div class='fill-white'>
+{% highlight xml%}
 <Map background-color="blue" srs="+init=epsg:4326">
   <Style name="My Style">
     <Rule>
@@ -202,17 +201,16 @@ main()
   </Layer>
 </Map>
 {% endhighlight %}
+          </div>
+        </div>
+      </div>
+      <!-- blog -->
+      <div class='fill-gray content col12 clearfix pad1y'>
+        <div class='big quote center pad4y'>above all else, beautiful maps</div>
+      </div>
+      {% include stacks.html %}
+      {% include footer.html %}
+      <!-- end content -->
     </div>
-  </div>
-</div>
-<!--</div>-->
-<!-- blog -->
-<div class='fill-gray content col12 clearfix pad1y'>
-  <div class='big quote center pad4y'>above all else, beautiful maps</div>
-</div>
-{% include stacks.html %}
-{% include footer.html %}
-<!-- end content -->
-</div>
-</body>
+  </body>
 </html>
