@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     {% include mapnik.meta %}
     <title>{{ page.title }}</title>
@@ -8,29 +8,29 @@
     {% include stickynav.html %}
     <div class="contain col12 clearfix">
       <div class='stickymove clearfix fill-light col2 pad2x'>
-	{% for post in site.categories.Mapnik %}
-	{% if post.type != 'install' %}
-	<a class='block news' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> <span class='date'>{{post.date | date: "%b %d, %Y" }} | {{post.author}}</span><br>
-	{% endif %}
-	{% endfor %}
+        {% for post in site.categories.Mapnik %}
+        {% if post.type != 'install' %}
+        <a class='block news' href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> <span class='date'>{{post.date | date: "%b %d, %Y" }} | {{post.author}}</span><br>
+        {% endif %}
+        {% endfor %}
       </div>
       <div class="stickymove clearfix pad4x col6">
-	<div class=''>
-	  <h3 class='space-bottom2 big'>{{ page.title }}</h3>
-	  {% for post in site.categories.Mapnik limit:12 %}
-	  {% if post.type != 'install' %}
-	  <p><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
-	    <span class='date'>{{post.date | date: "%b %d, %Y" }} | {{post.author}}</span></p>
-	  <div class='col12 space-bottom2'>
-	    <p> {{ post.excerpt }}</p>
-	    <a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
-	  </div>
-	  <div class='col12 space-bottom4 '>
-	    <p><hr></p>
-	  </div>
-	  {% endif %}
-	  {% endfor %}
-	</div>
+        <div class=''>
+          <h3 class='space-bottom2 big'>{{ page.title }}</h3>
+          {% for post in site.categories.Mapnik limit:12 %}
+          {% if post.type != 'install' %}
+          <p><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br>
+            <span class='date'>{{post.date | date: "%b %d, %Y" }} | {{post.author}}</span></p>
+          <div class='col12 space-bottom2'>
+            <p> {{ post.excerpt }}</p>
+            <a class='news' href="{{site.baseurl}}{{post.url}}">read more...</a>
+          </div>
+          <div class='col12 space-bottom4 '>
+            <p><hr></p>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
     {% include footer.html %}
