@@ -20,6 +20,7 @@ We plan on providing prebuilt binaries soon for Mapnik 3.0.12.
 To build Mapnik v3.0.12 from source either download the [v3.0.12 tarball](https://github.com/mapnik/mapnik/releases/download/v3.0.12/mapnik-v3.0.12.tar.bz2) or pull directly from github:
 
     git clone https://github.com/mapnik/mapnik.git
+    cd mapnik
     git checkout v3.0.12
     git submodule update --init
     ./configure && make && make test
