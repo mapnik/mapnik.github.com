@@ -5,27 +5,27 @@ title: Downloads
 
 ## Latest Release
 
-The latest release is Mapnik v3.0.20.
+The latest release is Mapnik v3.0.21.
 
-## Mapnik 3.0.20
+## Mapnik 3.0.21
 
-Release Date: 12 April 2018
+Release Date: 8 October 2018
 
 ### Prebuilt Binaries
 
-We plan on providing prebuilt binaries soon for Mapnik 3.0.20.
+We plan on providing prebuilt binaries soon for Mapnik 3.0.21.
 
 ### Source Installation
 
-To build Mapnik v3.0.20 from source either download the [v3.0.20 tarball](https://github.com/mapnik/mapnik/releases/download/v3.0.20/mapnik-v3.0.20.tar.bz2) or pull directly from github:
+To build Mapnik v3.0.21 from source either download the [v3.0.21 tarball](https://github.com/mapnik/mapnik/releases/download/v3.0.21/mapnik-v3.0.21.tar.bz2) or pull directly from github:
 
     git clone https://github.com/mapnik/mapnik.git
     cd mapnik
-    git checkout v3.0.20
+    git checkout v3.0.21
     git submodule update --init
     ./configure && make && make test
 
-For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v3.0.20/INSTALL.md)
+For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v3.0.21/INSTALL.md)
 
 You can also use git to fetch the latest code (will default to `master` branch):
 
