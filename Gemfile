@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '2.1.1'
-gem 'rdiscount', '2.1.8'
+gem 'jekyll', '4.0.0'
+gem 'rdiscount', '2.2.0.1'
+gem 'kramdown', '2.1.0'
