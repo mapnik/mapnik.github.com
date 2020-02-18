@@ -5,23 +5,23 @@ title: Downloads
 
 ## Latest Release
 
-The latest release is Mapnik v3.0.22.
+The latest release is Mapnik v3.0.23.
 
-## Mapnik 3.0.22
+## Mapnik 3.0.23
 
-Release Date: 22 January 2019
+Release Date: 18 February 2020
 
 ### Source Installation
 
-To build Mapnik v3.0.22 from source either download the [v3.0.22 tarball](https://github.com/mapnik/mapnik/releases/download/v3.0.22/mapnik-v3.0.22.tar.bz2) or pull directly from github:
+To build Mapnik v3.0.23 from source either download the [v3.0.23 tarball](https://github.com/mapnik/mapnik/releases/download/v3.0.23/mapnik-v3.0.23.tar.bz2) or pull directly from github:
 
     git clone https://github.com/mapnik/mapnik.git
     cd mapnik
-    git checkout v3.0.22
+    git checkout v3.0.23
     git submodule update --init
     ./configure && make && make test
 
-For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v3.0.22/INSTALL.md)
+For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v3.0.23/INSTALL.md)
 
 You can also use git to fetch the latest code (will default to `master` branch):
 
