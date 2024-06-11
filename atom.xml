@@ -1,10 +1,10 @@
 ---
-layout: 01_page
+layout: none
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>mapnik.org</title>
  <link href="http://mapnik.org/"/>
  <link href="http://mapnik.org/atom.xml" rel="self" type="application/atom+xml"/>
@@ -14,7 +14,7 @@ layout: 01_page
    <name>Artem Pavlenko</name>
    <email>artem.mapnik@gmail.com</email>
  </author>
- 
+
  {% for post in site.posts limit:10 %}
  <entry>
    <title>{{ post.title }}</title>
@@ -26,5 +26,5 @@ layout: 01_page
    </content>
  </entry>
  {% endfor %}
- 
+
 </feed>
