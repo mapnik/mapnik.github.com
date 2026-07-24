@@ -5,24 +5,24 @@ title: Downloads
 
 ## Latest Release
 
-The latest release is Mapnik v4.2.2.
+The latest release is Mapnik v4.3.0.
 
-## Mapnik 4.2.2
+## Mapnik 4.3.0
 
-Release Date: 30 March 2026
+Release Date: 24 July 2026
 
 ### Source Installation (using SCons)
 
-To build Mapnik v4.2.2 from source either download the [v4.2.2 tarball](https://github.com/mapnik/mapnik/releases/download/v4.2.2/mapnik-v4.2.2.tar.bz2) or pull directly from github:
+To build Mapnik v4.3.0 from source either download the [v4.3.0 tarball](https://github.com/mapnik/mapnik/releases/download/v4.3.0/mapnik-v4.3.0.tar.bz2) or pull directly from github:
 
     git clone https://github.com/mapnik/mapnik.git
     cd mapnik
-    git checkout v4.2.2
+    git checkout v4.3.0
     git submodule update --init
     python3 ./scons/scons.py configure
     python3 ./scons/scons.py install -j8
 
-For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v4.2.2/INSTALL.md)
+For source install help see the [Install docs](https://github.com/mapnik/mapnik/blob/v4.3.0/INSTALL.md)
 
 You can also use git to fetch the latest code (will default to `master` branch):
 
